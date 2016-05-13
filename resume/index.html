@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume | ZeroDY</title>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<script>
+	var browser={
+	versions:function(){ 
+			var u = navigator.userAgent;
+			return {//移动终端浏览器版本信息 
+			//trident: u.indexOf('Trident') > -1, //IE内核
+			//presto: u.indexOf('Presto') > -1, //opera内核
+			//webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+			//gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+			//ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+			//android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+			//iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+			//iPad: u.indexOf('iPad') > -1, //是否iPad  
+			//webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+      		};}()//,
+	//language: (navigator.browserLanguage || navigator.language).toLowerCase()
+	} 
+	function init(){
+		if(browser.versions.mobile){
+			window.location = "resumeformobile.html";
+		}
+	}
+	init();
+	</script>
+</head>
+<body>
+	<header>
+		<span>简历 | 周德艺</span>
+		<nav>
+			<ul>
+				<li>
+					<a href="http://wkcole.github.io/" target="_blank">博客</a>
+				</li>
+				<li>
+					<a href="http://github.com/wkcole" target="_blank">Github</a>
+				</li>
+				<li>
+					<a href="#personal_message">个人信息</a>
+				</li>
+				<li>
+					<a href="#skills">技能证书</a>
+				</li>
+				<li>
+					<a href="#education">教育经历</a>
+				</li>
+				<li>
+					<a href="#programe_exp">编程经历</a>
+				</li>
+				<li>
+					<a href="#self_judge">自我评价</a>
+				</li>
+				<li>
+					<a href="http://7xr23s.com1.z0.glb.clouddn.com/resume.pdf" target="_blank">PDF</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="personal_message">
+			<div class="section--left">
+				<div class="circle" title="个人信息"></div>
+				<div class="personal_message--title">
+					<a name="personal_message"></a>
+					个人信息
+				</div>
+			</div>
+			<div class="section--right">
+				<div>
+					<span>邮箱</span>
+					<span>//</span>
+					<span> zhodeyi32@163.com</span>
+				</div>
+				<div>
+					<span>出生日期</span>
+					<span>//</span>
+					<span>1991.02.10</span>
+				</div>
+				<div>
+					<span>微信账号</span>
+					<span>//</span>
+					<span>xxxxxxxx</span>
+				</div>
+				<div>
+					<span>户籍</span>
+					<span>//</span>
+					<span>xxxxxxxxxx</span>
+				</div>
+				<div>
+					<span>个人主页</span>
+					<span>//</span>
+					<span>
+						<a href="http://zerody.me" target="_blank">http://zerody.me</a>
+					</span>
+				</div>
+				<div>
+					<span>地址</span>
+					<span>//</span>
+					<span>上海</span>
+				</div>
+				<div>
+					<span>Github</span>
+					<span>//</span>
+					<span>
+						<a href="http://github.com/ZeroDY" target="_blank">http://github.com/ZeroDY</a>
+					</span>
+				</div>
+			</div>
+		</section>
+		<section class="skills">
+			<div class="section--left">
+				<div class="circle" title="技能证书"></div>
+				<div class="skills--title">
+					<a name="skills"></a>
+					技能证书
+				</div>
+			</div>
+			<div class="section--right">
+				<div>
+					<span>HTML(5)</span>
+					<span>
+						<span></span>
+					</span>
+				</div>
+				<div>
+					<span>CSS(3)</span>
+					<span>
+						<span></span>
+					</span>
+				</div>
+				<div>
+					<span>Javascript</span>
+					<span>
+						<span></span>
+					</span>
+				</div>
+				<div>
+					<span>Java</span>
+					<span>
+						<span></span>
+					</span>
+				</div>
+				<div>
+					<span>操作系统</span>
+					<span>Windows、Ubuntu14.04</span>
+				</div>
+				<div>
+					<span>证书</span>
+					<span>zzzzzzzzzzzzz</span>
+				</div>
+			</div>
+		</section>
+		<section class="education">
+			<div class="section--left">
+				<div class="circle" title="教育经历"></div>
+				<div class="education--title">
+					<a name="education"></a>
+					教育经历
+				</div>
+			</div>
+			<div class="section--right">
+				<div>
+					<span>生物医学工程</span>
+					<span>//</span>
+					<span>2012.9 - 2016.06</span>
+					<span>南京</span>
+				</div>
+				<div>
+					<span>学士学位</span>
+					<span>南京邮电大学</span>
+					<span>主要课程：C/C++、数据结构、Java、模电、数电</span>
+				</div>
+			</div>
+		</section>
+		<section class="programe_exp">
+			<div class="section--left">
+				<div class="circle" title="编程经历"></div>
+				<div class="programe_exp--title">
+					<a name="programe_exp"></a>
+					编程经历
+				</div>
+			</div>
+			<div class="section--right">
+				<div>
+					<span>jsp用户信息管理系统</span>
+					<span>//</span>
+					<span>2016.03 - 2016.03</span>
+				</div>
+				<div>
+					<span class="link">
+						<a href="https://github.com/wkcole/Management/" target="_blank">点击查看代码</a>
+					</span>
+				</div>
+				<div>
+					<span>2016百度前端技术学院春季班</span>
+					<span>//</span>
+					<span>2016.03 - 至今</span>
+				</div>
+				<div>
+					<span class="link">
+						<a href="http://ifecarbonsteel.github.io/wkcole_task" target="_blank">点击查看代码</a>
+					</span>
+				</div>
+				<div>
+					<span>js实现翻页</span>
+					<span>//</span>
+					<span>2个下午</span>
+				</div>
+				<div>
+					<span class="link">
+						<a href="http://ifecarbonsteel.github.io/wkcole-homepage/" target="_blank">点击查看代码</a>
+					</span>
+				</div>
+				<div>
+					<span>java swing简易图像处理工具</span>
+					<span>//</span>
+					<span>两三天</span>
+				</div>
+				<div>
+					<span class="link">
+						<a href="https://github.com/wkcole/picFix-Swing/" target="_blank">点击查看代码</a>
+					</span>
+				</div>
+				<div>
+					<span>简易在线计算器</span>
+					<span>//</span>
+					<span>2015.07 - 2015.08</span>
+				</div>
+				<div>
+					<span class="link">
+						<a href="https://github.com/wkcole/simpleCalculator/tree/gh-pages" target="_blank">点击查看代码</a>
+					</span>
+				</div>
+				<div>
+					<span>Android心电动态显示</span>
+					<span>//</span>
+					<span>一周</span>
+				</div>
+				<div>
+					<span class="link">
+						<a href="https://github.com/wkcole/Dynamic-display-of-ECG/" target="_blank">点击查看代码</a>
+					</span>
+				</div>
+			</div>
+		</section>
+		<section class="self_judge">
+			<div class="section--left">
+				<div class="circle" title="自我评价"></div>
+				<div class="circle_last" title="end"></div>
+				<div class="self_judge--title">
+					<a name="self_judge"></a>
+					自我评价
+				</div>
+			</div>
+			<div class="section--right">
+				<div>
+					热爱web开发，自学过Android、java开发，喜欢不断尝试。对待工作有耐心有精力有热情，遇到开发问题能够通过查阅手册解决。对于技术有较强的好奇心，学习上智商不拖后腿，努力有余。
+				</div>
+				<div>
+					了解html(5)+css(3)、javascript，了解jquery框架。会使用简单的git命令，有java后台开发的经历，有用Node.js配合Hexo搭建博客的经验。
+				</div>
+				<div>
+					基本可以熟练使用ps切图，并且使用html5+css3实现ps的设计稿，在浏览器兼容上还需要学习，会使用css媒体查询进行简单的页面适配。
+				</div>
+				<div>
+					有自学能力和一定的编程能力，正在自学使用jade、less等工具，ajax和php也在学习中，对于工具的想法觉得没必要盲目跟风，像Angularjs，因为没有具体业务做，所以就很难上手学习。
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>&copy; ZeroDY 2016</footer>
+</body>
+</html>

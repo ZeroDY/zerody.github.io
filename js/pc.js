@@ -59,7 +59,7 @@ define([], function(){
 
 		$(".icon").bind("mouseenter", function(){
 			isEnterBtn = true;
-			Tips.show();
+			// Tips.show();
 		}).bind("mouseleave", function(){
 			isEnterBtn = false;
 			setTimeout(function(){

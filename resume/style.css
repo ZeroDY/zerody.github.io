@@ -1,0 +1,199 @@
+body {
+	font-family: "Microsoft YaHei","Segoe UI","Arial","Verdana","Tahoma",serif;
+	margin: 0;
+	padding: 0;
+	min-width: 900px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	width: calc(100% - 40px);
+	padding: 0 20px;
+	background: #333333;
+	color: white;
+}
+
+header span {
+	line-height: 80px;
+}
+
+header ul {
+	margin: 0;
+	padding: 0;
+	display: inline-flex;
+	list-style: none;
+	justify-content: space-between;
+	text-align: center;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+header ul li {
+	cursor: pointer;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	transition: all 0.3s;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+section a {
+	display: inline;
+	text-decoration: none;
+	color: #9A9999;
+}
+
+header ul li:hover {
+	background: #777;
+	transition: all 0.3s;
+}
+
+main {
+	margin: 40px 5%;
+
+}
+
+main section {
+	width: 100%;
+	height: 300px;
+	display: flex;
+}
+
+.section--left {
+	position: relative;
+	box-sizing: border-box;
+	padding: 0 30px;
+	display: inline-block;
+	height: 100%;
+	width: 20%;
+	text-align: right;
+	border-right: 2px solid #777;
+	color: #6FA8DF;
+}
+
+.section--right {
+	box-sizing: border-box;
+	padding: 0 30px;
+	display: inline-block;
+	height: 100%;
+	width: 80%;
+	border-left: 2px solid #777;
+}
+
+.circle{
+	cursor: pointer;
+	width: 22px;
+	height: 22px;
+	box-sizing: border-box;
+	border-radius: 11px;
+	border: 4px solid #777;
+	z-index: 23;
+	position: absolute;
+	right: -13px;
+	top: -11px;
+	background: #fff;
+}
+
+.circle_last{
+	width: 22px;
+	height: 22px;
+	box-sizing: border-box;
+	border-radius: 11px;
+	border: 4px solid #777;
+	z-index: 23;
+	position: absolute;
+	right: -13px;
+	bottom: -11px;
+	background: #fff;
+	cursor: pointer;
+
+}
+
+.personal_message div span:nth-child(2),
+.education div:nth-child(1) span:nth-child(2),
+.programe_exp div span:nth-child(2){
+	color: #4087C7;
+	font-weight: bold;
+	display: inline-block;
+	width: 10%;
+}
+
+.section--right div{
+	width: 100%;
+}
+
+.section--right div span:nth-child(1){
+	display: inline-block;
+	width: 40%;
+}
+
+.self_judge .section--right{
+	text-indent: 2em;
+	line-height: 30px;
+}
+
+.programe_exp .section--right div .link {
+	width: 59%;
+	float: right;
+}
+
+.section--right {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+.skills .section--right div:nth-child(1) span:nth-child(2),
+.skills .section--right div:nth-child(2) span:nth-child(2),
+.skills .section--right div:nth-child(3) span:nth-child(2),
+.skills .section--right div:nth-child(4) span:nth-child(2){
+	display: inline-block;
+	width: 40%;
+	background: #fff;
+}
+
+.skills .section--right div:nth-child(1) span:nth-child(2) span,
+.skills .section--right div:nth-child(2) span:nth-child(2) span,
+.skills .section--right div:nth-child(3) span:nth-child(2) span,
+.skills .section--right div:nth-child(4) span:nth-child(2) span{
+	display: inline-block;
+	height: 18px;
+	width: 5%;
+	background: #4087C7;
+}
+
+.skills .section--right div:nth-child(1) span:nth-child(2) span{
+	width: 30%;
+}
+
+.skills .section--right div:nth-child(2) span:nth-child(2) span{
+	width: 35%;
+}
+
+.skills .section--right div:nth-child(3) span:nth-child(2) span{
+	width: 20%;
+}
+
+.skills .section--right div:nth-child(4) span:nth-child(2) span{
+	width: 10%;
+}
+
+footer{
+	height: 200px;
+	width: 100%;
+	background: #464646;
+	color: #fff;
+	line-height: 200px;
+	text-align: center;
+}
