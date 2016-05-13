@@ -474,22 +474,22 @@ a {
 }
 .header-author {
   text-align: center;
-  margin: 0.67em 0;
+  margin: 0.5em 0;
   font-family: Roboto, "Roboto", serif;
-  font-size: 30px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
+  font-size: 32px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 }
 #header {
   width: 100%;
 }
 #header a {
-  color: #696969;
+  color: #ccc; /* 左边名字、标签字体颜色 */
 }
 #header a:hover {
-  color: #b0a0aa;
+  color: #fff; /* 左边名字、标签字体变换颜色 */
 }
 #header .profilepic {
   text-align: center;
@@ -502,7 +502,7 @@ a {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background: #88acdb; /*头像图片背景 */
+  background: #09c; /*头像图片背景颜色 88acdb*/
   -webkit-transition: all 0.2s ease-in;
   display: -webkit-box;
   -webkit-box-orient: horizontal;
@@ -516,7 +516,7 @@ a {
   -webkit-border-radius: 300px;
   border-radius: 300px;
   opacity: 0;
-  -webkit-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.5s ease-in; /* 头像动画时间	*/
 }
 #header .profilepic img.show {
   width: 100%;
@@ -536,7 +536,7 @@ a {
 }
 #header .header-menu {
   font-weight: 300;
-  line-height: 31px;
+  line-height: 30px;
   cursor: pointer;
   text-transform: uppercase;
   float: none;
@@ -859,7 +859,6 @@ a {
   margin-bottom: 80px;
 }
 .article {
-/*color: #333333;  正文字体及 标题前 颜色 */
   margin: 30px;
   position: relative;
   border: 1px solid #ddd;
@@ -868,12 +867,12 @@ a {
 }
 .article.show {
   visibility: visible;
-  -webkit-animation: cd-bounce-1 0.6s;
-  -moz-animation: cd-bounce-1 0.6s;
-  -webkit-animation: cd-bounce-1 0.6s;
-  -moz-animation: cd-bounce-1 0.6s;
-  -ms-animation: cd-bounce-1 0.6s;
-  animation: cd-bounce-1 0.6s;
+  -webkit-animation: cd-bounce-1 0.8s;
+  -moz-animation: cd-bounce-1 0.8s;
+  -webkit-animation: cd-bounce-1 0.8s;
+  -moz-animation: cd-bounce-1 0.8s;
+  -ms-animation: cd-bounce-1 0.8s;
+  animation: cd-bounce-1 0.8s;
 }
 .article.hidden {
   visibility: hidden;
@@ -930,7 +929,7 @@ a {
   color: #c8c8c8;
 }
 .article-title {
-  color: #696969;
+  color: #09c;
   margin-left: 0px;
   font-weight: 300;
   line-height: 35px;
@@ -945,7 +944,7 @@ a {
   transition: color 0.3s;
 }
 .article-title:hover {
-  color: #b0a0aa;
+  color: #9cf; /* 标题改变色*/
 }
 .article-inner {
   position: relative;
