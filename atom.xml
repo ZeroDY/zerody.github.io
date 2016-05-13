@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-13T07:22:52.000Z</updated>
+  <updated>2016-05-13T09:37:35.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,56 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>离屏渲染</title>
-    <link href="http://yoursite.com/2016/05/13/%E7%A6%BB%E5%B1%8F%E6%B8%B2%E6%9F%93/"/>
-    <id>http://yoursite.com/2016/05/13/离屏渲染/</id>
-    <published>2016-05-13T07:12:53.000Z</published>
-    <updated>2016-05-13T07:22:52.000Z</updated>
-    
-    <content type="html">&lt;hr&gt;
-&lt;h3 id=&quot;一、概念理解&quot;&gt;&lt;a href=&quot;#一、概念理解&quot; class=&quot;headerlink&quot; title=&quot;一、概念理解&quot;&gt;&lt;/a&gt;一、概念理解&lt;/h3&gt;&lt;p&gt;OpenGL中，GPU屏幕渲染有以下两种方式：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;On-Screen Rendering&lt;/strong&gt;&lt;br&gt;意为当前屏幕渲染，指的是GPU的渲染操作是在当前用于显示的屏幕缓冲区中进行。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Off-Screen Rendering&lt;/strong&gt;&lt;br&gt;意为离屏渲染，指的是GPU在当前屏幕缓冲区以外新开辟一个缓冲区进行渲染操作。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;###二、离屏渲染的是是非非&lt;/p&gt;
-&lt;p&gt;相比于当前屏幕渲染，离屏渲染的代价是很高的，主要体现在两个方面：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;创建新缓冲区&lt;/strong&gt;&lt;br&gt;要想进行离屏渲染，首先要创建一个新的缓冲区。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;上下文切换&lt;/strong&gt;&lt;br&gt;离屏渲染的整个过程，需要多次切换上下文环境：先是从当前屏幕（On-Screen）切换到离屏（Off-Screen）；等到离屏渲染结束以后，将离屏缓冲区的渲染结果显示到屏幕上有需要将上下文环境从离屏切换到当前屏幕。而上下文环境的切换是要付出很大代价的。&lt;/p&gt;
-&lt;h3 id=&quot;三、离屏渲染触发方式&quot;&gt;&lt;a href=&quot;#三、离屏渲染触发方式&quot; class=&quot;headerlink&quot; title=&quot;三、离屏渲染触发方式&quot;&gt;&lt;/a&gt;三、离屏渲染触发方式&lt;/h3&gt;&lt;p&gt;设置了以下属性时，都会触发离屏绘制：&lt;br&gt;    shouldRasterize（光栅化）&lt;br&gt;    masks（遮罩）&lt;br&gt;    shadows（阴影）&lt;br&gt;    edge antialiasing（抗锯齿）&lt;br&gt;    group opacity（不透明）&lt;br&gt;需要注意的是，如果shouldRasterize被设置成YES，在触发离屏绘制的同时，会将光栅化后的内容缓存起来，如果对应的layer及其sublayers没有发生改变，在下一帧的时候可以直接复用。这将在很大程度上提升渲染性能。&lt;/p&gt;
-&lt;p&gt;而其它属性如果是开启的，就不会有缓存，离屏绘制会在每一帧都发生。&lt;/p&gt;
-&lt;h3 id=&quot;四、另一种特殊的“离屏渲染”&quot;&gt;&lt;a href=&quot;#四、另一种特殊的“离屏渲染”&quot; class=&quot;headerlink&quot; title=&quot;四、另一种特殊的“离屏渲染”&quot;&gt;&lt;/a&gt;四、另一种特殊的“离屏渲染”&lt;/h3&gt;&lt;p&gt;按照之前的说法，如果将不在GPU的当前屏幕缓冲区中进行的渲染都称为离屏渲染，那么就还有另一种特殊的“离屏渲染”方式：CPU渲染。&lt;/p&gt;
-&lt;p&gt;如果我们重写了drawRect方法，并且使用任何Core Graphics的技术进行了绘制操作，就涉及到了CPU渲染。整个渲染过程由CPU在App内同步地完成，渲染得到的bitmap最后再交由GPU用于显示。&lt;/p&gt;
-&lt;h3 id=&quot;五、Instruments&quot;&gt;&lt;a href=&quot;#五、Instruments&quot; class=&quot;headerlink&quot; title=&quot;五、Instruments&quot;&gt;&lt;/a&gt;五、Instruments&lt;/h3&gt;&lt;p&gt;Instruments的Core Animation工具中有几个和离屏渲染相关的检查选项：&lt;/p&gt;
-&lt;p&gt;Color Offscreen-Rendered Yellow&lt;br&gt;开启后会把那些需要离屏渲染的图层高亮成黄色，这就意味着黄色图层可能存在性能问题。&lt;/p&gt;
-&lt;p&gt;Color Hits Green and Misses Red&lt;br&gt;如果shouldRasterize被设置成YES，对应的渲染结果会被缓存，如果图层是绿色，就表示这些缓存被复用；如果是红色就表示缓存会被重复创建，这就表示该处存在性能问题了。&lt;/p&gt;
-&lt;h3 id=&quot;六、如何抉择&quot;&gt;&lt;a href=&quot;#六、如何抉择&quot; class=&quot;headerlink&quot; title=&quot;六、如何抉择&quot;&gt;&lt;/a&gt;六、如何抉择&lt;/h3&gt;&lt;p&gt;现在摆在我们面前得有三个选择：当前屏幕渲染、离屏渲染、CPU渲染，该用哪个呢？这需要根据具体的使用场景来决定。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; 尽量使用当前屏幕渲染&lt;/strong&gt;&lt;br&gt;鉴于离屏渲染、CPU渲染可能带来的性能问题，一般情况下，我们要尽量使用当前屏幕渲染。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; 离屏渲染 VS CPU渲染&lt;/strong&gt;&lt;br&gt;由于GPU的浮点运算能力比CPU强，CPU渲染的效率可能不如离屏渲染；但如果仅仅是实现一个简单的效果，直接使用CPU渲染的效率又可能比离屏渲染好，毕竟离屏渲染要涉及到缓冲区创建和上下文切换等耗时操作。&lt;/p&gt;
-&lt;p&gt;总之，具体的选择应该由性能测试结果来决定。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;h3 id=&quot;一、概念理解&quot;&gt;&lt;a href=&quot;#一、概念理解&quot; class=&quot;headerlink&quot; title=&quot;一、概念理解&quot;&gt;&lt;/a&gt;一、概念理解&lt;/h3&gt;&lt;p&gt;OpenGL中，GPU屏幕渲染有以下两种方式：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;On-Screen Rendering&lt;/strong&gt;&lt;br&gt;意为当前屏幕渲染，指的是GPU的渲染操作是在当前用于显示的屏幕缓冲区中进行。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Off-Screen Rendering&lt;/strong&gt;&lt;br&gt;意为离屏渲染，指的是GPU在当前屏幕缓冲区以外新开辟一个缓冲区进行渲染操作。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="iOS 开发" scheme="http://yoursite.com/tags/iOS-%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="离屏渲染" scheme="http://yoursite.com/tags/%E7%A6%BB%E5%B1%8F%E6%B8%B2%E6%9F%93/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Markdown语法和MWeb写作使用说明</title>
     <link href="http://yoursite.com/2016/05/13/Markdown%E8%AF%AD%E6%B3%95%E5%92%8CMWeb%E5%86%99%E4%BD%9C%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
     <id>http://yoursite.com/2016/05/13/Markdown语法和MWeb写作使用说明/</id>
     <published>2016-05-12T18:56:05.000Z</published>
-    <updated>2016-05-13T04:31:59.000Z</updated>
+    <updated>2016-05-13T09:37:35.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://o7279yd4s.bkt.clouddn.com/12944427,2560,1600.jpg&quot; alt=&quot;Image Test&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Markdown-的设计哲学&quot;&gt;&lt;a href=&quot;#Markdown-的设计哲学&quot; class=&quot;headerlink&quot; title=&quot;Markdown 的设计哲学&quot;&gt;&lt;/a&gt;Markdown 的设计哲学&lt;/h2&gt;&lt;blockquote&gt;
@@ -121,7 +76,7 @@
 &lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;email &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;example@example.com&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;string&quot;&gt;GitHub&lt;/span&gt;](&lt;span class=&quot;link&quot;&gt;http://github.com&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;自动生成连接  &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;http:&lt;/span&gt;//&lt;span class=&quot;attr&quot;&gt;www.github.com&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。&lt;br&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#64;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#64;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#58;&amp;#101;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#64;&amp;#x65;&amp;#x78;&amp;#97;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&quot;&gt;&amp;#101;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#64;&amp;#x65;&amp;#x78;&amp;#97;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
 &lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;某某说:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第一行引用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第二行费用文字&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;效果如下：&lt;/p&gt;
@@ -208,6 +163,8 @@
     
     </summary>
     
+      <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
+    
     
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
@@ -217,10 +174,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/05/13/hello-world/"/>
-    <id>http://yoursite.com/2016/05/13/hello-world/</id>
-    <published>2016-05-12T18:03:58.000Z</published>
-    <updated>2016-05-13T07:22:54.000Z</updated>
+    <link href="http://yoursite.com/2016/04/13/hello-world/"/>
+    <id>http://yoursite.com/2016/04/13/hello-world/</id>
+    <published>2016-04-12T18:56:05.000Z</published>
+    <updated>2016-05-13T09:37:41.000Z</updated>
     
     <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -240,6 +197,54 @@
     
     </summary>
     
+      <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>离屏渲染</title>
+    <link href="http://yoursite.com/2015/05/13/%E7%A6%BB%E5%B1%8F%E6%B8%B2%E6%9F%93/"/>
+    <id>http://yoursite.com/2015/05/13/离屏渲染/</id>
+    <published>2015-05-13T07:12:53.000Z</published>
+    <updated>2016-05-13T09:37:18.000Z</updated>
+    
+    <content type="html">&lt;hr&gt;
+&lt;h3 id=&quot;一、概念理解&quot;&gt;&lt;a href=&quot;#一、概念理解&quot; class=&quot;headerlink&quot; title=&quot;一、概念理解&quot;&gt;&lt;/a&gt;一、概念理解&lt;/h3&gt;&lt;p&gt;OpenGL中，GPU屏幕渲染有以下两种方式：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;On-Screen Rendering&lt;/strong&gt;&lt;br&gt;意为当前屏幕渲染，指的是GPU的渲染操作是在当前用于显示的屏幕缓冲区中进行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Off-Screen Rendering&lt;/strong&gt;&lt;br&gt;意为离屏渲染，指的是GPU在当前屏幕缓冲区以外新开辟一个缓冲区进行渲染操作。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;二、离屏渲染的是是非非&quot;&gt;&lt;a href=&quot;#二、离屏渲染的是是非非&quot; class=&quot;headerlink&quot; title=&quot;二、离屏渲染的是是非非&quot;&gt;&lt;/a&gt;二、离屏渲染的是是非非&lt;/h3&gt;&lt;p&gt;相比于当前屏幕渲染，离屏渲染的代价是很高的，主要体现在两个方面：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;创建新缓冲区&lt;/strong&gt;&lt;br&gt;要想进行离屏渲染，首先要创建一个新的缓冲区。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上下文切换&lt;/strong&gt;&lt;br&gt;离屏渲染的整个过程，需要多次切换上下文环境：先是从当前屏幕（On-Screen）切换到离屏（Off-Screen）；等到离屏渲染结束以后，将离屏缓冲区的渲染结果显示到屏幕上有需要将上下文环境从离屏切换到当前屏幕。而上下文环境的切换是要付出很大代价的。&lt;/p&gt;
+&lt;h3 id=&quot;三、离屏渲染触发方式&quot;&gt;&lt;a href=&quot;#三、离屏渲染触发方式&quot; class=&quot;headerlink&quot; title=&quot;三、离屏渲染触发方式&quot;&gt;&lt;/a&gt;三、离屏渲染触发方式&lt;/h3&gt;&lt;p&gt;设置了以下属性时，都会触发离屏绘制：&lt;br&gt;    shouldRasterize（光栅化）&lt;br&gt;    masks（遮罩）&lt;br&gt;    shadows（阴影）&lt;br&gt;    edge antialiasing（抗锯齿）&lt;br&gt;    group opacity（不透明）&lt;br&gt;需要注意的是，如果shouldRasterize被设置成YES，在触发离屏绘制的同时，会将光栅化后的内容缓存起来，如果对应的layer及其sublayers没有发生改变，在下一帧的时候可以直接复用。这将在很大程度上提升渲染性能。&lt;/p&gt;
+&lt;p&gt;而其它属性如果是开启的，就不会有缓存，离屏绘制会在每一帧都发生。&lt;/p&gt;
+&lt;h3 id=&quot;四、另一种特殊的“离屏渲染”&quot;&gt;&lt;a href=&quot;#四、另一种特殊的“离屏渲染”&quot; class=&quot;headerlink&quot; title=&quot;四、另一种特殊的“离屏渲染”&quot;&gt;&lt;/a&gt;四、另一种特殊的“离屏渲染”&lt;/h3&gt;&lt;p&gt;按照之前的说法，如果将不在GPU的当前屏幕缓冲区中进行的渲染都称为离屏渲染，那么就还有另一种特殊的“离屏渲染”方式：CPU渲染。&lt;/p&gt;
+&lt;p&gt;如果我们重写了drawRect方法，并且使用任何Core Graphics的技术进行了绘制操作，就涉及到了CPU渲染。整个渲染过程由CPU在App内同步地完成，渲染得到的bitmap最后再交由GPU用于显示。&lt;/p&gt;
+&lt;h3 id=&quot;五、Instruments&quot;&gt;&lt;a href=&quot;#五、Instruments&quot; class=&quot;headerlink&quot; title=&quot;五、Instruments&quot;&gt;&lt;/a&gt;五、Instruments&lt;/h3&gt;&lt;p&gt;Instruments的Core Animation工具中有几个和离屏渲染相关的检查选项：&lt;/p&gt;
+&lt;p&gt;Color Offscreen-Rendered Yellow&lt;br&gt;开启后会把那些需要离屏渲染的图层高亮成黄色，这就意味着黄色图层可能存在性能问题。&lt;/p&gt;
+&lt;p&gt;Color Hits Green and Misses Red&lt;br&gt;如果shouldRasterize被设置成YES，对应的渲染结果会被缓存，如果图层是绿色，就表示这些缓存被复用；如果是红色就表示缓存会被重复创建，这就表示该处存在性能问题了。&lt;/p&gt;
+&lt;h3 id=&quot;六、如何抉择&quot;&gt;&lt;a href=&quot;#六、如何抉择&quot; class=&quot;headerlink&quot; title=&quot;六、如何抉择&quot;&gt;&lt;/a&gt;六、如何抉择&lt;/h3&gt;&lt;p&gt;现在摆在我们面前得有三个选择：当前屏幕渲染、离屏渲染、CPU渲染，该用哪个呢？这需要根据具体的使用场景来决定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 尽量使用当前屏幕渲染&lt;/strong&gt;&lt;br&gt;鉴于离屏渲染、CPU渲染可能带来的性能问题，一般情况下，我们要尽量使用当前屏幕渲染。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 离屏渲染 VS CPU渲染&lt;/strong&gt;&lt;br&gt;由于GPU的浮点运算能力比CPU强，CPU渲染的效率可能不如离屏渲染；但如果仅仅是实现一个简单的效果，直接使用CPU渲染的效率又可能比离屏渲染好，毕竟离屏渲染要涉及到缓冲区创建和上下文切换等耗时操作。&lt;/p&gt;
+&lt;p&gt;总之，具体的选择应该由性能测试结果来决定。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h3 id=&quot;一、概念理解&quot;&gt;&lt;a href=&quot;#一、概念理解&quot; class=&quot;headerlink&quot; title=&quot;一、概念理解&quot;&gt;&lt;/a&gt;一、概念理解&lt;/h3&gt;&lt;p&gt;OpenGL中，GPU屏幕渲染有以下两种方式：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;On-Screen Rendering&lt;/strong&gt;&lt;br&gt;意为当前屏幕渲染，指的是GPU的渲染操作是在当前用于显示的屏幕缓冲区中进行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Off-Screen Rendering&lt;/strong&gt;&lt;br&gt;意为离屏渲染，指的是GPU在当前屏幕缓冲区以外新开辟一个缓冲区进行渲染操作。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="iOS 开发" scheme="http://yoursite.com/tags/iOS-%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="离屏渲染" scheme="http://yoursite.com/tags/%E7%A6%BB%E5%B1%8F%E6%B8%B2%E6%9F%93/"/>
     
   </entry>
   
