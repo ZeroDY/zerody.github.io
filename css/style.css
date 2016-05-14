@@ -486,10 +486,10 @@ a {
   width: 100%;
 }
 #header a {
-  color: #ccc; /* 左边名字、标签字体颜色 */
+  color: #fff; /* 左边名字、标签字体颜色 */
 }
 #header a:hover {
-  color: #fff; /* 左边名字、标签字体变换颜色 */
+  color: #5e7c85; /* 左边名字、标签字体变换颜色 */
 }
 #header .profilepic {
   text-align: center;
@@ -502,7 +502,7 @@ a {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background: #09c; /*头像图片背景颜色 88acdb*/
+  background: #a1a3a6; /*头像图片背景颜色 88acdb*/
   -webkit-transition: all 0.2s ease-in;
   display: -webkit-box;
   -webkit-box-orient: horizontal;
@@ -525,7 +525,7 @@ a {
 }
 #header .header-subtitle {
   text-align: center;
-  color: #999;
+  color: #72777b;
   font-size: 14px;
   line-height: 25px;
   overflow: hidden;
@@ -535,12 +535,13 @@ a {
   -webkit-box-orient: vertical;
 }
 #header .header-menu {
+  color: #ccc;
   font-weight: 300;
   line-height: 30px;
   cursor: pointer;
   text-transform: uppercase;
   float: none;
-  min-height: 150px;
+  min-height: 200px;
   margin-left: -12px;
   text-align: center;
   display: -webkit-box;
