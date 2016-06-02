@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-13T09:37:35.000Z</updated>
+  <updated>2016-06-02T13:17:30.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ShougongkeDemo(仿“手工客”iOS App)说明</title>
+    <link href="http://yoursite.com/2016/06/02/ShougongkeDemo(%E4%BB%BF%E2%80%9C%E6%89%8B%E5%B7%A5%E5%AE%A2%E2%80%9DiOS%20App)/"/>
+    <id>http://yoursite.com/2016/06/02/ShougongkeDemo(仿“手工客”iOS App)/</id>
+    <published>2016-06-02T13:07:10.000Z</published>
+    <updated>2016-06-02T13:17:30.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;h1 id=&quot;郑重声明&quot;&gt;&lt;a href=&quot;#郑重声明&quot; class=&quot;headerlink&quot; title=&quot;郑重声明&quot;&gt;&lt;/a&gt;郑重声明&lt;/h1&gt;&lt;p&gt;本项目用于自身学习，以及为找工作做准备。&lt;br&gt;如无意间对您有所冒犯，请联系 deyi233@gmail.com&lt;/p&gt;
+&lt;p&gt;我将尽快删除，谢谢。&lt;/p&gt;
+&lt;p&gt;代码地址 &lt;a href=&quot;https://github.com/ZeroDY/ShougongkeDemo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/ZeroDY/ShougongkeDemo&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;为什么要做一个仿制App&quot;&gt;&lt;a href=&quot;#为什么要做一个仿制App&quot; class=&quot;headerlink&quot; title=&quot;为什么要做一个仿制App&quot;&gt;&lt;/a&gt;为什么要做一个仿制App&lt;/h1&gt;&lt;p&gt;从上家公司离职以来，由于个人原因一直耽误找工作。5月份上旬开始准备找工作时，&lt;br&gt;打算把自己工作这一段时间以来掌握的东西做一下整理，最好通过完整的项目做一下展示，既展示了自己，又方便用人单位。&lt;br&gt;但不能拿原公司商业化的东西展示；自己做一个新的 APP，后台编写又会耽误太多时间；所以就萌生仿制一款现有成熟App的想法。&lt;/p&gt;
+&lt;h2 id=&quot;为什么是“手工客”&quot;&gt;&lt;a href=&quot;#为什么是“手工客”&quot; class=&quot;headerlink&quot; title=&quot;为什么是“手工客”&quot;&gt;&lt;/a&gt;为什么是“手工客”&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;首先，“手工客”相较于微博等客户端，功能专一，界面简洁，复杂程度低，但细节处理又不错，难度适中&lt;/li&gt;
+&lt;li&gt;其次，个人比较倾向于寻找文化传播、社交分享一类的工作&lt;/li&gt;
+&lt;li&gt;最后，本人是一个手工爱好者（虽然手艺差点），更符合兴趣爱好，有动力&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;项目说明&quot;&gt;&lt;a href=&quot;#项目说明&quot; class=&quot;headerlink&quot; title=&quot;项目说明&quot;&gt;&lt;/a&gt;项目说明&lt;/h1&gt;&lt;h2 id=&quot;仿制版本&quot;&gt;&lt;a href=&quot;#仿制版本&quot; class=&quot;headerlink&quot; title=&quot;仿制版本&quot;&gt;&lt;/a&gt;仿制版本&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;截止5月18号最新版本 手工客 V5.7.3
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;开发环境&quot;&gt;&lt;a href=&quot;#开发环境&quot; class=&quot;headerlink&quot; title=&quot;开发环境&quot;&gt;&lt;/a&gt;开发环境&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;Xcode 7.2.1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;由于自己比较依赖代码提示，最新的 Xcode 7.3系列 ,大家都知道的代码提示问题，果断装回7.2&lt;/p&gt;
+&lt;h2 id=&quot;语言&quot;&gt;&lt;a href=&quot;#语言&quot; class=&quot;headerlink&quot; title=&quot;语言&quot;&gt;&lt;/a&gt;语言&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;Objective-C
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Swift 虽然有用过，但还是Objective-C比较熟练&lt;/p&gt;
+&lt;h2 id=&quot;运行环境&quot;&gt;&lt;a href=&quot;#运行环境&quot; class=&quot;headerlink&quot; title=&quot;运行环境&quot;&gt;&lt;/a&gt;运行环境&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;iOS8+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;时间原因，未做 iOS8以下版本的适配，真机测试5s，其他为模拟器测试&lt;/p&gt;
+&lt;h2 id=&quot;完成度&quot;&gt;&lt;a href=&quot;#完成度&quot; class=&quot;headerlink&quot; title=&quot;完成度&quot;&gt;&lt;/a&gt;完成度&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;项目初始目标为未登录状态下所有功能界面
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;现未开发的功能有：跳转购买，用户主页两大模块，后期将逐步完成&lt;/p&gt;
+&lt;p&gt;其他页面中存在少数页面细节遗漏，后期逐步优化&lt;/p&gt;
+&lt;h2 id=&quot;开发说明&quot;&gt;&lt;a href=&quot;#开发说明&quot; class=&quot;headerlink&quot; title=&quot;开发说明&quot;&gt;&lt;/a&gt;开发说明&lt;/h2&gt;&lt;h3 id=&quot;1-架构&quot;&gt;&lt;a href=&quot;#1-架构&quot; class=&quot;headerlink&quot; title=&quot;1.架构&quot;&gt;&lt;/a&gt;1.架构&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;采用传统的MVC架构。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;项目前期曾考虑ReactiveCocoa的使用，但虽然MVVM模式及ReactiveCocoa也曾有所涉猎，但毕竟不够熟练，所以未予采用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在单一样式cell的界面中，使用自定义的dataSource及delegate对 UITableView 及 UICollectionView从 controller 中剥离，进行瘦身。个别 cell 多样结构略复杂的界面，随未做瘦身，但尽量简化 controller 的处理，例如“首页”和“市集”界面&lt;/li&gt;
+&lt;li&gt;数据处理基本放在 model 层完成，个别数据简单的放在 getter 中完成 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;2-开发方式&quot;&gt;&lt;a href=&quot;#2-开发方式&quot; class=&quot;headerlink&quot; title=&quot;2.开发方式&quot;&gt;&lt;/a&gt;2.开发方式&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;纯代码开发。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在查看“手工客”的安装包时，发现使用的是storyboard及xib文件开发。&lt;br&gt;考虑到在公司开发中的版本整合中避免不必要的麻烦，个人更倾向于纯代码开发。&lt;br&gt;当然storyboard及xib个人也是比较熟练的。&lt;/p&gt;
+&lt;h3 id=&quot;3-资源&quot;&gt;&lt;a href=&quot;#3-资源&quot; class=&quot;headerlink&quot; title=&quot;3.资源&quot;&gt;&lt;/a&gt;3.资源&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;项目中绝大部分图片资源来自手工客Android端。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在项目初期，从手工客iOS端获取图片资源后，发现大部分图片是没有得到的，所以转而考虑从 Android 端获取，最后实在找不到的，再自己从运行截图上抠(比如下拉刷新的小剪刀)。&lt;br&gt;    所以，在图片的使用上可能跟原版存在细微差别。&lt;/p&gt;
+&lt;h3 id=&quot;4-接口&quot;&gt;&lt;a href=&quot;#4-接口&quot; class=&quot;headerlink&quot; title=&quot;4.接口&quot;&gt;&lt;/a&gt;4.接口&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;使用Charles抓取接口。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;考虑到安全问题，捕获接口全部为未登录状态下的接口&lt;/p&gt;
+&lt;h3 id=&quot;5-第三方类库&quot;&gt;&lt;a href=&quot;#5-第三方类库&quot; class=&quot;headerlink&quot; title=&quot;5.第三方类库&quot;&gt;&lt;/a&gt;5.第三方类库&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;AFNetworking  -  结合&lt;a href=&quot;https://github.com/CoderJackyHuang/HYBNetworking&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HYBNetworking&lt;/a&gt;以及自身开发需求经验，对AFNetworking进行简单二次封装&lt;/li&gt;
+&lt;li&gt;Masonry   -  从去年学习了Masonry之后就开始放弃了拖拽开发……&lt;/li&gt;
+&lt;li&gt;MJExtension - 结合 ESJsonFormat 插件使用， model 的创建效率提升很高。但未对接口数据进行过滤，所以项目中存在部分无用的属性&lt;/li&gt;
+&lt;li&gt;MJRefresh - 使用MJRefresh自定义了下拉刷新&lt;/li&gt;
+&lt;li&gt;UITableView+FDTemplateLayoutCell - 不得不说这个计算行高，真的超好用&lt;/li&gt;
+&lt;li&gt;自己写的常用的几个：DYBannerView - 滚动条 、 DYMenu - 单级菜单  、DYSegment - 分段选择 略作修改整合到项目中&lt;/li&gt;
+&lt;li&gt;其他的如SDWebImage、MWPhotoBrowser、IQKeyboardManager不做多解释&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;问题说明&quot;&gt;&lt;a href=&quot;#问题说明&quot; class=&quot;headerlink&quot; title=&quot;问题说明&quot;&gt;&lt;/a&gt;问题说明&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;由于接口自己抓取、缺少设计文档、自己的不注意等种种原因，接口中数据的使用可能会不准确，页面布局在其他机型可能不合理，造成项目中经常会出现诸如无法跳转、图片过大、文字越界等问题，后期将逐步优化。&lt;/li&gt;
+&lt;li&gt;另外为了展示首次安装的引导页面，关闭了二次开启跳过此页面的代码。&lt;/li&gt;
+&lt;li&gt;相关命名从为了便于开发，与接口一致，可能有待斟酌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;部分效果展示&quot;&gt;&lt;a href=&quot;#部分效果展示&quot; class=&quot;headerlink&quot; title=&quot;部分效果展示&quot;&gt;&lt;/a&gt;部分效果展示&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首页 &lt;a href=&quot;http://o76hg1e0m.bkt.clouddn.com/sgk-show01.gif&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;首页.gif&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;教程 &lt;a href=&quot;http://o76hg1e0m.bkt.clouddn.com/sgk-show02.gif&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;教程.gif&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;市集 &lt;a href=&quot;http://o76hg1e0m.bkt.clouddn.com/sgk-show04.gif&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;市集.gif&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;最后&quot;&gt;&lt;a href=&quot;#最后&quot; class=&quot;headerlink&quot; title=&quot;最后&quot;&gt;&lt;/a&gt;最后&lt;/h1&gt;&lt;p&gt;开发中遇到的问题，代码整理，经验总结等，请移步 &lt;a href=&quot;http://www.zerody.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我的博客&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;这才是真的最后-放个我的手工作品镇楼&quot;&gt;&lt;a href=&quot;#这才是真的最后-放个我的手工作品镇楼&quot; class=&quot;headerlink&quot; title=&quot;这才是真的最后-放个我的手工作品镇楼&quot;&gt;&lt;/a&gt;这才是真的最后-放个我的手工作品镇楼&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/IMG_20140123_113242.jpg&quot; alt=&quot;&quot;&gt;  &lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/IMG_20140123_112739.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;h1 id=&quot;郑重声明&quot;&gt;&lt;a href=&quot;#郑重声明&quot; class=&quot;headerlink&quot; title=&quot;郑重声明&quot;&gt;&lt;/a&gt;郑重声明&lt;/h1&gt;&lt;p&gt;本项目用于自身学习，以及为找工作做准备。&lt;br&gt;如无意间对您有所冒犯，请联系 deyi233@gmail.com&lt;/p&gt;
+&lt;p&gt;我将尽快删除，谢谢。&lt;/p&gt;
+&lt;p&gt;代码地址 &lt;a href=&quot;https://github.com/ZeroDY/ShougongkeDemo&quot;&gt;https://github.com/ZeroDY/ShougongkeDemo&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="开发" scheme="http://yoursite.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="手工客" scheme="http://yoursite.com/tags/%E6%89%8B%E5%B7%A5%E5%AE%A2/"/>
+    
+      <category term="仿" scheme="http://yoursite.com/tags/%E4%BB%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown语法和MWeb写作使用说明</title>
@@ -76,7 +162,7 @@
 &lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;email &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;example@example.com&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;string&quot;&gt;GitHub&lt;/span&gt;](&lt;span class=&quot;link&quot;&gt;http://github.com&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;自动生成连接  &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;http:&lt;/span&gt;//&lt;span class=&quot;attr&quot;&gt;www.github.com&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。&lt;br&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#120;&amp;#x61;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#x40;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#120;&amp;#x61;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#x40;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#58;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#64;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#109;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#64;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#109;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
 &lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;某某说:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第一行引用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第二行费用文字&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;效果如下：&lt;/p&gt;
