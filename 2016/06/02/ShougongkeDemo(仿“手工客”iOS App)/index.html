@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://o76hg1e0m.bkt.clouddn.com/sgk-show04.gif">
 <meta property="og:image" content="http://o76hg1e0m.bkt.clouddn.com/IMG_20140123_113242.jpg">
 <meta property="og:image" content="http://o76hg1e0m.bkt.clouddn.com/IMG_20140123_112739.jpg">
-<meta property="og:updated_time" content="2016-06-02T13:32:04.000Z">
+<meta property="og:updated_time" content="2016-06-02T13:33:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ShougongkeDemo(仿“手工客”iOS App)说明">
 <meta name="twitter:description" content="郑重声明本项目用于自身学习，以及为找工作做准备。如无意间对您有所冒犯，请联系 deyi233@gmail.com
@@ -262,28 +262,39 @@
 <li>其次，个人比较倾向于寻找文化传播、社交分享一类的工作</li>
 <li>最后，本人是一个手工爱好者（虽然手艺差点），更符合兴趣爱好，有动力</li>
 </ol>
-<h1 id="二、项目说明"><a href="#二、项目说明" class="headerlink" title="二、项目说明"></a>二、项目说明</h1><h2 id="仿制版本"><a href="#仿制版本" class="headerlink" title="仿制版本"></a>仿制版本</h2><pre><code>截止5月18号最新版本 手工客 V5.7.3
-</code></pre><h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><pre><code>Xcode 7.2.1
-</code></pre><p>由于自己比较依赖代码提示，最新的 Xcode 7.3系列 ,大家都知道的代码提示问题，果断装回7.2</p>
-<h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><pre><code>Objective-C
-</code></pre><p>Swift 虽然有用过，但还是Objective-C比较熟练</p>
-<h2 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h2><pre><code>iOS8+
-</code></pre><p>时间原因，未做 iOS8以下版本的适配，真机测试5s，其他为模拟器测试</p>
-<h2 id="完成度"><a href="#完成度" class="headerlink" title="完成度"></a>完成度</h2><pre><code>项目初始目标为未登录状态下所有功能界面
-</code></pre><p>现未开发的功能有：跳转购买，用户主页两大模块，后期将逐步完成</p>
+<h1 id="二、项目说明"><a href="#二、项目说明" class="headerlink" title="二、项目说明"></a>二、项目说明</h1><h2 id="仿制版本"><a href="#仿制版本" class="headerlink" title="仿制版本"></a>仿制版本</h2><blockquote>
+<p>截止5月18号最新版本 手工客 V5.7.3</p>
+</blockquote>
+<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><blockquote>
+<p>Xcode 7.2.1<br>由于自己比较依赖代码提示，最新的 Xcode 7.3系列 ,大家都知道的代码提示问题，果断装回7.2</p>
+</blockquote>
+<h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><blockquote>
+<p>Objective-C<br>Swift 虽然有用过，但还是Objective-C比较熟练</p>
+</blockquote>
+<h2 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h2><blockquote>
+<p>iOS8+<br>时间原因，未做 iOS8以下版本的适配，真机测试5s，其他为模拟器测试</p>
+</blockquote>
+<h2 id="完成度"><a href="#完成度" class="headerlink" title="完成度"></a>完成度</h2><blockquote>
+<p>项目初始目标为未登录状态下所有功能界面</p>
+</blockquote>
+<p>现未开发的功能有：跳转购买，用户主页两大模块，后期将逐步完成</p>
 <p>其他页面中存在少数页面细节遗漏，后期逐步优化</p>
-<h1 id="三、开发说明"><a href="#三、开发说明" class="headerlink" title="三、开发说明"></a>三、开发说明</h1><h2 id="1-架构"><a href="#1-架构" class="headerlink" title="1.架构"></a>1.架构</h2><pre><code>采用传统的MVC架构。
-</code></pre><p>项目前期曾考虑ReactiveCocoa的使用，但虽然MVVM模式及ReactiveCocoa也曾有所涉猎，但毕竟不够熟练，所以未予采用</p>
+<h1 id="三、开发说明"><a href="#三、开发说明" class="headerlink" title="三、开发说明"></a>三、开发说明</h1><h2 id="1-架构"><a href="#1-架构" class="headerlink" title="1.架构"></a>1.架构</h2><blockquote>
+<p>采用传统的MVC架构。<br>项目前期曾考虑ReactiveCocoa的使用，但虽然MVVM模式及ReactiveCocoa也曾有所涉猎，但毕竟不够熟练，所以未予采用</p>
+</blockquote>
 <ul>
 <li>在单一样式cell的界面中，使用自定义的dataSource及delegate对 UITableView 及 UICollectionView从 controller 中剥离，进行瘦身。个别 cell 多样结构略复杂的界面，随未做瘦身，但尽量简化 controller 的处理，例如“首页”和“市集”界面</li>
 <li>数据处理基本放在 model 层完成，个别数据简单的放在 getter 中完成 </li>
 </ul>
-<h2 id="2-开发方式"><a href="#2-开发方式" class="headerlink" title="2.开发方式"></a>2.开发方式</h2><pre><code>纯代码开发。
-</code></pre><p>在查看“手工客”的安装包时，发现使用的是storyboard及xib文件开发。<br>考虑到在公司开发中的版本整合中避免不必要的麻烦，个人更倾向于纯代码开发。<br>当然storyboard及xib个人也是比较熟练的。</p>
-<h2 id="3-资源"><a href="#3-资源" class="headerlink" title="3.资源"></a>3.资源</h2><pre><code>项目中绝大部分图片资源来自手工客Android端。
-</code></pre><p>在项目初期，从手工客iOS端获取图片资源后，发现大部分图片是没有得到的，所以转而考虑从 Android 端获取，最后实在找不到的，再自己从运行截图上抠(比如下拉刷新的小剪刀)。<br>    所以，在图片的使用上可能跟原版存在细微差别。</p>
-<h2 id="4-接口"><a href="#4-接口" class="headerlink" title="4.接口"></a>4.接口</h2><pre><code>使用Charles抓取接口。
-</code></pre><p>考虑到安全问题，捕获接口全部为未登录状态下的接口</p>
+<h2 id="2-开发方式"><a href="#2-开发方式" class="headerlink" title="2.开发方式"></a>2.开发方式</h2><blockquote>
+<p>纯代码开发。<br>在查看“手工客”的安装包时，发现使用的是storyboard及xib文件开发。<br>考虑到在公司开发中的版本整合中避免不必要的麻烦，个人更倾向于纯代码开发。<br>当然storyboard及xib个人也是比较熟练的。</p>
+</blockquote>
+<h2 id="3-资源"><a href="#3-资源" class="headerlink" title="3.资源"></a>3.资源</h2><blockquote>
+<p>项目中绝大部分图片资源来自手工客Android端。<br>在项目初期，从手工客iOS端获取图片资源后，发现大部分图片是没有得到的，所以转而考虑从 Android 端获取，最后实在找不到的，再自己从运行截图上抠(比如下拉刷新的小剪刀)。<br>所以，在图片的使用上可能跟原版存在细微差别。</p>
+</blockquote>
+<h2 id="4-接口"><a href="#4-接口" class="headerlink" title="4.接口"></a>4.接口</h2><blockquote>
+<p>使用Charles抓取接口。<br>考虑到安全问题，捕获接口全部为未登录状态下的接口</p>
+</blockquote>
 <h2 id="5-第三方类库"><a href="#5-第三方类库" class="headerlink" title="5.第三方类库"></a>5.第三方类库</h2><ul>
 <li>AFNetworking  -  结合<a href="https://github.com/CoderJackyHuang/HYBNetworking" target="_blank" rel="external">HYBNetworking</a>以及自身开发需求经验，对AFNetworking进行简单二次封装</li>
 <li>Masonry   -  从去年学习了Masonry之后就开始放弃了拖拽开发……</li>
