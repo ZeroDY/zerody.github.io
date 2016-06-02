@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-02T13:17:30.000Z</updated>
+  <updated>2016-06-02T13:22:35.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/02/ShougongkeDemo(%E4%BB%BF%E2%80%9C%E6%89%8B%E5%B7%A5%E5%AE%A2%E2%80%9DiOS%20App)/"/>
     <id>http://yoursite.com/2016/06/02/ShougongkeDemo(仿“手工客”iOS App)/</id>
     <published>2016-06-02T13:07:10.000Z</published>
-    <updated>2016-06-02T13:17:30.000Z</updated>
+    <updated>2016-06-02T13:22:35.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;h1 id=&quot;郑重声明&quot;&gt;&lt;a href=&quot;#郑重声明&quot; class=&quot;headerlink&quot; title=&quot;郑重声明&quot;&gt;&lt;/a&gt;郑重声明&lt;/h1&gt;&lt;p&gt;本项目用于自身学习，以及为找工作做准备。&lt;br&gt;如无意间对您有所冒犯，请联系 deyi233@gmail.com&lt;/p&gt;
@@ -28,13 +28,13 @@
 &lt;p&gt;代码地址 &lt;a href=&quot;https://github.com/ZeroDY/ShougongkeDemo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/ZeroDY/ShougongkeDemo&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;为什么要做一个仿制App&quot;&gt;&lt;a href=&quot;#为什么要做一个仿制App&quot; class=&quot;headerlink&quot; title=&quot;为什么要做一个仿制App&quot;&gt;&lt;/a&gt;为什么要做一个仿制App&lt;/h1&gt;&lt;p&gt;从上家公司离职以来，由于个人原因一直耽误找工作。5月份上旬开始准备找工作时，&lt;br&gt;打算把自己工作这一段时间以来掌握的东西做一下整理，最好通过完整的项目做一下展示，既展示了自己，又方便用人单位。&lt;br&gt;但不能拿原公司商业化的东西展示；自己做一个新的 APP，后台编写又会耽误太多时间；所以就萌生仿制一款现有成熟App的想法。&lt;/p&gt;
+&lt;h1 id=&quot;一、为什么要做一个仿制App&quot;&gt;&lt;a href=&quot;#一、为什么要做一个仿制App&quot; class=&quot;headerlink&quot; title=&quot;一、为什么要做一个仿制App&quot;&gt;&lt;/a&gt;一、为什么要做一个仿制App&lt;/h1&gt;&lt;p&gt;从上家公司离职以来，由于个人原因一直耽误找工作。5月份上旬开始准备找工作时，&lt;br&gt;打算把自己工作这一段时间以来掌握的东西做一下整理，最好通过完整的项目做一下展示，既展示了自己，又方便用人单位。&lt;br&gt;但不能拿原公司商业化的东西展示；自己做一个新的 APP，后台编写又会耽误太多时间；所以就萌生仿制一款现有成熟App的想法。&lt;/p&gt;
 &lt;h2 id=&quot;为什么是“手工客”&quot;&gt;&lt;a href=&quot;#为什么是“手工客”&quot; class=&quot;headerlink&quot; title=&quot;为什么是“手工客”&quot;&gt;&lt;/a&gt;为什么是“手工客”&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;首先，“手工客”相较于微博等客户端，功能专一，界面简洁，复杂程度低，但细节处理又不错，难度适中&lt;/li&gt;
 &lt;li&gt;其次，个人比较倾向于寻找文化传播、社交分享一类的工作&lt;/li&gt;
 &lt;li&gt;最后，本人是一个手工爱好者（虽然手艺差点），更符合兴趣爱好，有动力&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&quot;项目说明&quot;&gt;&lt;a href=&quot;#项目说明&quot; class=&quot;headerlink&quot; title=&quot;项目说明&quot;&gt;&lt;/a&gt;项目说明&lt;/h1&gt;&lt;h2 id=&quot;仿制版本&quot;&gt;&lt;a href=&quot;#仿制版本&quot; class=&quot;headerlink&quot; title=&quot;仿制版本&quot;&gt;&lt;/a&gt;仿制版本&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;截止5月18号最新版本 手工客 V5.7.3
+&lt;h1 id=&quot;二、项目说明&quot;&gt;&lt;a href=&quot;#二、项目说明&quot; class=&quot;headerlink&quot; title=&quot;二、项目说明&quot;&gt;&lt;/a&gt;二、项目说明&lt;/h1&gt;&lt;h2 id=&quot;仿制版本&quot;&gt;&lt;a href=&quot;#仿制版本&quot; class=&quot;headerlink&quot; title=&quot;仿制版本&quot;&gt;&lt;/a&gt;仿制版本&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;截止5月18号最新版本 手工客 V5.7.3
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;开发环境&quot;&gt;&lt;a href=&quot;#开发环境&quot; class=&quot;headerlink&quot; title=&quot;开发环境&quot;&gt;&lt;/a&gt;开发环境&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;Xcode 7.2.1
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;由于自己比较依赖代码提示，最新的 Xcode 7.3系列 ,大家都知道的代码提示问题，果断装回7.2&lt;/p&gt;
 &lt;h2 id=&quot;语言&quot;&gt;&lt;a href=&quot;#语言&quot; class=&quot;headerlink&quot; title=&quot;语言&quot;&gt;&lt;/a&gt;语言&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;Objective-C
@@ -65,21 +65,25 @@
 &lt;li&gt;自己写的常用的几个：DYBannerView - 滚动条 、 DYMenu - 单级菜单  、DYSegment - 分段选择 略作修改整合到项目中&lt;/li&gt;
 &lt;li&gt;其他的如SDWebImage、MWPhotoBrowser、IQKeyboardManager不做多解释&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;问题说明&quot;&gt;&lt;a href=&quot;#问题说明&quot; class=&quot;headerlink&quot; title=&quot;问题说明&quot;&gt;&lt;/a&gt;问题说明&lt;/h2&gt;&lt;ul&gt;
+&lt;h2 id=&quot;三、问题说明&quot;&gt;&lt;a href=&quot;#三、问题说明&quot; class=&quot;headerlink&quot; title=&quot;三、问题说明&quot;&gt;&lt;/a&gt;三、问题说明&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;由于接口自己抓取、缺少设计文档、自己的不注意等种种原因，接口中数据的使用可能会不准确，页面布局在其他机型可能不合理，造成项目中经常会出现诸如无法跳转、图片过大、文字越界等问题，后期将逐步优化。&lt;/li&gt;
 &lt;li&gt;另外为了展示首次安装的引导页面，关闭了二次开启跳过此页面的代码。&lt;/li&gt;
 &lt;li&gt;相关命名从为了便于开发，与接口一致，可能有待斟酌&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;部分效果展示&quot;&gt;&lt;a href=&quot;#部分效果展示&quot; class=&quot;headerlink&quot; title=&quot;部分效果展示&quot;&gt;&lt;/a&gt;部分效果展示&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;首页 &lt;a href=&quot;http://o76hg1e0m.bkt.clouddn.com/sgk-show01.gif&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;首页.gif&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;教程 &lt;a href=&quot;http://o76hg1e0m.bkt.clouddn.com/sgk-show02.gif&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;教程.gif&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;市集 &lt;a href=&quot;http://o76hg1e0m.bkt.clouddn.com/sgk-show04.gif&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;市集.gif&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;首页 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;最后&quot;&gt;&lt;a href=&quot;#最后&quot; class=&quot;headerlink&quot; title=&quot;最后&quot;&gt;&lt;/a&gt;最后&lt;/h1&gt;&lt;p&gt;开发中遇到的问题，代码整理，经验总结等，请移步 &lt;a href=&quot;http://www.zerody.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我的博客&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;这才是真的最后-放个我的手工作品镇楼&quot;&gt;&lt;a href=&quot;#这才是真的最后-放个我的手工作品镇楼&quot; class=&quot;headerlink&quot; title=&quot;这才是真的最后-放个我的手工作品镇楼&quot;&gt;&lt;/a&gt;这才是真的最后-放个我的手工作品镇楼&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/IMG_20140123_113242.jpg&quot; alt=&quot;&quot;&gt;  &lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/IMG_20140123_112739.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/sgk-show01.gif&quot; alt=&quot;首页.gif&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;教程 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/sgk-show02.gif&quot; alt=&quot;教程.gif&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;市集 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/sgk-show04.gif&quot; alt=&quot;市集.gif&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;最后&quot;&gt;&lt;a href=&quot;#最后&quot; class=&quot;headerlink&quot; title=&quot;最后&quot;&gt;&lt;/a&gt;最后&lt;/h1&gt;&lt;p&gt;水平不高，能力有限，望多指正。&lt;br&gt;开发中遇到的问题，代码整理，经验总结等，请移步 &lt;a href=&quot;http://www.zerody.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我的博客&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;这才是真的最后&quot;&gt;&lt;a href=&quot;#这才是真的最后&quot; class=&quot;headerlink&quot; title=&quot;这才是真的最后&quot;&gt;&lt;/a&gt;这才是真的最后&lt;/h1&gt;&lt;p&gt;放个我的手工作品镇楼&lt;br&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/IMG_20140123_113242.jpg&quot; alt=&quot;&quot;&gt;  &lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/IMG_20140123_112739.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
