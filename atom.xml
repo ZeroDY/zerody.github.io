@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-02T13:26:28.000Z</updated>
+  <updated>2016-06-02T13:32:04.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/02/ShougongkeDemo(%E4%BB%BF%E2%80%9C%E6%89%8B%E5%B7%A5%E5%AE%A2%E2%80%9DiOS%20App)/"/>
     <id>http://yoursite.com/2016/06/02/ShougongkeDemo(仿“手工客”iOS App)/</id>
     <published>2016-06-02T13:07:10.000Z</published>
-    <updated>2016-06-02T13:26:28.000Z</updated>
+    <updated>2016-06-02T13:32:04.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;h1 id=&quot;郑重声明&quot;&gt;&lt;a href=&quot;#郑重声明&quot; class=&quot;headerlink&quot; title=&quot;郑重声明&quot;&gt;&lt;/a&gt;郑重声明&lt;/h1&gt;&lt;p&gt;本项目用于自身学习，以及为找工作做准备。&lt;br&gt;如无意间对您有所冒犯，请联系 deyi233@gmail.com&lt;/p&gt;
@@ -65,7 +65,7 @@
 &lt;li&gt;自己写的常用的几个：DYBannerView - 滚动条 、 DYMenu - 单级菜单  、DYSegment - 分段选择 略作修改整合到项目中&lt;/li&gt;
 &lt;li&gt;其他的如SDWebImage、MWPhotoBrowser、IQKeyboardManager不做多解释&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;四、问题说明&quot;&gt;&lt;a href=&quot;#四、问题说明&quot; class=&quot;headerlink&quot; title=&quot;四、问题说明&quot;&gt;&lt;/a&gt;四、问题说明&lt;/h2&gt;&lt;ul&gt;
+&lt;h1 id=&quot;四、问题说明&quot;&gt;&lt;a href=&quot;#四、问题说明&quot; class=&quot;headerlink&quot; title=&quot;四、问题说明&quot;&gt;&lt;/a&gt;四、问题说明&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;由于接口自己抓取、缺少设计文档、自己的不注意等种种原因，接口中数据的使用可能会不准确，页面布局在其他机型可能不合理，造成项目中经常会出现诸如无法跳转、图片过大、文字越界等问题，后期将逐步优化。&lt;/li&gt;
 &lt;li&gt;另外为了展示首次安装的引导页面，关闭了二次开启跳过此页面的代码。&lt;/li&gt;
 &lt;li&gt;相关命名从为了便于开发，与接口一致，可能有待斟酌&lt;/li&gt;
