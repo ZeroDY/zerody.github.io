@@ -167,6 +167,94 @@
   </entry>
   
   <entry>
+    <title>UIApplication学习笔记</title>
+    <link href="http://yoursite.com/2016/03/02/UIApplication%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/03/02/UIApplication学习笔记/</id>
+    <published>2016-03-02T15:51:06.000Z</published>
+    <updated>2016-06-04T16:56:51.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;什么是UIApplication&quot;&gt;&lt;a href=&quot;#什么是UIApplication&quot; class=&quot;headerlink&quot; title=&quot;什么是UIApplication&quot;&gt;&lt;/a&gt;什么是UIApplication&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;UIApplication对象是应⽤程序的象征.&lt;br&gt;每一个应用都有⾃己的UIApplication对象,这个对象是系统自动帮我们创建的, 它是一个单例对象.&lt;br&gt;一个iOS程序启动后创建的第一个对象就是UIApplication对象&lt;br&gt;我们只能通过[UIApplication sharedApplication]获得这个单例对象,不能够手动去创建它.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;UIApplication作用&quot;&gt;&lt;a href=&quot;#UIApplication作用&quot; class=&quot;headerlink&quot; title=&quot;UIApplication作用?&quot;&gt;&lt;/a&gt;UIApplication作用?&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;利⽤用UIApplication对象,能进⾏一些应用级别的操作.&lt;br&gt;可以设置应用程序图标右上角的红色提醒数字&lt;br&gt;设置联⽹指示器的可见性&lt;br&gt;可以设置应用程序的状态栏，进行应用之间的跳转.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;UIApplication功能&quot;&gt;&lt;a href=&quot;#UIApplication功能&quot; class=&quot;headerlink&quot; title=&quot;UIApplication功能&quot;&gt;&lt;/a&gt;UIApplication功能&lt;/h1&gt;&lt;h2 id=&quot;1-设置应用提醒数字&quot;&gt;&lt;a href=&quot;#1-设置应用提醒数字&quot; class=&quot;headerlink&quot; title=&quot;1.设置应用提醒数字&quot;&gt;&lt;/a&gt;1.设置应用提醒数字&lt;/h2&gt;&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;获取&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt;对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt; *ap = [&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt; sharedApplication];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;在设置之前, 要注册一个通知,从ios8之后,都要先注册一个通知对象.才能够接收到提醒. &lt;span class=&quot;built_in&quot;&gt;UIUserNotificationSettings&lt;/span&gt; *notice =&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;built_in&quot;&gt;UIUserNotificationSettings&lt;/span&gt; settingsForTypes:&lt;span class=&quot;built_in&quot;&gt;UIUserNotificationTypeBadge&lt;/span&gt; categories:&lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;注册通知对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[ap registerUserNotificationSettings:notice];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;设置提醒数字&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ap.applicationIconBadgeNumber = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;2-设置连网状态&quot;&gt;&lt;a href=&quot;#2-设置连网状态&quot; class=&quot;headerlink&quot; title=&quot;2.设置连网状态&quot;&gt;&lt;/a&gt;2.设置连网状态&lt;/h2&gt;&lt;p&gt;&lt;code&gt;ap.networkActivityIndicatorVisible = YES;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;3-设置状态栏&quot;&gt;&lt;a href=&quot;#3-设置状态栏&quot; class=&quot;headerlink&quot; title=&quot;3.设置状态栏&quot;&gt;&lt;/a&gt;3.设置状态栏&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;样式&lt;/p&gt;
+&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;built_in&quot;&gt;UIStatusBarStyle&lt;/span&gt;)preferredStatusBarStyle &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;UIStatusBarStyleLightContent&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;隐藏状态栏,通过控制器的方式.同样实现方法:&lt;br&gt;返回NO时为不隐藏&lt;br&gt;返回YES时为隐藏&lt;/p&gt;
+&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;built_in&quot;&gt;BOOL&lt;/span&gt;)prefersStatusBarHidden &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;NO&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通常在开发当中都是应用程序来管理状态栏的.来做统一管理,不然的话, 会有很多个控制器. 会非常的麻烦.&lt;br&gt;想要让应用程序管理状态栏,要在info.plist当中进行配置,&lt;br&gt;在最后一个添加一个key值:View controller-based status bar appearance&lt;br&gt;设置为NO.就是应用程序来管理了. 并且控制器管理会无效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过UIApplication来管理状态&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;获取UIApplication&lt;br&gt;&lt;code&gt;UIApplication *ap = [UIApplication sharedApplication];&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;设置状态栏样式.&lt;br&gt;&lt;code&gt;ap.statusBarStyle = UIStatusBarStyleLightContent;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;设置状态的隐藏&lt;br&gt;&lt;code&gt;ap.statusBarHidden = YES;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;跳转网页&lt;figure class=&quot;highlight groovy&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;UIApplication *ap = [UIApplication sharedApplication]; &lt;span class=&quot;string&quot;&gt;URL:&lt;/span&gt;协议头:&lt;span class=&quot;comment&quot;&gt;//域名 应用程序通过协议头的类型,去打开相应的软件.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NSURL *url =[NSURL &lt;span class=&quot;string&quot;&gt;URLWithString:&lt;/span&gt;@&lt;span class=&quot;string&quot;&gt;&quot;http://www.baidu.com&quot;&lt;/span&gt;]; [ap &lt;span class=&quot;string&quot;&gt;openURL:&lt;/span&gt;url];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;打电话&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[application &lt;span class=&quot;string&quot;&gt;openURL:&lt;/span&gt;[NSURL &lt;span class=&quot;string&quot;&gt;URLWithString:&lt;/span&gt;@&lt;span class=&quot;string&quot;&gt;&quot;tel://10086&quot;&lt;/span&gt;]];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;发短信&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[app &lt;span class=&quot;string&quot;&gt;openURL:&lt;/span&gt;[NSURL &lt;span class=&quot;string&quot;&gt;URLWithString:&lt;/span&gt;@&lt;span class=&quot;string&quot;&gt;&quot;sms://10086&quot;&lt;/span&gt;]];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;UIApplication代理&quot;&gt;&lt;a href=&quot;#UIApplication代理&quot; class=&quot;headerlink&quot; title=&quot;UIApplication代理&quot;&gt;&lt;/a&gt;UIApplication代理&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;所有的移动操作系统都有个致命的缺点:app很容易受到打扰。&lt;br&gt;比如一个来电或者锁屏会导致app进入后台甚至被终止,还有很多其它类似的情况会导致app受到干扰,在app受到干扰时,会产生一些系统事件, 这时UIApplication会通知它的delegate对象,让delegate代理来处理这些系统事件&lt;br&gt;delegate可处理的事件包括:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;应用程序的生命周期事件(如程序启动和关闭)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统事件(如来电)&lt;/li&gt;
+&lt;li&gt;内存警告&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UIApplication会在程序一启动时候创建一个遵守UIApplicationDelegate的代理.&lt;br&gt;这个就是我们程序一创建时的AppDelegate类。AppDelegate就是遵守了UIApplicationDelegate协议。 在这个类中定义很多监听系统事件的方法.同时也定义了一些应用程序的生命周期方法.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;应用程序的生命周期&lt;/p&gt;
+&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;应用程序启动完成的时候调用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;built_in&quot;&gt;BOOL&lt;/span&gt;)application:(&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt; *)application didFinishLaunchingWithOptions: (&lt;span class=&quot;built_in&quot;&gt;NSDictionary&lt;/span&gt; *)launchOptions &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;当我们应用程序即将失去焦点的时候调用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)applicationWillResignActive:(&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt; *)application &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%s&quot;&lt;/span&gt;,__func__);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;当我们应用程序完全进⼊后台的时候调用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)applicationDidEnterBackground:(&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt; *)application&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%s&quot;&lt;/span&gt;,__func__);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;当我们应用程序即将进⼊前台的时候调用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)applicationWillEnterForeground:(&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt; *)application &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%s&quot;&lt;/span&gt;,__func__);&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;当我们应用程序完全获取焦点的时候调用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;只有当一个应用程序完全获取到焦点,才能与用户交互.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)applicationDidBecomeActive:(&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt; *)application &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%s&quot;&lt;/span&gt;,__func__);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;当我们应用程序即将关闭的时候调用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)applicationWillTerminate:(&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt; *)application &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%s&quot;&lt;/span&gt;,__func__);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;应⽤程序的启动原理-重要&quot;&gt;&lt;a href=&quot;#应⽤程序的启动原理-重要&quot; class=&quot;headerlink&quot; title=&quot;应⽤程序的启动原理(重要)&quot;&gt;&lt;/a&gt;应⽤程序的启动原理(重要)&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;程序启动时执行main函数,在main函数当中有以下操作.&lt;/p&gt;
+&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; main(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; argc, &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; * argv[]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;@autoreleasepool&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;UIApplicationMain&lt;/span&gt;(argc, argv, &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;, &lt;span class=&quot;built_in&quot;&gt;NSStringFromClass&lt;/span&gt;([AppDelegate class])); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       第三个参数:&lt;span class=&quot;built_in&quot;&gt;UIApplication&lt;/span&gt;类名或者子类的名称 &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; == &lt;span class=&quot;string&quot;&gt;@&quot;UIApplication&quot;&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSStringFromClass&lt;/span&gt;好处:&lt;span class=&quot;number&quot;&gt;1.&lt;/span&gt;有提示功能 &lt;span class=&quot;number&quot;&gt;2.&lt;/span&gt;避免输入错误&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;程序完整启动流程&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;执行Main&lt;/li&gt;
+&lt;li&gt;执行UIApplicationMain函数.&lt;/li&gt;
+&lt;li&gt;创建UIApplication对象,并设置UIApplicationMain对象的代理.&lt;br&gt;UIApplication的第三个参数就是UIApplication的名称,如果指定为nil,它会默认 为UIApplication.&lt;br&gt;UIApplication的第四个参数为UIApplication的代理.&lt;/li&gt;
+&lt;li&gt;开启一个主运行循环.保证应用程序不退出.&lt;/li&gt;
+&lt;li&gt;加载info.plist.加载配置⽂文件.判断一下info.plist文件当中有没有Main storyboard file base name&lt;br&gt;⾥面有没有指定storyboard文件,如果有就去加载info.plist文件,如果没有,那么应用程序加载完毕.&lt;/li&gt;
+&lt;li&gt;通知应用程序，调用代理方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原文链接：&lt;a href=&quot;http://www.jianshu.com/p/a72bcb948371&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/a72bcb948371&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;什么是UIApplication&quot;&gt;&lt;a href=&quot;#什么是UIApplication&quot; class=&quot;headerlink&quot; title=&quot;什么是UIApplication&quot;&gt;&lt;/a&gt;什么是UIApplication&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;UIApplication对象是应⽤程序的象征.&lt;br&gt;每一个应用都有⾃己的UIApplication对象,这个对象是系统自动帮我们创建的, 它是一个单例对象.&lt;br&gt;一个iOS程序启动后创建的第一个对象就是UIApplication对象&lt;br&gt;我们只能通过[UIApplication sharedApplication]获得这个单例对象,不能够手动去创建它.&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="iOS学习" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="UIApplication" scheme="http://yoursite.com/tags/UIApplication/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ReactiveCocoa学习笔记</title>
     <link href="http://yoursite.com/2016/02/23/ReactiveCocoa%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/02/23/ReactiveCocoa学习笔记/</id>
@@ -452,91 +540,31 @@
   </entry>
   
   <entry>
-    <title>iOS学习网站、博客</title>
-    <link href="http://yoursite.com/2015/12/27/iOS%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E3%80%81%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2015/12/27/iOS学习网站、博客/</id>
-    <published>2015-12-27T07:24:07.000Z</published>
-    <updated>2016-06-04T15:45:21.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/37699326ddce0e28faccf077be3a38c0.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;学习网站&quot;&gt;&lt;a href=&quot;#学习网站&quot; class=&quot;headerlink&quot; title=&quot;学习网站&quot;&gt;&lt;/a&gt;学习网站&lt;/h1&gt;&lt;p&gt;妈妈再也不用担心我的自学了&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://objccn.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;objc中国&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://nshipster.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NSHipster中文站&lt;/a&gt; &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.cocoachina.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cocoachina&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;常去博客&quot;&gt;&lt;a href=&quot;#常去博客&quot; class=&quot;headerlink&quot; title=&quot;常去博客&quot;&gt;&lt;/a&gt;常去博客&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://devtang.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;唐巧的技术博客&lt;/a&gt; ：并不多说，业界大牛&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://onevcat.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;王巍 (@onevcat)&lt;/a&gt;  ：喵神 &lt;a href=&quot;http://swifter.tips/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;喵神-Swifter.tips&lt;/a&gt; &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://casatwy.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;田伟宇&lt;/a&gt; ： 架构&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.cnbluebox.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;刘坤的技术博客&lt;/a&gt; ： 干货&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://beyondvincent.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;破船之家&lt;/a&gt; ： &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://kittenyang.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;杨骑滔(KittenYang)&lt;/a&gt; ： 动画&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://allluckly.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bison的技术博客&lt;/a&gt; ： &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://yulingtianxia.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;杨萧玉&lt;/a&gt; ： runtime&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/users/b82d2721ba07/latest_articles&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;叶孤城___&lt;/a&gt; ： 技巧&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://southpeak.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;南峰子的技术博客&lt;/a&gt; ： &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://tech.glowing.com/cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Glow 技术团队博客&lt;/a&gt; ： 团队博客&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/kenshincui/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;崔江涛 Kenshin Cui’s Blog&lt;/a&gt; ： 基础干货&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://adad184.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;里脊串的开发随笔&lt;/a&gt; ： &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://tutuge.me/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;土土哥的技术Blog&lt;/a&gt; ： &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://msching.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;码农人生&lt;/a&gt; ： 音频学习&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blog.lessfun.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浮生猎趣&lt;/a&gt; ： &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.iosxxx.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;向晨宇的技术博客&lt;/a&gt; ： &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/37699326ddce0e28faccf077be3a38c0.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="iOS学习" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Blogs" scheme="http://yoursite.com/tags/Blogs/"/>
-    
-      <category term="iOS学习" scheme="http://yoursite.com/tags/iOS%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>常用代码备忘散碎、技巧</title>
     <link href="http://yoursite.com/2015/11/12/(%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98)%E6%95%A3%E7%A2%8E%E3%80%81%E6%8A%80%E5%B7%A7/"/>
     <id>http://yoursite.com/2015/11/12/(常用代码备忘)散碎、技巧/</id>
     <published>2015-11-12T11:28:02.000Z</published>
-    <updated>2016-06-04T15:41:00.000Z</updated>
+    <updated>2016-06-04T16:56:40.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;持续更新&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;一种下滑隐藏的实现&quot;&gt;&lt;a href=&quot;#一种下滑隐藏的实现&quot; class=&quot;headerlink&quot; title=&quot;一种下滑隐藏的实现&quot;&gt;&lt;/a&gt;一种下滑隐藏的实现&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;pragma mark – scroll delegate&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)scrollViewDidScroll:(&lt;span class=&quot;built_in&quot;&gt;UIScrollView&lt;/span&gt; *)scrollView&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGFloat&lt;/span&gt; offsetY = scrollView.contentOffset.y + _tableView.contentInset.top;&lt;span class=&quot;comment&quot;&gt;//注意&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGFloat&lt;/span&gt; panTranslationY = [scrollView.panGestureRecognizer translationInView:&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.tableView].y;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (offsetY &amp;gt; &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (panTranslationY &amp;gt; &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;) &amp;#123; &lt;span class=&quot;comment&quot;&gt;//下滑趋势，显示&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.navigationController setNavigationBarHidden:&lt;span class=&quot;literal&quot;&gt;NO&lt;/span&gt; animated:&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(panTranslationY &amp;lt; &lt;span class=&quot;number&quot;&gt;-50&lt;/span&gt;) &amp;#123;  &lt;span class=&quot;comment&quot;&gt;//上滑趋势，隐藏&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.navigationController setNavigationBarHidden:&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt; animated:&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(offsetY &amp;lt; &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt; ) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.navigationController setNavigationBarHidden:&lt;span class=&quot;literal&quot;&gt;NO&lt;/span&gt; animated:&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;pragma mark – scroll delegate&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)scrollViewDidScroll:(&lt;span class=&quot;built_in&quot;&gt;UIScrollView&lt;/span&gt; *)scrollView&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGFloat&lt;/span&gt; offsetY = scrollView.contentOffset.y + _tableView.contentInset.top;&lt;span class=&quot;comment&quot;&gt;//注意&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGFloat&lt;/span&gt; panTranslationY = [scrollView.panGestureRecognizer translationInView:&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.tableView].y;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (offsetY &amp;gt; &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (panTranslationY &amp;gt; &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;) &amp;#123; &lt;span class=&quot;comment&quot;&gt;//下滑趋势，显示&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.navigationController setNavigationBarHidden:&lt;span class=&quot;literal&quot;&gt;NO&lt;/span&gt; animated:&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(panTranslationY &amp;lt; &lt;span class=&quot;number&quot;&gt;-50&lt;/span&gt;) &amp;#123;  &lt;span class=&quot;comment&quot;&gt;//上滑趋势，隐藏&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.navigationController setNavigationBarHidden:&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt; animated:&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(offsetY &amp;lt; &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt; ) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.navigationController setNavigationBarHidden:&lt;span class=&quot;literal&quot;&gt;NO&lt;/span&gt; animated:&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-</content>
+&lt;h1 id=&quot;状态栏颜色&quot;&gt;&lt;a href=&quot;#状态栏颜色&quot; class=&quot;headerlink&quot; title=&quot;状态栏颜色&quot;&gt;&lt;/a&gt;状态栏颜色&lt;/h1&gt;&lt;figure class=&quot;highlight groovy&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)&lt;span class=&quot;string&quot;&gt;setStatusBarBackgroundColor:&lt;/span&gt;(UIColor *)color &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    UIView *statusBar = [[[UIApplication sharedApplication] &lt;span class=&quot;string&quot;&gt;valueForKey:&lt;/span&gt;@&lt;span class=&quot;string&quot;&gt;&quot;statusBarWindow&quot;&lt;/span&gt;] &lt;span class=&quot;string&quot;&gt;valueForKey:&lt;/span&gt;@&lt;span class=&quot;string&quot;&gt;&quot;statusBar&quot;&lt;/span&gt;]; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([statusBar &lt;span class=&quot;string&quot;&gt;respondsToSelector:&lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;@selector&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;setBackgroundColor:&lt;/span&gt;)]) &amp;#123;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            statusBar.backgroundColor = color; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;respondsToSelector的相关使用&quot;&gt;&lt;a href=&quot;#respondsToSelector的相关使用&quot; class=&quot;headerlink&quot; title=&quot;respondsToSelector的相关使用&quot;&gt;&lt;/a&gt;respondsToSelector的相关使用&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-(BOOL) isKindOfClass: classObj&lt;/code&gt; 用来判断是否是某个类或其子类的实例&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-(BOOL) isMemberOfClass: classObj&lt;/code&gt;用来判断是否是某个类的实例&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-(BOOL) respondsToSelector: selector&lt;/code&gt; 用来判断是否有以某个名字命名的方法(被封装在一个selector的对象里传递)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+(BOOL) instancesRespondToSelector: selector&lt;/code&gt; 用来判断实例是否有以某个名字命名的方法. 和上面一个不同之处在于, 前面这个方法可以用在实例和类上，而此方法只能用在类上.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-(id) performSelector: selector&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight groovy&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;SEL sel = &lt;span class=&quot;meta&quot;&gt;@selector&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;start:&lt;/span&gt;) ; &lt;span class=&quot;comment&quot;&gt;// 指定action  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([obj &lt;span class=&quot;string&quot;&gt;respondsToSelector:&lt;/span&gt;sel]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;comment&quot;&gt;//判断该对象是否有相应的方法  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   [obj &lt;span class=&quot;string&quot;&gt;performSelector:&lt;/span&gt;sel &lt;span class=&quot;string&quot;&gt;withObject:&lt;/span&gt;self]; &lt;span class=&quot;comment&quot;&gt;//调用选择器方法  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用[[UIApplication sharedApplication] keyWindow]查找应用程序的主窗口对象&lt;br&gt;&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Tester.h&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import FoundationFoundation.h&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Tester&lt;/span&gt; : &lt;span class=&quot;title&quot;&gt;NSObject&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-(&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;) test:(&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt;*) msg;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-(&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;) notImp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Tester.m&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import &lt;span class=&quot;meta-string&quot;&gt;&quot;Tester.h&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Tester&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-(&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;) test:(&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt;*) msg&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%@&quot;&lt;/span&gt;, msg);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;注意：没有实现notImp方法&lt;/p&gt;
+&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;Foundation/Foundation.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import &lt;span class=&quot;meta-string&quot;&gt;&quot;Tester.h&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; main (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; argc, &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; * argv[])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;NSAutoreleasePool&lt;/span&gt; * pool = [[&lt;span class=&quot;built_in&quot;&gt;NSAutoreleasePool&lt;/span&gt; alloc] init];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt; tester = [[Tester alloc] init];&lt;span class=&quot;comment&quot;&gt;//注意，这里使用id&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    SEL testSelector = &lt;span class=&quot;keyword&quot;&gt;@selector&lt;/span&gt;(test:);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    SEL notImpSelector = &lt;span class=&quot;keyword&quot;&gt;@selector&lt;/span&gt;(notImp:);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;([tester respondsToSelector:testSelector])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//tester.m中实现了test方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [tester test:&lt;span class=&quot;string&quot;&gt;@&quot;invoke test method&quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;([tester respondsToSelector:notImpSelector])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//test.m中没有实现此主就去&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [tester notImp];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [pool drain];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
     
     <summary type="html">
     
@@ -615,7 +643,7 @@
 &lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;email &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;example@example.com&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;string&quot;&gt;GitHub&lt;/span&gt;](&lt;span class=&quot;link&quot;&gt;http://github.com&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;自动生成连接  &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;http:&lt;/span&gt;//&lt;span class=&quot;attr&quot;&gt;www.github.com&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。&lt;br&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#101;&amp;#x78;&amp;#x61;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#x78;&amp;#x61;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#x3a;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#108;&amp;#x65;&amp;#64;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#x65;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#108;&amp;#x65;&amp;#64;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#x65;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
 &lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;某某说:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第一行引用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第二行费用文字&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;效果如下：&lt;/p&gt;
@@ -710,6 +738,78 @@
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS学习网站、博客</title>
+    <link href="http://yoursite.com/2015/04/27/iOS%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E3%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2015/04/27/iOS学习网站、博客/</id>
+    <published>2015-04-27T07:24:07.000Z</published>
+    <updated>2016-06-04T15:48:42.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/37699326ddce0e28faccf077be3a38c0.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;学习网站&quot;&gt;&lt;a href=&quot;#学习网站&quot; class=&quot;headerlink&quot; title=&quot;学习网站&quot;&gt;&lt;/a&gt;学习网站&lt;/h1&gt;&lt;p&gt;妈妈再也不用担心我的自学了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://objccn.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;objc中国&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://nshipster.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NSHipster中文站&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.cocoachina.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cocoachina&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;常去博客&quot;&gt;&lt;a href=&quot;#常去博客&quot; class=&quot;headerlink&quot; title=&quot;常去博客&quot;&gt;&lt;/a&gt;常去博客&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://devtang.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;唐巧的技术博客&lt;/a&gt; ：并不多说，业界大牛&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://onevcat.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;王巍 (@onevcat)&lt;/a&gt;  ：喵神 &lt;a href=&quot;http://swifter.tips/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;喵神-Swifter.tips&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://casatwy.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;田伟宇&lt;/a&gt; ： 架构&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.cnbluebox.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;刘坤的技术博客&lt;/a&gt; ： 干货&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://beyondvincent.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;破船之家&lt;/a&gt; ： &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://kittenyang.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;杨骑滔(KittenYang)&lt;/a&gt; ： 动画&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://allluckly.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bison的技术博客&lt;/a&gt; ： &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://yulingtianxia.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;杨萧玉&lt;/a&gt; ： runtime&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/users/b82d2721ba07/latest_articles&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;叶孤城___&lt;/a&gt; ： 技巧&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://southpeak.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;南峰子的技术博客&lt;/a&gt; ： &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://tech.glowing.com/cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Glow 技术团队博客&lt;/a&gt; ： 团队博客&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/kenshincui/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;崔江涛 Kenshin Cui’s Blog&lt;/a&gt; ： 基础干货&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://adad184.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;里脊串的开发随笔&lt;/a&gt; ： &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://tutuge.me/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;土土哥的技术Blog&lt;/a&gt; ： &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://msching.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;码农人生&lt;/a&gt; ： 音频学习&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blog.lessfun.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浮生猎趣&lt;/a&gt; ： &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.iosxxx.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;向晨宇的技术博客&lt;/a&gt; ： &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://o76hg1e0m.bkt.clouddn.com/37699326ddce0e28faccf077be3a38c0.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="iOS学习" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Blogs" scheme="http://yoursite.com/tags/Blogs/"/>
+    
+      <category term="iOS学习" scheme="http://yoursite.com/tags/iOS%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
