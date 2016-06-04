@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>(常用代码备忘)UIAppearance App全局设置 | ZeroDY&#39;s Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="UIAppearance App全局设置
+
+在OC中, 很多UI提供了全局设置这一便捷的属性。但要注意, 有一些东西在iOS8中有, iOS7中没有,会导致iOS7.0程序奔溃。以下内容兼容iOS7, iOS8中的新特性没有列出来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(常用代码备忘)UIAppearance App全局设置">
+<meta property="og:url" content="http://yoursite.com/2016/06/04/(常用代码备忘)UIAppearance App全局设置/index.html">
+<meta property="og:site_name" content="ZeroDY's Blogs">
+<meta property="og:description" content="UIAppearance App全局设置
+
+在OC中, 很多UI提供了全局设置这一便捷的属性。但要注意, 有一些东西在iOS8中有, iOS7中没有,会导致iOS7.0程序奔溃。以下内容兼容iOS7, iOS8中的新特性没有列出来。">
+<meta property="og:updated_time" content="2016-06-04T11:24:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(常用代码备忘)UIAppearance App全局设置">
+<meta name="twitter:description" content="UIAppearance App全局设置
+
+在OC中, 很多UI提供了全局设置这一便捷的属性。但要注意, 有一些东西在iOS8中有, iOS7中没有,会导致iOS7.0程序奔溃。以下内容兼容iOS7, iOS8中的新特性没有列出来。">
+  
+  
+    <link rel="icon" href="http://o7279yd4s.bkt.clouddn.com/bitbug_favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://o7279yd4s.bkt.clouddn.com/IMG_1776.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">ZeroDY</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">梦想还是要有的，万一见鬼了呢。</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">主页</a></li> -->
+				        
+							<li><a href="/archives">所有文章</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">所有文章</a></li> -->
+				        
+							<li><a href="/tags">标签云</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">标签云</a></li> -->
+				        
+							<li><a href="/message">留言板</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">留言板</a></li> -->
+				        
+							<li><a href="/resume/index.html">关于我</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">关于我</a></li> -->
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_self" href="https://github.com/ZeroDY" title="github">github</a>
+					        
+								<a class="weibo" target="_self" href="http://weibo.com/2345900261/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_self" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Blogs/" style="font-size: 10px;">Blogs</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/MVVM/" style="font-size: 10px;">MVVM</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ReactiveCocoa/" style="font-size: 10px;">ReactiveCocoa</a> <a href="/tags/UIAppearance/" style="font-size: 10px;">UIAppearance</a> <a href="/tags/UIScrollView/" style="font-size: 10px;">UIScrollView</a> <a href="/tags/iOS学习/" style="font-size: 15px;">iOS学习</a> <a href="/tags/仿/" style="font-size: 10px;">仿</a> <a href="/tags/备忘/" style="font-size: 20px;">备忘</a> <a href="/tags/常用代码/" style="font-size: 15px;">常用代码</a> <a href="/tags/手工客/" style="font-size: 10px;">手工客</a> <a href="/tags/技巧/" style="font-size: 10px;">技巧</a> <a href="/tags/离屏渲染/" style="font-size: 10px;">离屏渲染</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">ZeroDY</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://o7279yd4s.bkt.clouddn.com/IMG_1776.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">ZeroDY</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">梦想还是要有的，万一见鬼了呢。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags">标签云</a></li>
+		        
+					<li><a href="/message">留言板</a></li>
+		        
+					<li><a href="/resume/index.html">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ZeroDY" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/2345900261/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-(常用代码备忘)UIAppearance App全局设置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/04/(常用代码备忘)UIAppearance App全局设置/" class="article-date">
+  	<time datetime="2016-06-04T11:01:34.000Z" itemprop="datePublished">2016-06-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      (常用代码备忘)UIAppearance App全局设置
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UIAppearance/">UIAppearance</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/备忘/">备忘</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/备忘/">备忘</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+          
+            <div id="toc" class="toc-article">
+              <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#例如-全局的设置NavigaitonBar的tintColor的颜色。"><span class="toc-number">1.</span> <span class="toc-text">例如 全局的设置NavigaitonBar的tintColor的颜色。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIActivityIndicatorView"><span class="toc-number">2.</span> <span class="toc-text">UIActivityIndicatorView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIBarButtonItem"><span class="toc-number">3.</span> <span class="toc-text">UIBarButtonItem</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIBarItem"><span class="toc-number">4.</span> <span class="toc-text">UIBarItem</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIButton"><span class="toc-number">5.</span> <span class="toc-text">UIButton</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UINavigationBar"><span class="toc-number">6.</span> <span class="toc-text">UINavigationBar</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIPageControl"><span class="toc-number">7.</span> <span class="toc-text">UIPageControl</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIProgressView"><span class="toc-number">8.</span> <span class="toc-text">UIProgressView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIRefreshControl"><span class="toc-number">9.</span> <span class="toc-text">UIRefreshControl</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UISearchBar"><span class="toc-number">10.</span> <span class="toc-text">UISearchBar</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UISearchBar-1"><span class="toc-number">11.</span> <span class="toc-text">UISearchBar</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UISegmentedControl"><span class="toc-number">12.</span> <span class="toc-text">UISegmentedControl</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UISlider"><span class="toc-number">13.</span> <span class="toc-text">UISlider</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIStepper"><span class="toc-number">14.</span> <span class="toc-text">UIStepper</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UISwitch"><span class="toc-number">15.</span> <span class="toc-text">UISwitch</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UITabBar"><span class="toc-number">16.</span> <span class="toc-text">UITabBar</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UITabBarItem"><span class="toc-number">17.</span> <span class="toc-text">UITabBarItem</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UITableView"><span class="toc-number">18.</span> <span class="toc-text">UITableView</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UITableViewCell"><span class="toc-number">19.</span> <span class="toc-text">UITableViewCell</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIToolbar"><span class="toc-number">20.</span> <span class="toc-text">UIToolbar</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UIView"><span class="toc-number">21.</span> <span class="toc-text">UIView</span></a></li></ol>
+            </div>
+          
+
+          
+
+        <p>UIAppearance App全局设置</p>
+<blockquote>
+<p>在OC中, 很多UI提供了全局设置这一便捷的属性。但要注意, 有一些东西在iOS8中有, iOS7中没有,会导致iOS7.0程序奔溃。以下内容兼容iOS7, iOS8中的新特性没有列出来。</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="例如-全局的设置NavigaitonBar的tintColor的颜色。"><a href="#例如-全局的设置NavigaitonBar的tintColor的颜色。" class="headerlink" title="例如 全局的设置NavigaitonBar的tintColor的颜色。"></a>例如 全局的设置NavigaitonBar的tintColor的颜色。</h1><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[[UINavigationBar appearance]</span> <span class="selector-tag">setTintColor</span><span class="selector-pseudo">:myColor</span>];</span><br></pre></td></tr></table></figure>
+<h1 id="UIActivityIndicatorView"><a href="#UIActivityIndicatorView" class="headerlink" title="UIActivityIndicatorView"></a>UIActivityIndicatorView</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">readwrite</span>, <span class="keyword">nonatomic</span>, retain) <span class="built_in">UIColor</span> *color <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UIBarButtonItem"><a href="#UIBarButtonItem" class="headerlink" title="UIBarButtonItem"></a>UIBarButtonItem</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)setBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forState:(<span class="built_in">UIControlState</span>)state barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)backgroundImageForState:(<span class="built_in">UIControlState</span>)state barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forState:(<span class="built_in">UIControlState</span>)state style:(<span class="built_in">UIBarButtonItemStyle</span>)style barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)backgroundImageForState:(<span class="built_in">UIControlState</span>)state style:(<span class="built_in">UIBarButtonItemStyle</span>)style barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setBackgroundVerticalPositionAdjustment:(<span class="built_in">CGFloat</span>)adjustment forBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">CGFloat</span>)backgroundVerticalPositionAdjustmentForBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setTitlePositionAdjustment:(<span class="built_in">UIOffset</span>)adjustment forBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIOffset</span>)titlePositionAdjustmentForBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setBackButtonBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forState:(<span class="built_in">UIControlState</span>)state barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)backButtonBackgroundImageForState:(<span class="built_in">UIControlState</span>)state barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setBackButtonTitlePositionAdjustment:(<span class="built_in">UIOffset</span>)adjustment forBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIOffset</span>)backButtonTitlePositionAdjustmentForBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setBackButtonBackgroundVerticalPositionAdjustment:(<span class="built_in">CGFloat</span>)adjustment forBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">CGFloat</span>)backButtonBackgroundVerticalPositionAdjustmentForBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UIBarItem"><a href="#UIBarItem" class="headerlink" title="UIBarItem"></a>UIBarItem</h1><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">- (void)<span class="built_in">set</span>TitleTextAttributes:(NSDictionary *)attributes <span class="keyword">for</span>State:(UIControlState)<span class="keyword">state</span> NS_AVAILABLE_IOS(<span class="number">5</span>_0) UI_APPEARANCE_SELECTOR;</span><br><span class="line"></span><br><span class="line">- (NSDictionary *)titleTextAttributesForState:(UIControlState)<span class="keyword">state</span> NS_AVAILABLE_IOS(<span class="number">5</span>_0) UI_APPEARANCE_SELECTOR;</span><br></pre></td></tr></table></figure>
+<h1 id="UIButton"><a href="#UIButton" class="headerlink" title="UIButton"></a>UIButton</h1><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">@property(nonatomic) UIEdgeInsets contentEdgeInsets UI_APPEARANCE_SELECTOR; // <span class="keyword">default</span> is UIEdgeInsetsZero</span><br><span class="line"></span><br><span class="line">- (void)<span class="built_in">set</span>TitleColor:(UIColor *)color <span class="keyword">for</span>State:(UIControlState)<span class="keyword">state</span> UI_APPEARANCE_SELECTOR; // <span class="keyword">default</span> if nil. use opaque white</span><br><span class="line"></span><br><span class="line">- (void)<span class="built_in">set</span>TitleShadowColor:(UIColor *)color <span class="keyword">for</span>State:(UIControlState)<span class="keyword">state</span> UI_APPEARANCE_SELECTOR; // <span class="keyword">default</span> is nil. use <span class="number">50</span>% black</span><br><span class="line"></span><br><span class="line">- (void)<span class="built_in">set</span>BackgroundImage:(UIImage *)image <span class="keyword">for</span>State:(UIControlState)<span class="keyword">state</span> UI_APPEARANCE_SELECTOR; // <span class="keyword">default</span> is nil</span><br></pre></td></tr></table></figure>
+<h1 id="UINavigationBar"><a href="#UINavigationBar" class="headerlink" title="UINavigationBar"></a>UINavigationBar</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *barTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// default is nil</span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forBarPosition:(<span class="built_in">UIBarPosition</span>)barPosition barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)backgroundImageForBarPosition:(<span class="built_in">UIBarPosition</span>)barPosition barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)backgroundImageForBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIImage</span> *shadowImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">copy</span>) <span class="built_in">NSDictionary</span> *titleTextAttributes <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setTitleVerticalPositionAdjustment:(<span class="built_in">CGFloat</span>)adjustment forBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">CGFloat</span>)titleVerticalPositionAdjustmentForBarMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIImage</span> *backIndicatorImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIImage</span> *backIndicatorTransitionMaskImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UIPageControl"><a href="#UIPageControl" class="headerlink" title="UIPageControl"></a>UIPageControl</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *pageIndicatorTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *currentPageIndicatorTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UIProgressView"><a href="#UIProgressView" class="headerlink" title="UIProgressView"></a>UIProgressView</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIColor</span>* progressTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIColor</span>* trackTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIImage</span>* progressImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIImage</span>* trackImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UIRefreshControl"><a href="#UIRefreshControl" class="headerlink" title="UIRefreshControl"></a>UIRefreshControl</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, retain) <span class="built_in">NSAttributedString</span> *attributedTitle <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UISearchBar"><a href="#UISearchBar" class="headerlink" title="UISearchBar"></a>UISearchBar</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *barTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// default is nil</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIImage</span> *backgroundImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIImage</span> *scopeBarBackgroundImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forBarPosition:(<span class="built_in">UIBarPosition</span>)barPosition barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// Use UIBarMetricsDefaultPrompt to set a separate backgroundImage for a search bar with a prompt</span></span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)backgroundImageForBarPosition:(<span class="built_in">UIBarPosition</span>)barPosition barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setSearchFieldBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forState:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)searchFieldBackgroundImageForState:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setImage:(<span class="built_in">UIImage</span> *)iconImage forSearchBarIcon:(<span class="built_in">UISearchBarIcon</span>)icon state:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)imageForSearchBarIcon:(<span class="built_in">UISearchBarIcon</span>)icon state:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setScopeBarButtonBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forState:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)scopeBarButtonBackgroundImageForState:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setScopeBarButtonDividerImage:(<span class="built_in">UIImage</span> *)dividerImage forLeftSegmentState:(<span class="built_in">UIControlState</span>)leftState rightSegmentState:(<span class="built_in">UIControlState</span>)rightState <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)scopeBarButtonDividerImageForLeftSegmentState:(<span class="built_in">UIControlState</span>)leftState rightSegmentState:(<span class="built_in">UIControlState</span>)rightState <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setScopeBarButtonTitleTextAttributes:(<span class="built_in">NSDictionary</span> *)attributes forState:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSDictionary</span> *)scopeBarButtonTitleTextAttributesForState:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UISearchBar-1"><a href="#UISearchBar-1" class="headerlink" title="UISearchBar"></a>UISearchBar</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">UIOffset</span> searchFieldBackgroundPositionAdjustment <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">UIOffset</span> searchTextPositionAdjustment <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setPositionAdjustment:(<span class="built_in">UIOffset</span>)adjustment forSearchBarIcon:(<span class="built_in">UISearchBarIcon</span>)icon <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIOffset</span>)positionAdjustmentForSearchBarIcon:(<span class="built_in">UISearchBarIcon</span>)icon <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UISegmentedControl"><a href="#UISegmentedControl" class="headerlink" title="UISegmentedControl"></a>UISegmentedControl</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)setBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forState:(<span class="built_in">UIControlState</span>)state barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)backgroundImageForState:(<span class="built_in">UIControlState</span>)state barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setDividerImage:(<span class="built_in">UIImage</span> *)dividerImage forLeftSegmentState:(<span class="built_in">UIControlState</span>)leftState rightSegmentState:(<span class="built_in">UIControlState</span>)rightState barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)dividerImageForLeftSegmentState:(<span class="built_in">UIControlState</span>)leftState rightSegmentState:(<span class="built_in">UIControlState</span>)rightState barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setTitleTextAttributes:(<span class="built_in">NSDictionary</span> *)attributes forState:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSDictionary</span> *)titleTextAttributesForState:(<span class="built_in">UIControlState</span>)state <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setContentPositionAdjustment:(<span class="built_in">UIOffset</span>)adjustment forSegmentType:(<span class="built_in">UISegmentedControlSegment</span>)leftCenterRightOrAlone barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIOffset</span>)contentPositionAdjustmentForSegmentType:(<span class="built_in">UISegmentedControlSegment</span>)leftCenterRightOrAlone barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UISlider"><a href="#UISlider" class="headerlink" title="UISlider"></a>UISlider</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *minimumTrackTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *maximumTrackTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *thumbTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UIStepper"><a href="#UIStepper" class="headerlink" title="UIStepper"></a>UIStepper</h1><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">- (void)<span class="built_in">set</span>BackgroundImage:(UIImage*)image <span class="keyword">for</span>State:(UIControlState)<span class="keyword">state</span> NS_AVAILABLE_IOS(<span class="number">6</span>_0) UI_APPEARANCE_SELECTOR;</span><br><span class="line"></span><br><span class="line">- (UIImage*)backgroundImageForState:(UIControlState)<span class="keyword">state</span> NS_AVAILABLE_IOS(<span class="number">6</span>_0) UI_APPEARANCE_SELECTOR;</span><br><span class="line"></span><br><span class="line">- (void)<span class="built_in">set</span>DividerImage:(UIImage*)image <span class="keyword">for</span>LeftSegmentState:(UIControlState)leftState rightSegmentState:(UIControlState)rightState NS_AVAILABLE_IOS(<span class="number">6</span>_0) UI_APPEARANCE_SELECTOR;</span><br><span class="line"></span><br><span class="line">- (UIImage*)dividerImageForLeftSegmentState:(UIControlState)<span class="keyword">state</span> rightSegmentState:(UIControlState)<span class="keyword">state</span> NS_AVAILABLE_IOS(<span class="number">6</span>_0) UI_APPEARANCE_SELECTOR;</span><br><span class="line"></span><br><span class="line">- (void)<span class="built_in">set</span>IncrementImage:(UIImage *)image <span class="keyword">for</span>State:(UIControlState)<span class="keyword">state</span> NS_AVAILABLE_IOS(<span class="number">6</span>_0) UI_APPEARANCE_SELECTOR;</span><br><span class="line"></span><br><span class="line">- (UIImage *)incrementImageForState:(UIControlState)<span class="keyword">state</span> NS_AVAILABLE_IOS(<span class="number">6</span>_0) UI_APPEARANCE_SELECTOR;</span><br><span class="line"></span><br><span class="line">- (void)<span class="built_in">set</span>DecrementImage:(UIImage *)image <span class="keyword">for</span>State:(UIControlState)<span class="keyword">state</span> NS_AVAILABLE_IOS(<span class="number">6</span>_0) UI_APPEARANCE_SELECTOR;</span><br><span class="line"></span><br><span class="line">- (UIImage *)decrementImageForState:(UIControlState)<span class="keyword">state</span> NS_AVAILABLE_IOS(<span class="number">6</span>_0) UI_APPEARANCE_SELECTOR;</span><br></pre></td></tr></table></figure>
+<h1 id="UISwitch"><a href="#UISwitch" class="headerlink" title="UISwitch"></a>UISwitch</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIColor</span> *onTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIColor</span> *thumbTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIImage</span> *onImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIImage</span> *offImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UITabBar"><a href="#UITabBar" class="headerlink" title="UITabBar"></a>UITabBar</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *barTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// default is nil</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *selectedImageTintColor <span class="built_in">NS_DEPRECATED_IOS</span>(<span class="number">5</span>_0,<span class="number">8</span>_0,<span class="string">"Use tintColor"</span>) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIImage</span> *backgroundImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIImage</span> *selectionIndicatorImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIImage</span> *shadowImage <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">UITabBarItemPositioning</span> itemPositioning <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">CGFloat</span> itemWidth <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">CGFloat</span> itemSpacing <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>) <span class="built_in">UIBarStyle</span> barStyle <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UITabBarItem"><a href="#UITabBarItem" class="headerlink" title="UITabBarItem"></a>UITabBarItem</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)setTitlePositionAdjustment:(<span class="built_in">UIOffset</span>)adjustment <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIOffset</span>)titlePositionAdjustment <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>) <span class="built_in">UIEdgeInsets</span> separatorInset <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// allows customization of the frame of cell separators</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIColor</span> *sectionIndexColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// color used for text of the section index</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIColor</span> *sectionIndexBackgroundColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// the background color of the section index while not being touched</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIColor</span> *sectionIndexTrackingBackgroundColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// the background color of the section index while it is being touched</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, retain) <span class="built_in">UIColor</span> *separatorColor <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// default is the standard separator gray</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">UIVisualEffect</span> *separatorEffect <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">8</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// effect to apply to table separators</span></span><br></pre></td></tr></table></figure>
+<h1 id="UITableViewCell"><a href="#UITableViewCell" class="headerlink" title="UITableViewCell"></a>UITableViewCell</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>) <span class="built_in">UIEdgeInsets</span> separatorInset <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// allows customization of the separator frame</span></span><br></pre></td></tr></table></figure>
+<h1 id="UIToolbar"><a href="#UIToolbar" class="headerlink" title="UIToolbar"></a>UIToolbar</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,retain) <span class="built_in">UIColor</span> *barTintColor <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// default is nil</span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setBackgroundImage:(<span class="built_in">UIImage</span> *)backgroundImage forToolbarPosition:(<span class="built_in">UIBarPosition</span>)topOrBottom barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)backgroundImageForToolbarPosition:(<span class="built_in">UIBarPosition</span>)topOrBottom barMetrics:(<span class="built_in">UIBarMetrics</span>)barMetrics <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setShadowImage:(<span class="built_in">UIImage</span> *)shadowImage forToolbarPosition:(<span class="built_in">UIBarPosition</span>)topOrBottom <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UIImage</span> *)shadowImageForToolbarPosition:(<span class="built_in">UIBarPosition</span>)topOrBottom <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0) <span class="built_in">UI_APPEARANCE_SELECTOR</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="UIView"><a href="#UIView" class="headerlink" title="UIView"></a>UIView</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">copy</span>) <span class="built_in">UIColor</span> *backgroundColor <span class="built_in">UI_APPEARANCE_SELECTOR</span>; <span class="comment">// default is nil. Can be useful with the appearance proxy on custom UIView subclasses.</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/04/(常用代码备忘)散碎、技巧/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          常用代码备忘散碎、技巧
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/04/(常用代码备忘)UIScrollView/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">(常用代码备忘)UIScrollView</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="(常用代码备忘)UIAppearance App全局设置" data-title="(常用代码备忘)UIAppearance App全局设置" data-url="http://yoursite.com/2016/06/04/(常用代码备忘)UIAppearance App全局设置/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"zerody"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 ZeroDY
+    	</div>
+
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-77677122-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+<div id="totop" style="position:fixed;bottom:30px;right:0px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/gotop.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>ViewController瘦身 | ZeroDY&#39;s Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="该篇主要针对的是UITableViewController，因为UITableViewController是iOS开发中用的最多的组件。本文转自：http://objccn.io/issue-1-1/示例代码地址：https://github.com/ZeroDY/DYSource/tree/master/DYDataSourceDelegate">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ViewController瘦身">
+<meta property="og:url" content="http://yoursite.com/2016/01/04/ViewController瘦身/index.html">
+<meta property="og:site_name" content="ZeroDY's Blogs">
+<meta property="og:description" content="该篇主要针对的是UITableViewController，因为UITableViewController是iOS开发中用的最多的组件。本文转自：http://objccn.io/issue-1-1/示例代码地址：https://github.com/ZeroDY/DYSource/tree/master/DYDataSourceDelegate">
+<meta property="og:updated_time" content="2016-06-04T14:52:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ViewController瘦身">
+<meta name="twitter:description" content="该篇主要针对的是UITableViewController，因为UITableViewController是iOS开发中用的最多的组件。本文转自：http://objccn.io/issue-1-1/示例代码地址：https://github.com/ZeroDY/DYSource/tree/master/DYDataSourceDelegate">
+  
+  
+    <link rel="icon" href="http://o7279yd4s.bkt.clouddn.com/bitbug_favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://o7279yd4s.bkt.clouddn.com/IMG_1776.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">ZeroDY</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">梦想还是要有的，万一见鬼了呢。</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">主页</a></li> -->
+				        
+							<li><a href="/archives">所有文章</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">所有文章</a></li> -->
+				        
+							<li><a href="/tags">标签云</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">标签云</a></li> -->
+				        
+							<li><a href="/message">留言板</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">留言板</a></li> -->
+				        
+							<li><a href="/resume/index.html">关于我</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">关于我</a></li> -->
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_self" href="https://github.com/ZeroDY" title="github">github</a>
+					        
+								<a class="weibo" target="_self" href="http://weibo.com/2345900261/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_self" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Blogs/" style="font-size: 10px;">Blogs</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/MVVM/" style="font-size: 10px;">MVVM</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ReactiveCocoa/" style="font-size: 10px;">ReactiveCocoa</a> <a href="/tags/UIAppearance/" style="font-size: 10px;">UIAppearance</a> <a href="/tags/UIScrollView/" style="font-size: 10px;">UIScrollView</a> <a href="/tags/iOS学习/" style="font-size: 15px;">iOS学习</a> <a href="/tags/仿/" style="font-size: 10px;">仿</a> <a href="/tags/备忘/" style="font-size: 20px;">备忘</a> <a href="/tags/常用代码/" style="font-size: 15px;">常用代码</a> <a href="/tags/手工客/" style="font-size: 10px;">手工客</a> <a href="/tags/技巧/" style="font-size: 10px;">技巧</a> <a href="/tags/离屏渲染/" style="font-size: 10px;">离屏渲染</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">ZeroDY</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://o7279yd4s.bkt.clouddn.com/IMG_1776.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">ZeroDY</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">梦想还是要有的，万一见鬼了呢。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags">标签云</a></li>
+		        
+					<li><a href="/message">留言板</a></li>
+		        
+					<li><a href="/resume/index.html">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ZeroDY" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/2345900261/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-ViewController瘦身" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/04/ViewController瘦身/" class="article-date">
+  	<time datetime="2016-01-04T11:34:27.000Z" itemprop="datePublished">2016-01-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ViewController瘦身
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+          
+            <div id="toc" class="toc-article">
+              <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#将DataSource从ViewController中进行抽离"><span class="toc-number">1.</span> <span class="toc-text">将DataSource从ViewController中进行抽离</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#让-Cells-可复用"><span class="toc-number">2.</span> <span class="toc-text">让 Cells 可复用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#在-Cell-内部控制-Cell-的状态"><span class="toc-number">3.</span> <span class="toc-text">在 Cell 内部控制 Cell 的状态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+            </div>
+          
+
+          
+
+        <blockquote>
+<p>该篇主要针对的是UITableViewController，因为UITableViewController是iOS开发中用的最多的组件。<br>本文转自：<a href="http://objccn.io/issue-1-1/" target="_blank" rel="external">http://objccn.io/issue-1-1/</a><br>示例代码地址：<a href="https://github.com/ZeroDY/DYSource/tree/master/DYDataSourceDelegate" target="_blank" rel="external">https://github.com/ZeroDY/DYSource/tree/master/DYDataSourceDelegate</a></p>
+</blockquote>
+<a id="more"></a>
+<h1 id="将DataSource从ViewController中进行抽离"><a href="#将DataSource从ViewController中进行抽离" class="headerlink" title="将DataSource从ViewController中进行抽离"></a>将DataSource从ViewController中进行抽离</h1><p>其实就是把UITableViewDataSource协议用一个单独的类来实现。抽离的目的是什么呢？当然是复用了，我们就不用在每个含有TableView的ViewController里边都实现一遍UITableViewDataSource协议了，省时省力，极大提高代码质量和编程效率。那该怎么抽离呢？<br>首先为实现DataSource协议的类起个名字吧，比如叫：ArrayDataSource。接下来看一下都要实现哪些协议：</p>
+<figure class="highlight erlang"><table><tr><td class="code"><pre><span class="line">- <span class="params">(NSInteger)</span>tableView:<span class="params">(UITableView*)</span>tableView</span><br><span class="line"> numberOfRowsInSection:<span class="params">(NSInteger)</span>section;</span><br><span class="line"> </span><br><span class="line">- <span class="params">(UITableViewCell*)</span>tableView:<span class="params">(UITableView*)</span>tableView</span><br><span class="line">        cellForRowAtIndexPath:<span class="params">(NSIndexPath*)</span>indexPath;</span><br></pre></td></tr></table></figure>
+<p>第一个协议返回数组元素个数。第二个协议返回一个UITableViewCell。<br>数组简单，直接传进去就好了，cell呢？cell的创建方法为：<br><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">UITableViewCell *cell = [tableView <span class="string">dequeueReusableCellWithIdentifier:</span>cellIdentifier <span class="string">forIndexPath:</span>indexPath];<span class="comment">//</span></span><br></pre></td></tr></table></figure></p>
+<p>这种创建方式要求identifier已经注册到具体的Cell类型<br>其中 tableView和indexPath这两个参数都是通过协议方法返回的，直接用。所以只剩下Identifier这个参数需要我们自己设置。这样我们就确定了两个参数需要传到ArrayDataSource，一个是数组，一个是Identifier。这样是不是就没问题了呢？当然不是，因为每个TableView的Cell都是不一样的，同时每个数组元素的类型也是不确定的。怎么保证Cell的多态性呢？这是问题的关键<br>多态的用法一般就是进行类型转换，比如我们经常在代码里这么写<br><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">CustomCell *cell = [tableView <span class="string">dequeueReusableCellWithIdentifier:</span>cellIdentifier <span class="string">forIndexPath:</span>indexPath];</span><br></pre></td></tr></table></figure></p>
+<p>其实这个可以拆分成两行代码<br><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">UITableViewCell *cell = [tableView <span class="string">dequeueReusableCellWithIdentifier:</span>cellIdentifier <span class="string">forIndexPath:</span>indexPath];</span><br><span class="line">CustomCell *customCell = cell;<span class="comment">//类型转换</span></span><br></pre></td></tr></table></figure></p>
+<p>所以关键就是怎么做来实现类型转换，其实cell创建之后类型已经确定了，但是我们需要对其进行显式的转换以便对cell进行设置，两个思路，一个是delegate，一个是block。<br>delegate的话，可以定义一个类似这样的协议：<br><code>- (void)configCell:(id)cell withItem:(id)item;</code></p>
+<p>然后在具体的ViewController实现如下：<br><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)<span class="string">configCell:</span>(id)cell <span class="string">withItem:</span>(id)item&#123;</span><br><span class="line">    CustomCell *customCell = cell;</span><br><span class="line">    CustomModel *customModel = item;</span><br><span class="line">    [customCell <span class="string">setContent:</span>customModel];<span class="comment">//setContent方法需要在CustomCell实现</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>相对于delegate，我还是倾向于block，因为block结构紧凑，易于阅读，那么block该如何写呢？block的功能类似函数指针的功能。我们在具体的ViewController里定义好具体的参数类型以及实现，然后将block传到ArrayDataSource。那么ArrayDataSource的block类型应该怎么写呢？<br><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">void</span> (^TableViewCellConfigureBlock)(<span class="keyword">id</span> cell, <span class="keyword">id</span> item);<span class="comment">//</span></span><br></pre></td></tr></table></figure></p>
+<p>因为要复用，所以要写成id类型<br><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">id</span>)initWithItems:(<span class="built_in">NSArray</span> *)anItems</span><br><span class="line">     cellIdentifier:(<span class="built_in">NSString</span> *)aCellIdentifier</span><br><span class="line"> configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.items = anItems;</span><br><span class="line">        <span class="keyword">self</span>.cellIdentifier = aCellIdentifier;</span><br><span class="line">        <span class="keyword">self</span>.configureCellBlock = [aConfigureCellBlock <span class="keyword">copy</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">UITableViewCell</span>*)tableView:(<span class="built_in">UITableView</span>*)tableView</span><br><span class="line">        cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span>*)indexPath &#123;</span><br><span class="line">    <span class="keyword">id</span> cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier</span><br><span class="line">                                              forIndexPath:indexPath];</span><br><span class="line">    <span class="keyword">id</span> item = [<span class="keyword">self</span> itemAtIndexPath:indexPath];</span><br><span class="line">    <span class="keyword">self</span>.configureCellBlock(cell,item);</span><br><span class="line">    <span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>而具体的ViewController里应该这么写<br><figure class="highlight dns"><table><tr><td class="code"><pre><span class="line">void (^configureCell)(CustomCell*, CustomModel*) = ^(CustomCell* cell, CustomModel* model) &#123;</span><br><span class="line">    [cell setContent:model]<span class="comment">;</span></span><br><span class="line">&#125;<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">photosArrayDataSource = [[ArrayDataSource alloc] initWithItems:photos</span><br><span class="line">                                                cellIdentifier:PhotoCellIdentifier</span><br><span class="line">                                            configureCellBlock:configureCell]<span class="comment">;</span></span><br><span class="line">self.tableView.dataSource = photosArrayDataSource<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>这样就搞定了，是不是很爽呢，ArrayDataSource就可以作为一个数据源类来使用了，省去好多重复代码。<br>同时还有一个小细节：<br><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-</span> (id)<span class="selector-tag">itemAtIndexPath</span><span class="selector-pseudo">:(NSIndexPath</span> *)<span class="selector-tag">indexPath</span></span><br><span class="line">&#123;</span><br><span class="line">    return self<span class="selector-class">.items</span><span class="selector-attr">[(NSUInteger) indexPath.row]</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>也是为了复用，对外只暴露indexPath参数，同时返回id类型。 </p>
+<h1 id="让-Cells-可复用"><a href="#让-Cells-可复用" class="headerlink" title="让 Cells 可复用"></a>让 Cells 可复用</h1><p>有时多种 model 对象需要用同一类型的 cell 来表示，这种情况下，我们怎么让 cell 复用呢？因为 [cell setContent:model];content的参数类型是确定的，那怎么做可以保证同一个cell可以设置不同的model呢？对，协议，只要遵循了该Cell协议的对象都可以作为-setContent:的参数。<br>首先，我们给 cell 定义一个 protocol，需要用这个 cell 对于的model对象必须遵循这个 protocol。类似这样：<br><figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">@protocol CellConfigDelegate</span><br><span class="line">-<span class="ruby"> (NSString *)imageName;</span><br><span class="line"></span>-<span class="ruby"> (NSString *)mainTitle;</span><br><span class="line"></span>-<span class="ruby"> (NSString *)subTitle;</span><br><span class="line"></span>@end</span><br></pre></td></tr></table></figure></p>
+<p>然后简单修改 category 中的设置方法，让它可以接受遵循这个 protocol 的对象。<br><code>- (void)setContent:(id&lt;CellConfigDelegate&gt;)model;</code><br>这些简单的步骤让 cell 和任何特殊的 model 对象之间得以解耦，让它可适应不同的数据类型。 </p>
+<h1 id="在-Cell-内部控制-Cell-的状态"><a href="#在-Cell-内部控制-Cell-的状态" class="headerlink" title="在 Cell 内部控制 Cell 的状态"></a>在 Cell 内部控制 Cell 的状态</h1><p>如果你想自定义 table views 默认的高亮或选择行为，你可以实现两个 delegate 方法，把点击的 cell 修改成我们想要的样子。例如：<br><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView</span><br><span class="line">        didHighlightRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    PhotoCell *cell = [tableView cellForRowAtIndexPath:indexPath];</span><br><span class="line">    cell.photoTitleLabel.shadowColor = [<span class="built_in">UIColor</span> darkGrayColor];</span><br><span class="line">    cell.photoTitleLabel.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">3</span>, <span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView</span><br><span class="line">        didUnhighlightRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    PhotoCell *cell = [tableView cellForRowAtIndexPath:indexPath];</span><br><span class="line">    cell.photoTitleLabel.shadowColor = <span class="literal">nil</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然而，这两个 delegate 方法的实现又基于了 view controller 知晓 cell 实现的具体细节。如果我们想替换或重新设计 cell，我们必须改写 delegate 代码。View 的实现细节和 delegate 的实现交织在一起了。我们应该把这些细节移到 cell 自身中去。<br><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">PhotoCell</span></span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">- (<span class="keyword">void</span>)setHighlighted:(<span class="built_in">BOOL</span>)highlighted animated:(<span class="built_in">BOOL</span>)animated</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> setHighlighted:highlighted animated:animated];</span><br><span class="line">    <span class="keyword">if</span> (highlighted) &#123;</span><br><span class="line">        <span class="keyword">self</span>.photoTitleLabel.shadowColor = [<span class="built_in">UIColor</span> darkGrayColor];</span><br><span class="line">        <span class="keyword">self</span>.photoTitleLabel.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">3</span>, <span class="number">3</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">self</span>.photoTitleLabel.shadowColor = <span class="literal">nil</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure></p>
+<p>这样我们通过<code>- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated</code>中的bool参数就可以设置不同状态了。<br>总的来说，我们在努力把 view 层和 controller 层的实现细节分离开。delegate 肯定得清楚一个 view 该显示什么状态，但是它不应该了解如何修改 view 结构或者给某些 subviews 设置某些属性以获得正确的状态。所有这些逻辑都应该封装到 view 内部，然后给外部提供一个简单地 API。 </p>
+<p>##将业务逻辑移到Model层比如一些格式化字符串，解析数据等都放到Model层去处理</p>
+<p>##将网络请求移到Model层对网络请求进行封装到单独的模块 </p>
+<p>##把 View相关代码移到 View 层对于复杂的视图，我们要进行封装 </p>
+<p>##使用Child View Controllers(这个单独来进行总结) </p>
+<p>##搭建 Model 对象和 Cells 之间的桥梁[cell setContent:model]; </p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Table view controllers（以及其他的 controller 对象！）应该在 model 和 view 对象之间扮演协调者和调解者的角色。它不应该关心明显属于 view 层或 model 层的任务。你应该始终记住这点，这样 delegate 和 data source 方法会变得更小巧，最多包含一些简单地样板代码。<br>这不仅减少了 table view controllers 那样的大小和复杂性，而且还把业务逻辑和 view 的逻辑放到了更合适的地方。Controller 层的里里外外的实现细节都被封装成了简单地 API，最终，它变得更加容易理解，也更利于团队协作。 </p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/04/ReactiveCocoa学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          ReactiveCocoa学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/13/离屏渲染/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">离屏渲染</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="ViewController瘦身" data-title="ViewController瘦身" data-url="http://yoursite.com/2016/01/04/ViewController瘦身/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"zerody"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 ZeroDY
+    	</div>
+
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-77677122-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+<div id="totop" style="position:fixed;bottom:30px;right:0px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/gotop.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>
