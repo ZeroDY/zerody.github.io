@@ -320,9 +320,9 @@
       <category term="iOS学习" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="iOS学习" scheme="http://yoursite.com/tags/iOS%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="Blogs" scheme="http://yoursite.com/tags/Blogs/"/>
+    
+      <category term="iOS学习" scheme="http://yoursite.com/tags/iOS%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -479,9 +479,9 @@
       <category term="备忘" scheme="http://yoursite.com/categories/%E5%A4%87%E5%BF%98/"/>
     
     
-      <category term="UIAppearance" scheme="http://yoursite.com/tags/UIAppearance/"/>
-    
       <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
+    
+      <category term="UIAppearance" scheme="http://yoursite.com/tags/UIAppearance/"/>
     
   </entry>
   
@@ -556,11 +556,11 @@
       <category term="备忘" scheme="http://yoursite.com/categories/%E5%A4%87%E5%BF%98/"/>
     
     
+      <category term="UIScrollView" scheme="http://yoursite.com/tags/UIScrollView/"/>
+    
       <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
     
       <category term="常用代码" scheme="http://yoursite.com/tags/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
-    
-      <category term="UIScrollView" scheme="http://yoursite.com/tags/UIScrollView/"/>
     
   </entry>
   
@@ -747,9 +747,9 @@
     
       <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
     
-      <category term="技巧" scheme="http://yoursite.com/tags/%E6%8A%80%E5%B7%A7/"/>
-    
       <category term="常用代码" scheme="http://yoursite.com/tags/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+      <category term="技巧" scheme="http://yoursite.com/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
@@ -812,7 +812,7 @@
 &lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;email &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;example@example.com&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;string&quot;&gt;GitHub&lt;/span&gt;](&lt;span class=&quot;link&quot;&gt;http://github.com&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;自动生成连接  &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;http:&lt;/span&gt;//&lt;span class=&quot;attr&quot;&gt;www.github.com&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。&lt;br&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x40;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x40;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#64;&amp;#x65;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#101;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#64;&amp;#x65;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#101;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
 &lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;某某说:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第一行引用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第二行费用文字&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;效果如下：&lt;/p&gt;
@@ -904,9 +904,118 @@
       <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
     
     
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
+  </entry>
+  
+  <entry>
+    <title>GithubPages与Hexo搭建个人博客</title>
+    <link href="http://yoursite.com/2015/11/10/GithubPages%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2015/11/10/GithubPages与Hexo搭建个人博客/</id>
+    <published>2015-11-10T09:24:03.000Z</published>
+    <updated>2016-06-11T09:27:04.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;1-准备工作&quot;&gt;&lt;a href=&quot;#1-准备工作&quot; class=&quot;headerlink&quot; title=&quot;1.准备工作&quot;&gt;&lt;/a&gt;1.准备工作&lt;/h1&gt;&lt;p&gt;先安装好相关的工具，这里提供了brewhome安装和已经安装了Xcode的两种方式，下面两个二选一，这里墙裂推荐brewhome。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;1-1方式一-安装第三方包管理brewhome&quot;&gt;&lt;a href=&quot;#1-1方式一-安装第三方包管理brewhome&quot; class=&quot;headerlink&quot; title=&quot;1.1方式一:安装第三方包管理brewhome&quot;&gt;&lt;/a&gt;1.1方式一:安装第三方包管理brewhome&lt;/h2&gt;&lt;p&gt;首先安装好第三方包管理工具brewhome，方便后续软件的管理和安装。&lt;br&gt;直接一句命令搞定&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;     
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;1-2方式二-安装Xcode的命令行工具&quot;&gt;&lt;a href=&quot;#1-2方式二-安装Xcode的命令行工具&quot; class=&quot;headerlink&quot; title=&quot;1.2方式二:安装Xcode的命令行工具&quot;&gt;&lt;/a&gt;1.2方式二:安装Xcode的命令行工具&lt;/h2&gt;&lt;p&gt;提前安装好Xcode的 command line tools,同样一句话搞定&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xcode-select --install
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;2-安装Git&quot;&gt;&lt;a href=&quot;#2-安装Git&quot; class=&quot;headerlink&quot; title=&quot;2.安装Git&quot;&gt;&lt;/a&gt;2.安装Git&lt;/h1&gt;&lt;p&gt;安装git的方式比较多，这里只提供两种，二选一即可，如果已经安装可以跳过。账号注册比较简单，就直接略过。&lt;/p&gt;
+&lt;h2 id=&quot;2-1方式一-直接brewhome安装&quot;&gt;&lt;a href=&quot;#2-1方式一-直接brewhome安装&quot; class=&quot;headerlink&quot; title=&quot;2.1方式一:直接brewhome安装&quot;&gt;&lt;/a&gt;2.1方式一:直接brewhome安装&lt;/h2&gt;&lt;p&gt;依旧一句命令搞定&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo brew install git
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;2-2方式二-直接命令行安装&quot;&gt;&lt;a href=&quot;#2-2方式二-直接命令行安装&quot; class=&quot;headerlink&quot; title=&quot;2.2方式二:直接命令行安装&quot;&gt;&lt;/a&gt;2.2方式二:直接命令行安装&lt;/h2&gt;&lt;p&gt;前提已经安装好Xcode的Command Line Tools&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -O http://kernel.org/pub/software/scm/git/git-1.7.5.tar.bz2
+tar xjvf git-1.7.4.1.tar.bz2
+cd git-1.7.4.1
+./configure --prefix=/usr/local
+make
+sudo make install
+which git
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;3-Github的ssh设置&quot;&gt;&lt;a href=&quot;#3-Github的ssh设置&quot; class=&quot;headerlink&quot; title=&quot;3.Github的ssh设置&quot;&gt;&lt;/a&gt;3.Github的ssh设置&lt;/h1&gt;&lt;h2 id=&quot;3-1生成ssh的key&quot;&gt;&lt;a href=&quot;#3-1生成ssh的key&quot; class=&quot;headerlink&quot; title=&quot;3.1生成ssh的key&quot;&gt;&lt;/a&gt;3.1生成ssh的key&lt;/h2&gt;&lt;p&gt;输入以下命令生成ssh的key，引号内是你的github邮箱，如果已经配置完成，同样跳过。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh-keygen -t rsa -C &amp;quot;xxx@xxx.com”
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果出现以下提示，直接回车就好&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Generating public/private rsa key pair.
+Enter file in which to save the key (/        your_home_path/.ssh/id_rsa):
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;接着会显示一下信息，提示你输入两次密码，这个是在提交项目时输入的密码，不想设置的话可以直接回车跳过&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Enter passphrase (empty for no passphrase): [Type a passphrase]
+Enter same passphrase again: [Type passphrase again]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;最后如果出现一下信息就表示设置成功&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Your identification has been saved in /your_home_path/.ssh/id_rsa.
+Your public key has been saved in /your_home_path/.ssh/id_rsa.pub.
+The key fingerprint is: 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;3-2添加SSH-key到自己的Github上&quot;&gt;&lt;a href=&quot;#3-2添加SSH-key到自己的Github上&quot; class=&quot;headerlink&quot; title=&quot;3.2添加SSH key到自己的Github上&quot;&gt;&lt;/a&gt;3.2添加SSH key到自己的Github上&lt;/h2&gt;&lt;p&gt;1,在完成上一步后，会生成一个.ssh的隐藏文件，这里直接输入以下命令打开后全选复制里面的内容&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd ~/.ssh
+open -e id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2,接着登陆github，按照以下步骤&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1,点击右上角的头像图标 Settings—-&amp;gt;SSH keys —-&amp;gt; add SSH keys&lt;/p&gt;
+&lt;p&gt;2,把刚刚复制的内容粘贴到key里，title随便填&lt;/p&gt;
+&lt;p&gt;3,点击add SSH，这就完成了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3,本地测试，直接复制以下命令到命令行回车，不用修改下面的邮箱&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果看到下面的提示，则是提醒你网站证书未验证而已，直接输入yes后回车就行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;The authenticity of host &amp;apos;github.com (207.97.227.239)&amp;apos; can&amp;apos;t be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;最后看到以下提示，标明ssh的key设置成功&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Hi username! You&amp;apos;ve successfully authenticated, but GitHub does not provide shell access.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;最后设置一下自己的个人信息，用于push提交内容时记录提交者信息，就完成了，引号内的内容自行修改&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global user.name &amp;quot;your user_name&amp;quot;
+git config --global user.email &amp;quot;your_email@example.com&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;4-安装Node-js&quot;&gt;&lt;a href=&quot;#4-安装Node-js&quot; class=&quot;headerlink&quot; title=&quot;4.安装Node.js&quot;&gt;&lt;/a&gt;4.安装Node.js&lt;/h1&gt;&lt;p&gt;同样提供两种方式，二选一即可&lt;/p&gt;
+&lt;h2 id=&quot;4-1方式一-直接brewhome安装&quot;&gt;&lt;a href=&quot;#4-1方式一-直接brewhome安装&quot; class=&quot;headerlink&quot; title=&quot;4.1方式一:直接brewhome安装&quot;&gt;&lt;/a&gt;4.1方式一:直接brewhome安装&lt;/h2&gt;&lt;p&gt;一句命令搞定&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;brew install node
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;4-2方式二-直接命令行安装&quot;&gt;&lt;a href=&quot;#4-2方式二-直接命令行安装&quot; class=&quot;headerlink&quot; title=&quot;4.2方式二:直接命令行安装&quot;&gt;&lt;/a&gt;4.2方式二:直接命令行安装&lt;/h2&gt;&lt;p&gt;这里要求已经安装Xcode命令行工具和git,即已经完成以上步骤&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone git://github.com/joyent/node.git
+cd node
+./configure
+make
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;5-安装hexo&quot;&gt;&lt;a href=&quot;#5-安装hexo&quot; class=&quot;headerlink&quot; title=&quot;5.安装hexo&quot;&gt;&lt;/a&gt;5.安装hexo&lt;/h1&gt;&lt;p&gt;这里也提供两种方式，直接用node的npm安装和源码下载编译，以下同样二选一&lt;/p&gt;
+&lt;h2 id=&quot;5-1方式一-直接npm安装&quot;&gt;&lt;a href=&quot;#5-1方式一-直接npm安装&quot; class=&quot;headerlink&quot; title=&quot;5.1方式一:直接npm安装&quot;&gt;&lt;/a&gt;5.1方式一:直接npm安装&lt;/h2&gt;&lt;p&gt;完成以上步骤安装了node的情况下，同样一句话搞定&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g hexo 
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;5-2方式二-源码下载编译&quot;&gt;&lt;a href=&quot;#5-2方式二-源码下载编译&quot; class=&quot;headerlink&quot; title=&quot;5.2方式二:源码下载编译&quot;&gt;&lt;/a&gt;5.2方式二:源码下载编译&lt;/h2&gt;&lt;p&gt;直接使用以下命令下载编译源码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./configure --prefix=~/nodejs &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install
+cp ~/nodejs/bin/node /usr/sbin/node
+~/nodejs/bin/npm install -g hexo
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;6-生成hexo博客文件&quot;&gt;&lt;a href=&quot;#6-生成hexo博客文件&quot; class=&quot;headerlink&quot; title=&quot;6.生成hexo博客文件&quot;&gt;&lt;/a&gt;6.生成hexo博客文件&lt;/h1&gt;&lt;p&gt;完成以上步骤后，cd命令进入到要存放博客的目录,用以下命令生成hexo博客相关文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hexo init
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;接着安装下依赖&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install
+npm install hexo-renderer-ejs --save
+npm install hexo-renderer-stylus --save
+npm install hexo-renderer-marked --save
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;接着修改hexo根目录下_config.yml文件（xxx为你的github账户名称）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deploy:
+       type: git
+       repo: git@github.com:xxx/xxx.github.io.git
+      branch: master
+      message: 博客迁移测试        #提交的注释内容
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后直接输入以下命令，在本地预览博文&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hexo g
+hexo s
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果查看没问题，直接输入以下命令提交&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hexo d -g
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;注：因为目前用npm下载的hexo是最新的3.x版本，所以在配置完yml文件，执行 hexo deploy后,可能出现 error deployer not found:github 的错误，这时候直接 cd进入生成hexo的博文目录，输入以下命令即可&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install hexo-deployer-git --save
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-准备工作&quot;&gt;&lt;a href=&quot;#1-准备工作&quot; class=&quot;headerlink&quot; title=&quot;1.准备工作&quot;&gt;&lt;/a&gt;1.准备工作&lt;/h1&gt;&lt;p&gt;先安装好相关的工具，这里提供了brewhome安装和已经安装了Xcode的两种方式，下面两个二选一，这里墙裂推荐brewhome。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
