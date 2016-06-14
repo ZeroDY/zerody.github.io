@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>TextKit学习笔记 | ZeroDY&#39;s Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="TextKit对象：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TextKit学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/02/05/TextKit学习笔记/index.html">
+<meta property="og:site_name" content="ZeroDY's Blogs">
+<meta property="og:description" content="TextKit对象：">
+<meta property="og:updated_time" content="2016-06-14T17:10:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TextKit学习笔记">
+<meta name="twitter:description" content="TextKit对象：">
+  
+  
+    <link rel="icon" href="http://o7279yd4s.bkt.clouddn.com/bitbug_favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://o7279yd4s.bkt.clouddn.com/IMG_1776.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">ZeroDY</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">梦想还是要有的，万一见鬼了呢。</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">主页</a></li> -->
+				        
+							<li><a href="/archives">所有文章</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">所有文章</a></li> -->
+				        
+							<li><a href="/tags">标签云</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">标签云</a></li> -->
+				        
+							<li><a href="/message">留言板</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">留言板</a></li> -->
+				        
+							<li><a href="/resume/index.html">关于我</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">关于我</a></li> -->
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_self" href="https://github.com/ZeroDY" title="github">github</a>
+					        
+								<a class="weibo" target="_self" href="http://weibo.com/2345900261/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_self" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Blogs/" style="font-size: 10px;">Blogs</a> <a href="/tags/Category/" style="font-size: 10px;">Category</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/MVVM/" style="font-size: 10px;">MVVM</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSAttributedString/" style="font-size: 10px;">NSAttributedString</a> <a href="/tags/ReactiveCocoa/" style="font-size: 10px;">ReactiveCocoa</a> <a href="/tags/TextKit/" style="font-size: 10px;">TextKit</a> <a href="/tags/UIAppearance/" style="font-size: 10px;">UIAppearance</a> <a href="/tags/UIApplication/" style="font-size: 10px;">UIApplication</a> <a href="/tags/UIScrollView/" style="font-size: 10px;">UIScrollView</a> <a href="/tags/iOS学习/" style="font-size: 13.33px;">iOS学习</a> <a href="/tags/仿/" style="font-size: 10px;">仿</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/备忘/" style="font-size: 20px;">备忘</a> <a href="/tags/富文本/" style="font-size: 16.67px;">富文本</a> <a href="/tags/常用代码/" style="font-size: 13.33px;">常用代码</a> <a href="/tags/手工客/" style="font-size: 10px;">手工客</a> <a href="/tags/技巧/" style="font-size: 10px;">技巧</a> <a href="/tags/离屏渲染/" style="font-size: 10px;">离屏渲染</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">ZeroDY</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://o7279yd4s.bkt.clouddn.com/IMG_1776.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">ZeroDY</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">梦想还是要有的，万一见鬼了呢。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags">标签云</a></li>
+		        
+					<li><a href="/message">留言板</a></li>
+		        
+					<li><a href="/resume/index.html">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ZeroDY" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/2345900261/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-TextKit学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/05/TextKit学习笔记/" class="article-date">
+  	<time datetime="2016-02-05T05:03:59.000Z" itemprop="datePublished">2016-02-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      TextKit学习笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TextKit/">TextKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/富文本/">富文本</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/iOS学习/">iOS学习</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+          
+            <div id="toc" class="toc-article">
+              <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TextKit对象："><span class="toc-number">1.</span> <span class="toc-text">TextKit对象：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现"><span class="toc-number">2.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-创建textView"><span class="toc-number">2.1.</span> <span class="toc-text">第一步:创建textView</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-创建TextView时，创建NSTextContainer"><span class="toc-number">2.2.</span> <span class="toc-text">第二步:创建TextView时，创建NSTextContainer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三步-创建NSTextContainer时，同时创建NSTextStorage、NSLayoutManager"><span class="toc-number">2.3.</span> <span class="toc-text">第三步:创建NSTextContainer时，同时创建NSTextStorage、NSLayoutManager</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四步，创建告诉TextKit如何排版TextView内容的富文本属性字典"><span class="toc-number">2.4.</span> <span class="toc-text">第四步，创建告诉TextKit如何排版TextView内容的富文本属性字典.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第五步、由上调用得到一个段落样式"><span class="toc-number">2.5.</span> <span class="toc-text">第五步、由上调用得到一个段落样式</span></a></li></ol></li></ol>
+            </div>
+          
+
+          
+
+        <h1 id="TextKit对象："><a href="#TextKit对象：" class="headerlink" title="TextKit对象："></a>TextKit对象：</h1><a id="more"></a>
+<ul>
+<li><p>NSTextStorage，表示存储一段需要被处理的原始文本字符串和一些富文本属性设置项（NSAttributeString）</p>
+</li>
+<li><p>NSLayoutManager，文字排版布局管理</p>
+</li>
+<li><p>NSTextContainer，决定能够显示内容的区域</p>
+</li>
+<li><p>UITextView 中 NSAttributeString、NSMUtableAttrinuteString、NSParagraphStyle  ……等等一些富文本基本设置key</p>
+</li>
+</ul>
+<figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="built_in">NSTextStorage</span> *sharedStoage = <span class="keyword">self</span>.originalTextView.textStorage;</span><br><span class="line">[sharedStoage replaceCharactersInRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">0</span>) withString:[<span class="built_in">NSString</span> stringWithContentsOfURL:[<span class="built_in">NSBundle</span>.mainBundle URLForResource:<span class="string">@"lorem"</span> withExtension:<span class="string">@"txt"</span>]usedEncoding:<span class="literal">NULL</span> error:<span class="literal">NULL</span>]];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSLayoutManager</span> *otherLayoutManager = [<span class="built_in">NSLayoutManager</span> new];</span><br><span class="line">[sharedStoage addLayoutManager:otherLayoutManager];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSTextContainer</span> *otherContainer = [<span class="built_in">NSTextContainer</span> new];</span><br><span class="line">[otherLayoutManager addTextContainer:otherContainer];</span><br><span class="line"></span><br><span class="line"><span class="built_in">UITextView</span> *otherTextView = [[<span class="built_in">UITextView</span> alloc] initWithFrame:<span class="keyword">self</span>.otherContainerView.bounds textContainer:otherContainer];</span><br><span class="line">otherTextView.backgroundColor = <span class="keyword">self</span>.otherContainerView.backgroundColor;</span><br><span class="line">otherTextView.translatesAutoresizingMaskIntoConstraints = <span class="literal">YES</span>;</span><br><span class="line">otherTextView.scrollEnabled = <span class="literal">NO</span>;</span><br><span class="line"></span><br><span class="line">[<span class="keyword">self</span>.otherContainerView addSubview:otherTextView];</span><br><span class="line"><span class="keyword">self</span>.otherTextView = otherTextView;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSTextContainer</span> *thirdTextContainer = [<span class="built_in">NSTextContainer</span> new];</span><br><span class="line">[otherLayoutManager addTextContainer:thirdTextContainer];</span><br><span class="line"></span><br><span class="line"><span class="built_in">UITextView</span> *thirdTextView = [[<span class="built_in">UITextView</span> alloc] initWithFrame:<span class="keyword">self</span>.thirdContainerView.bounds textContainer:thirdTextContainer];</span><br><span class="line">thirdTextView.backgroundColor = <span class="keyword">self</span>.thirdContainerView.backgroundColor;</span><br><span class="line">thirdTextView.translatesAutoresizingMaskIntoConstraints = <span class="literal">NO</span>;</span><br><span class="line">thirdTextView.scrollEnabled = <span class="literal">YES</span>;</span><br><span class="line">[<span class="keyword">self</span>.thirdContainerView addSubview:thirdTextView];</span><br></pre></td></tr></table></figure>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="第一步-创建textView"><a href="#第一步-创建textView" class="headerlink" title="第一步:创建textView"></a>第一步:创建textView</h2><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">self</span>.title = <span class="string">@"关于我们"</span>;</span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">self</span> createTextView];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第二步-创建TextView时，创建NSTextContainer"><a href="#第二步-创建TextView时，创建NSTextContainer" class="headerlink" title="第二步:创建TextView时，创建NSTextContainer"></a>第二步:创建TextView时，创建NSTextContainer</h2><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)createTextView &#123;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    _textView = [[<span class="built_in">UITextView</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">20</span>, <span class="built_in">CGRectGetMaxY</span>(<span class="keyword">self</span>.lebel.frame) + <span class="number">30</span>, SCREEN_WIDTH<span class="number">-40</span>, <span class="built_in">CGRectGetMaxY</span>(<span class="keyword">self</span>.view.frame)-<span class="built_in">CGRectGetMaxY</span>(_lebel.frame)) textContainer:<span class="keyword">self</span>.textContainer];</span><br><span class="line">    </span><br><span class="line">    _textView.scrollEnabled                    = <span class="literal">YES</span>;</span><br><span class="line">    _textView.editable                         = <span class="literal">NO</span>;</span><br><span class="line">    _textView.selectable                       = <span class="literal">NO</span>;</span><br><span class="line">    _textView.layer.masksToBounds              = <span class="literal">YES</span>;</span><br><span class="line">    _textView.showsVerticalScrollIndicator     = <span class="literal">NO</span>;</span><br><span class="line"><span class="comment">//    _textView.delegate                         = self;</span></span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:_textView];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第三步-创建NSTextContainer时，同时创建NSTextStorage、NSLayoutManager"><a href="#第三步-创建NSTextContainer时，同时创建NSTextStorage、NSLayoutManager" class="headerlink" title="第三步:创建NSTextContainer时，同时创建NSTextStorage、NSLayoutManager"></a>第三步:创建NSTextContainer时，同时创建NSTextStorage、NSLayoutManager</h2><figure class="highlight dns"><table><tr><td class="code"><pre><span class="line">- (NSTextContainer *)textContainer &#123;</span><br><span class="line">    </span><br><span class="line">    NSString *text = @"长亭外，古道边，芳草碧连天。晚风拂柳笛声残，夕阳山外山。</span><br><span class="line">                        天之涯，地之角，知交半零落。一斛浊酒尽余欢，今宵别梦寒。</span><br><span class="line">                        长亭外，古道边，芳草碧连天。问君此去几时来，来时莫徘徊。</span><br><span class="line">                        天之涯，地之角，知交半零落。人生难得是欢聚，惟有别离多。"<span class="comment">;</span></span><br><span class="line">    </span><br><span class="line">    _textStorage = [[NSTextStorage alloc] initWithString:text attributes:self.paragraphyDict]<span class="comment">;</span></span><br><span class="line">    </span><br><span class="line">    _layoutManager = [[NSLayoutManager alloc] init]<span class="comment">;</span></span><br><span class="line">    [_textStorage addLayoutManager:_layoutManager]<span class="comment">;</span></span><br><span class="line">    </span><br><span class="line">    _textContainer = [[NSTextContainer alloc] init]<span class="comment">;</span></span><br><span class="line">    CGFloat width  = SCREEN_WIDTH - <span class="number">20</span> * <span class="number">2</span><span class="comment">;</span></span><br><span class="line">    CGSize size = CGSizeMake(width, MAXFLOAT)<span class="comment">;</span></span><br><span class="line">    _textContainer.size = size<span class="comment">;</span></span><br><span class="line">    </span><br><span class="line">    [_layoutManager addTextContainer:_textContainer]<span class="comment">;</span></span><br><span class="line">    </span><br><span class="line">    return _textContainer<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第四步，创建告诉TextKit如何排版TextView内容的富文本属性字典"><a href="#第四步，创建告诉TextKit如何排版TextView内容的富文本属性字典" class="headerlink" title="第四步，创建告诉TextKit如何排版TextView内容的富文本属性字典."></a>第四步，创建告诉TextKit如何排版TextView内容的富文本属性字典.</h2><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line">- (<span class="built_in">NSDictionary</span> *)paragraphyDict &#123;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSMutableDictionary</span> *attributes = [<span class="built_in">NSMutableDictionary</span> dictionary];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIColor</span> *textColor = [<span class="built_in">UIColor</span> hexString:<span class="string">@"#666666"</span>];</span><br><span class="line">    [attributes setValue:textColor forKey:<span class="built_in">NSForegroundColorAttributeName</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIFont</span> *textFont = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">13.</span>f];</span><br><span class="line">    [attributes setValue:textFont forKey:<span class="built_in">NSFontAttributeName</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//创建段落样式</span></span><br><span class="line">    [attributes setValue:[<span class="keyword">self</span> style] forKey:<span class="built_in">NSParagraphStyleAttributeName</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> attributes;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第五步、由上调用得到一个段落样式"><a href="#第五步、由上调用得到一个段落样式" class="headerlink" title="第五步、由上调用得到一个段落样式"></a>第五步、由上调用得到一个段落样式</h2><figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">- (NSMutableParagraphStyle *)<span class="built_in">style</span> &#123;</span><br><span class="line">  </span><br><span class="line">  NSMutableParagraphStyle *<span class="built_in">style</span> = [[NSMutableParagraphStyle alloc] init];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">style</span>.lineSpacing = <span class="number">8.</span>5f;</span><br><span class="line">    <span class="built_in">style</span>.paragraphSpacing = <span class="number">25.</span>f;</span><br><span class="line">    <span class="built_in">style</span>.firstLineHeadIndent = <span class="number">20.</span>f;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">return</span> <span class="built_in">style</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong> NSMutableParagraphStyle段落样式的所有属性</strong><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 段落的风格（设置首行，行间距，对齐方式什么的）看自己需要什么属性，写什么  </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSMutableParagraphStyle</span> *paragraphStyle = [[<span class="built_in">NSMutableParagraphStyle</span> alloc] init];  </span><br><span class="line"></span><br><span class="line"><span class="comment">// 字体的行间距</span></span><br><span class="line">paragraphStyle.lineSpacing = <span class="number">10</span>;  </span><br><span class="line"></span><br><span class="line"><span class="comment">//首行缩进  </span></span><br><span class="line">paragraphStyle.firstLineHeadIndent = <span class="number">20.0</span>f;</span><br><span class="line"></span><br><span class="line"><span class="comment">//段头缩进(首行除外) </span></span><br><span class="line">paragraphStyle.headIndent = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//段尾缩进</span></span><br><span class="line">paragraphStyle.tailIndent = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//（两端对齐的）文本对齐方式：（左，中，右，两端对齐，自然）  </span></span><br><span class="line">paragraphStyle.alignment = <span class="built_in">NSTextAlignmentJustified</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//结尾（还有头部、中间）部分的内容以……方式省略 ( "...wxyz" ,"abcd..." ,"ab...yz") </span></span><br><span class="line">paragraphStyle.lineBreakMode = <span class="built_in">NSLineBreakByTruncatingTail</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//最低行高</span></span><br><span class="line">paragraphStyle.minimumLineHeight = <span class="number">10</span>;  </span><br><span class="line"></span><br><span class="line"><span class="comment">//最大行高</span></span><br><span class="line">paragraphStyle.maximumLineHeight = <span class="number">20</span>;  </span><br><span class="line"></span><br><span class="line"><span class="comment">//段与段之间的间距  </span></span><br><span class="line">paragraphStyle.paragraphSpacing = <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//段首行空白空间</span></span><br><span class="line">paragraphStyle.paragraphSpacingBefore = <span class="number">22.0</span>f;</span><br><span class="line"></span><br><span class="line"><span class="comment">//从左到右的书写方向（还有其他方向）</span></span><br><span class="line">paragraphStyle.baseWritingDirection = <span class="built_in">NSWritingDirectionLeftToRight</span>;  </span><br><span class="line"></span><br><span class="line">paragraphStyle.lineHeightMultiple = <span class="number">15</span>;</span><br><span class="line">  </span><br><span class="line"><span class="comment">//连字属性 在iOS，唯一支持的值分别为0和1 </span></span><br><span class="line">paragraphStyle.hyphenationFactor = <span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/11/(常用代码备忘)UIAppearance App全局设置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          (常用代码备忘)UIAppearance App全局设置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/23/iOS富文本/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS富文本</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="TextKit学习笔记" data-title="TextKit学习笔记" data-url="http://yoursite.com/2016/02/05/TextKit学习笔记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"zerody"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 ZeroDY
+    	</div>
+
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-77677122-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+<div id="totop" style="position:fixed;bottom:30px;right:0px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/gotop.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>
