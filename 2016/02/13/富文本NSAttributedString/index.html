@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="ZeroDY's Blogs">
 <meta property="og:description" content="iOS 富文本可以分为NSAttributedString和NSMutableAttributedString两种。在使用中通过将AttributedString赋值给控件的 attributedText 属性来添加文字样式。有属性的控件有UILabel、UITextField和UITextView。">
 <meta property="og:image" content="http://o76hg1e0m.bkt.clouddn.com/NSAttributedString.png">
-<meta property="og:updated_time" content="2016-06-14T10:47:42.000Z">
+<meta property="og:updated_time" content="2016-06-14T10:48:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="富文本NSAttributedString">
 <meta name="twitter:description" content="iOS 富文本可以分为NSAttributedString和NSMutableAttributedString两种。在使用中通过将AttributedString赋值给控件的 attributedText 属性来添加文字样式。有属性的控件有UILabel、UITextField和UITextView。">
@@ -249,8 +249,7 @@
 <li>赋值，并利用方法appendAttributedString:添加入NSMutableAttributedString，</li>
 <li>将其赋给控件的attributedText属性。</li>
 </ol>
-<h1 id="使用方法二"><a href="#使用方法二" class="headerlink" title="使用方法二"></a>使用方法二</h1><pre><code>这种方式只是简单的用几个属性表示了用法，在下面的一种使用方式中，会详细总结所有属性
-</code></pre><ol>
+<h1 id="使用方法二"><a href="#使用方法二" class="headerlink" title="使用方法二"></a>使用方法二</h1><ol>
 <li>初始化 <code>NSMutableAttributedString</code></li>
 <li>然后向里面添加文字样式</li>
 <li>将其赋给控件的<code>attributedText</code>属性。<figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *str = <span class="string">@"在有生的瞬间能遇到你，竟花光所有运气"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建NSMutableAttributedString</span></span><br><span class="line"><span class="built_in">NSMutableAttributedString</span> *attrStr = [[<span class="built_in">NSMutableAttributedString</span> alloc]initWithString:str];</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置字体和设置字体的范围</span></span><br><span class="line">[attrStr addAttribute:<span class="built_in">NSFontAttributeName</span> value:[<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">30.0</span>f] range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">3</span>)];</span><br><span class="line"><span class="comment">//添加下划线</span></span><br><span class="line">[attrStr addAttribute:<span class="built_in">NSUnderlineStyleAttributeName</span> value:[<span class="built_in">NSNumber</span> numberWithInteger:<span class="built_in">NSUnderlineStyleSingle</span>] range:<span class="built_in">NSMakeRange</span>(<span class="number">8</span>, <span class="number">7</span>)];</span><br><span class="line"></span><br><span class="line"><span class="built_in">UILabel</span> *label = [[<span class="built_in">UILabel</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">60</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">0</span>)];</span><br><span class="line">label.backgroundColor = [<span class="built_in">UIColor</span> greenColor];</span><br><span class="line"><span class="comment">//自动换行</span></span><br><span class="line">label.numberOfLines = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//设置label的富文本</span></span><br><span class="line">label.attributedText = attrStr;</span><br><span class="line"><span class="comment">//label高度自适应</span></span><br><span class="line">[label sizeToFit];</span><br><span class="line">[<span class="keyword">self</span>.view addSubview:label];</span><br></pre></td></tr></table></figure>
