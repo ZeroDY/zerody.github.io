@@ -433,6 +433,94 @@
   </entry>
   
   <entry>
+    <title>常用设计模式</title>
+    <link href="http://yoursite.com/2016/02/13/%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2016/02/13/常用设计模式/</id>
+    <published>2016-02-13T04:57:12.000Z</published>
+    <updated>2016-06-14T04:09:30.000Z</updated>
+    
+    <content type="html">&lt;p&gt;常用设计模式随笔&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot; title=&quot;单例模式&quot;&gt;&lt;/a&gt;单例模式&lt;/h1&gt;&lt;p&gt;单例模式作为一种目标明确、结构简单、理解容易的设计模式，在软件开发中使用频率相当高，在很多应用软件和框架中都得以广泛应用。  &lt;/p&gt;
+&lt;h2 id=&quot;1-主要优点&quot;&gt;&lt;a href=&quot;#1-主要优点&quot; class=&quot;headerlink&quot; title=&quot;1).主要优点&quot;&gt;&lt;/a&gt;1).主要优点&lt;/h2&gt;&lt;p&gt;单例模式的主要优点如下：&lt;/p&gt;
+&lt;p&gt;(1)单例模式提供了对唯一实例的受控访问。因为单例类封装了它的唯一实例，所以它可以严格控制客户怎样以及何时访问它。&lt;/p&gt;
+&lt;p&gt;(2)由于在系统内存中只存在一个对象，因此可以节约系统资源，对于一些需要频繁创建和销毁的对象单例模式无疑可以提高系统的性能。&lt;/p&gt;
+&lt;p&gt;(3)允许可变数目的实例。基于单例模式我们可以进行扩展，使用与单例控制相似的方法来获得指定个数的对象实例，既节省系统资源，又解决了单例单例对象共享过多有损性能的问题。&lt;/p&gt;
+&lt;h2 id=&quot;2-主要缺点&quot;&gt;&lt;a href=&quot;#2-主要缺点&quot; class=&quot;headerlink&quot; title=&quot;2).主要缺点&quot;&gt;&lt;/a&gt;2).主要缺点&lt;/h2&gt;&lt;p&gt;单例模式的主要缺点如下：&lt;/p&gt;
+&lt;p&gt;(1)由于单例模式中没有抽象层，因此单例类的扩展有很大的困难。&lt;/p&gt;
+&lt;p&gt;(2)单例类的职责过重，在一定程度上违背了“单一职责原则”。因为单例类既充当了工厂角色，提供了工厂方法，同时又充当了产品角色，包含一些业务方法，将产品的创建和产品的本身的功能融合到一起。&lt;/p&gt;
+&lt;p&gt;(3)现在很多面向对象语言(如Java、C#)的运行环境都提供了自动垃圾回收的技术，因此，如果实例化的共享对象长时间不被利用，系统会认为它是垃圾，会自动销毁并回收资源，下次利用时又将重新实例化，这将导致共享的单例对象状态的丢失。&lt;/p&gt;
+&lt;h2 id=&quot;3-适用场景&quot;&gt;&lt;a href=&quot;#3-适用场景&quot; class=&quot;headerlink&quot; title=&quot;3).适用场景&quot;&gt;&lt;/a&gt;3).适用场景&lt;/h2&gt;&lt;p&gt;在以下情况下可以考虑使用单例模式：&lt;/p&gt;
+&lt;p&gt;(1)系统只需要一个实例对象，如系统要求提供一个唯一的序列号生成器或资源管理器，或者需要考虑资源消耗太大而只允许创建一个对象。&lt;/p&gt;
+&lt;p&gt;(2)客户调用类的单个实例只允许使用一个公共访问点，除了该公共访问点，不能通过其他途径访问该实例。&lt;/p&gt;
+&lt;h1 id=&quot;委托模式（代理模式）&quot;&gt;&lt;a href=&quot;#委托模式（代理模式）&quot; class=&quot;headerlink&quot; title=&quot;委托模式（代理模式）&quot;&gt;&lt;/a&gt;委托模式（代理模式）&lt;/h1&gt;&lt;h2 id=&quot;1-主要优点-1&quot;&gt;&lt;a href=&quot;#1-主要优点-1&quot; class=&quot;headerlink&quot; title=&quot;1).主要优点&quot;&gt;&lt;/a&gt;1).主要优点&lt;/h2&gt;&lt;p&gt;(1).非常严格的语法。所有将听到的事件必须是在delegate协议中有清晰的定义。  &lt;/p&gt;
+&lt;p&gt;(2).如果delegate中的一个方法没有实现那么就会出现编译警告/错误&lt;/p&gt;
+&lt;p&gt;(3).协议必须在controller的作用域范围内定义&lt;/p&gt;
+&lt;p&gt;(4).在一个应用中的控制流程是可跟踪的并且是可识别的；&lt;/p&gt;
+&lt;p&gt;(5).在一个控制器中可以定义定义多个不同的协议，每个协议有不同的delegates&lt;/p&gt;
+&lt;p&gt;(6).没有第三方对象要求保持/监视通信过程。&lt;/p&gt;
+&lt;p&gt;(7).能够接收调用的协议方法的返回值。这意味着delegate能够提供反馈信息给controller&lt;/p&gt;
+&lt;h2 id=&quot;2-主要缺点-1&quot;&gt;&lt;a href=&quot;#2-主要缺点-1&quot; class=&quot;headerlink&quot; title=&quot;2).主要缺点&quot;&gt;&lt;/a&gt;2).主要缺点&lt;/h2&gt;&lt;p&gt;(1).需要定义很多代码：1.协议定义；2.controller的delegate属性；3.在delegate本身中实现delegate方法定义  &lt;/p&gt;
+&lt;p&gt;(2).在释放代理对象时，需要小心的将delegate改为nil。一旦设定失败，那么调用释放对象的方法将会出现内存crash&lt;/p&gt;
+&lt;p&gt;(3).在一个controller中有多个delegate对象，并且delegate是遵守同一个协议，但还是很难告诉多个对象同一个事件，不过有可能。&lt;/p&gt;
+&lt;h1 id=&quot;观察者模式&quot;&gt;&lt;a href=&quot;#观察者模式&quot; class=&quot;headerlink&quot; title=&quot;观察者模式&quot;&gt;&lt;/a&gt;观察者模式&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;观察者模式在iOS中有两个用法，NSNotification和KVO
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;NSNotification&quot;&gt;&lt;a href=&quot;#NSNotification&quot; class=&quot;headerlink&quot; title=&quot;NSNotification&quot;&gt;&lt;/a&gt;NSNotification&lt;/h2&gt;&lt;p&gt;涉及到两个对象，观察者和被观察者，观察者注册监听，当被观察者执行某个操作时，会发送一个通知，注册该通知的观察者就会收到这个通知，然后去执行下一步操作，通知是广播模式，支持一对多。&lt;/p&gt;
+&lt;h3 id=&quot;优势：&quot;&gt;&lt;a href=&quot;#优势：&quot; class=&quot;headerlink&quot; title=&quot;优势：&quot;&gt;&lt;/a&gt;优势：&lt;/h3&gt;&lt;p&gt;(1).不需要编写多少代码，实现比较简单；&lt;/p&gt;
+&lt;p&gt;(2).对于一个发出的通知，多个对象能够做出反应，即1对多的方式实现简单&lt;/p&gt;
+&lt;p&gt;(3).controller能够传递context对象（dictionary），context对象携带了关于发送通知的自定义的信息&lt;/p&gt;
+&lt;h3 id=&quot;缺点：&quot;&gt;&lt;a href=&quot;#缺点：&quot; class=&quot;headerlink&quot; title=&quot;缺点：&quot;&gt;&lt;/a&gt;缺点：&lt;/h3&gt;&lt;p&gt;(1).在编译期不会检查通知是否能够被观察者正确的处理；&lt;/p&gt;
+&lt;p&gt;(2).在释放注册的对象时，需要在通知中心取消注册；&lt;/p&gt;
+&lt;p&gt;(3).在调试的时候应用的工作以及控制过程难跟踪；&lt;/p&gt;
+&lt;p&gt;(4).需要第三方对喜爱那个来管理controller与观察者对象之间的联系；&lt;/p&gt;
+&lt;p&gt;(5).controller和观察者需要提前知道通知名称，如果这些没有在工作区间定义，那么会出现不同步的情况；&lt;/p&gt;
+&lt;p&gt;(6).通知发出后，controller不能从观察者获得任何的反馈信息。&lt;/p&gt;
+&lt;h2 id=&quot;KVO&quot;&gt;&lt;a href=&quot;#KVO&quot; class=&quot;headerlink&quot; title=&quot;KVO&quot;&gt;&lt;/a&gt;KVO&lt;/h2&gt;&lt;p&gt;是一个对象能够观察另外一个对象的属性的值，并且能够发现值的变化。前面两种模式更加适合一个controller与任何其他的对象进行通信，而KVO更加适合任何类型的对象侦听另外一个任意对象的改变（这里也可以是controller，但一般不是controller）。这是一个对象与另外一个对象保持同步的一种方法，即当另外一种对象的状态发生改变时，观察对象马上作出反应。&lt;strong&gt;它只能用来对属性作出反应，而不会用来对方法或者动作作出反应&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;优点：&quot;&gt;&lt;a href=&quot;#优点：&quot; class=&quot;headerlink&quot; title=&quot;优点：&quot;&gt;&lt;/a&gt;优点：&lt;/h3&gt;&lt;p&gt;(1).能够提供一种简单的方法实现两个对象间的同步。例如：model和view之间同步；&lt;/p&gt;
+&lt;p&gt;(2).能够对非我们创建的对象，即内部对象的状态改变作出响应，而且不需要改变内部对象（SKD对象）的实现；&lt;/p&gt;
+&lt;p&gt;(3).能够提供观察的属性的最新值以及先前值；&lt;/p&gt;
+&lt;p&gt;(4).用key paths来观察属性，因此也可以观察嵌套对象；&lt;/p&gt;
+&lt;p&gt;(5).完成了对观察对象的抽象，因为不需要额外的代码来允许观察值能够被观察&lt;/p&gt;
+&lt;h3 id=&quot;缺点：-1&quot;&gt;&lt;a href=&quot;#缺点：-1&quot; class=&quot;headerlink&quot; title=&quot;缺点：&quot;&gt;&lt;/a&gt;缺点：&lt;/h3&gt;&lt;p&gt;(1).我们观察的属性必须使用strings来定义。因此在编译器不会出现警告以及检查；&lt;/p&gt;
+&lt;p&gt;(2).对属性重构将导致我们的观察代码不再可用；&lt;/p&gt;
+&lt;p&gt;(3).复杂的“IF”语句要求对象正在观察多个值 。这是因为所有的观察代码通过一个方法来指向；&lt;/p&gt;
+&lt;p&gt;(4).当释放观察者时不需要移除观察者。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;delegate跟NSNotification、KVO有什么区别和联系&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三者都是为了代码解耦，delegate只支持一对一，而另外两个支持一对多；delegate有很明确的控制链，代码逻辑结构更加清晰易懂，而另外两个这方面就偏弱了；delegate跟NSNotification主要针对Controller之间的通信场景，而KVO主要针对Controller与属性之间的通信场景。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot; title=&quot;工厂模式&quot;&gt;&lt;/a&gt;工厂模式&lt;/h2&gt;&lt;p&gt;在基类中定义创建对象的一个接口，让子类决定实例化哪个类。工厂方法让一个类的实例化延迟到子类中进行。  &lt;/p&gt;
+&lt;p&gt;工厂方法要解决的问题是对象的创建时机，它提供了一种扩展的策略，很好地符合了开放封闭原则。工厂方法也叫做虚构造器（Virtual Constructor).&lt;/p&gt;
+&lt;p&gt;应用场景：工厂方式创建类的实例，多与代理模式配合，创建可替换代理类。  &lt;/p&gt;
+&lt;h2 id=&quot;1-优点：&quot;&gt;&lt;a href=&quot;#1-优点：&quot; class=&quot;headerlink&quot; title=&quot;1).优点：&quot;&gt;&lt;/a&gt;1).优点：&lt;/h2&gt;&lt;p&gt;(1).易于替换，面向抽象编程，只与抽象工厂和易变类的共性抽象类发生调用关系&lt;/p&gt;
+&lt;p&gt;(2).代码结构更加清晰，代码也更简洁&lt;/p&gt;
+&lt;p&gt;敏捷原则：DIP依赖倒置原则&lt;/p&gt;
+&lt;h2 id=&quot;2-缺点：&quot;&gt;&lt;a href=&quot;#2-缺点：&quot; class=&quot;headerlink&quot; title=&quot;2).缺点：&quot;&gt;&lt;/a&gt;2).缺点：&lt;/h2&gt;&lt;p&gt;(1).增加了代码的复杂度&lt;/p&gt;
+&lt;p&gt;(2).增加了调用层次&lt;/p&gt;
+&lt;p&gt;(3).增加了内存负担&lt;/p&gt;
+&lt;p&gt;实例：项目部署环境中依赖多个不同类型的数据库时，需要使用工厂配合代理完成易用性替换  &lt;/p&gt;
+&lt;h1 id=&quot;策略模式&quot;&gt;&lt;a href=&quot;#策略模式&quot; class=&quot;headerlink&quot; title=&quot;策略模式&quot;&gt;&lt;/a&gt;策略模式&lt;/h1&gt;&lt;p&gt;应用场景：定义算法族，封装起来，使他们之间可以相互替换。  &lt;/p&gt;
+&lt;p&gt;优势：使算法的变化独立于使用算法的用户&lt;/p&gt;
+&lt;p&gt;敏捷原则：接口隔离原则；多用组合，少用继承；针对接口编程，而非实现。&lt;/p&gt;
+&lt;p&gt;实例：排序算法，NSArray的sortedArrayUsingSelector；经典的鸭子会叫，会飞案例。&lt;/p&gt;
+&lt;p&gt;注意事项：1，剥离类中易于变化的行为，通过组合的方式嵌入抽象基类&lt;/p&gt;
+&lt;p&gt;2，变化的行为抽象基类为，所有可变变化的父类&lt;/p&gt;
+&lt;p&gt;3，用户类的最终实例，通过注入行为实例的方式，设定易变行为&lt;/p&gt;
+&lt;p&gt;防止了继承行为方式，导致无关行为污染子类。完成了策略封装和可替换性。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;常用设计模式随笔&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>(常用代码备忘)UIAppearance App全局设置</title>
     <link href="http://yoursite.com/2016/02/11/(%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98)UIAppearance%20App%E5%85%A8%E5%B1%80%E8%AE%BE%E7%BD%AE/"/>
     <id>http://yoursite.com/2016/02/11/(常用代码备忘)UIAppearance App全局设置/</id>
