@@ -116,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Blogs/" style="font-size: 10px;">Blogs</a> <a href="/tags/Category/" style="font-size: 10px;">Category</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/MVVM/" style="font-size: 10px;">MVVM</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSAttributedString/" style="font-size: 10px;">NSAttributedString</a> <a href="/tags/ReactiveCocoa/" style="font-size: 10px;">ReactiveCocoa</a> <a href="/tags/UIAppearance/" style="font-size: 10px;">UIAppearance</a> <a href="/tags/UIApplication/" style="font-size: 10px;">UIApplication</a> <a href="/tags/UIScrollView/" style="font-size: 10px;">UIScrollView</a> <a href="/tags/iOS学习/" style="font-size: 15px;">iOS学习</a> <a href="/tags/仿/" style="font-size: 10px;">仿</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/备忘/" style="font-size: 20px;">备忘</a> <a href="/tags/富文本/" style="font-size: 10px;">富文本</a> <a href="/tags/常用代码/" style="font-size: 15px;">常用代码</a> <a href="/tags/手工客/" style="font-size: 10px;">手工客</a> <a href="/tags/技巧/" style="font-size: 10px;">技巧</a> <a href="/tags/离屏渲染/" style="font-size: 10px;">离屏渲染</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/Blogs/" style="font-size: 10px;">Blogs</a> <a href="/tags/Category/" style="font-size: 10px;">Category</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/MVVM/" style="font-size: 10px;">MVVM</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSAttributedString/" style="font-size: 10px;">NSAttributedString</a> <a href="/tags/ReactiveCocoa/" style="font-size: 10px;">ReactiveCocoa</a> <a href="/tags/UIAppearance/" style="font-size: 10px;">UIAppearance</a> <a href="/tags/UIApplication/" style="font-size: 10px;">UIApplication</a> <a href="/tags/UIScrollView/" style="font-size: 10px;">UIScrollView</a> <a href="/tags/iOS学习/" style="font-size: 15px;">iOS学习</a> <a href="/tags/仿/" style="font-size: 10px;">仿</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/备忘/" style="font-size: 20px;">备忘</a> <a href="/tags/富文本/" style="font-size: 15px;">富文本</a> <a href="/tags/常用代码/" style="font-size: 15px;">常用代码</a> <a href="/tags/手工客/" style="font-size: 10px;">手工客</a> <a href="/tags/技巧/" style="font-size: 10px;">技巧</a> <a href="/tags/离屏渲染/" style="font-size: 10px;">离屏渲染</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -240,6 +240,133 @@
         <p class="article-more-link">
           <a  href="/2016/06/02/ShougongkeDemo(仿“手工客”iOS App)/#more">阅读全文 >></a>
         </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-iOS富文本" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/13/iOS富文本/" class="article-date">
+  	<time datetime="2016-03-13T15:22:12.000Z" itemprop="datePublished">2016-03-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/13/iOS富文本/">iOS富文本</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+          
+            <div id="toc" class="toc-article">
+              <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#要实现效果："><span class="toc-number">1.</span> <span class="toc-text">要实现效果：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现方式"><span class="toc-number">2.</span> <span class="toc-text">实现方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#具体实现"><span class="toc-number">3.</span> <span class="toc-text">具体实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#通过CoreText-TextKit来原生实现"><span class="toc-number">3.1.</span> <span class="toc-text">通过CoreText/TextKit来原生实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过UIWebView来间接实现"><span class="toc-number">3.2.</span> <span class="toc-text">通过UIWebView来间接实现</span></a></li></ol></li></ol>
+            </div>
+          
+
+          
+
+        <h1 id="要实现效果："><a href="#要实现效果：" class="headerlink" title="要实现效果："></a>要实现效果：</h1><ul>
+<li>图片和文字混排</li>
+<li>文字样式修改</li>
+</ul>
+<h1 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h1><ul>
+<li>CoreText/TextKit-原生实现</li>
+<li>UIWebView-间接实现</li>
+</ul>
+<h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><p><a href="http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png" target="_blank" rel="external"><img src="http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png" alt=""></a></p>
+<h2 id="通过CoreText-TextKit来原生实现"><a href="#通过CoreText-TextKit来原生实现" class="headerlink" title="通过CoreText/TextKit来原生实现"></a>通过CoreText/TextKit来原生实现</h2><p>iOS 6之前：CoreText,纯C语言,极其蛋疼<br>iOS 6开始：NSAttributedString,简单易用<br>iOS 7开始：TextKit,功能强大,简单易用</p>
+<p><strong>对于NSAttributedString（iOS6开始）：</strong></p>
+<ul>
+<li>可以给指定范围（range）内的string添加属性（见UIKit中的<code>NSAttributedString.h</code>中的属性列表）；</li>
+<li>可以使用它的类方法<code>attributedStringWithAttachment:</code>，将图片以附件（<code>NSTextAttachment</code>）的形式附加在已有NSAttributedString的后面。</li>
+</ul>
+<p><strong>对于TextKit（iOS7开始）：</strong></p>
+<ul>
+<li>可以通过继承<code>NSTextStorage</code>或<code>NSLayoutManager</code>来对不同的样式（如指定文字的高亮、背景颜色、下划线等）进行自定义处理；</li>
+<li>可以设置<code>NSTextContainer</code>的<code>exclusionPaths</code>属性来设置镂空区域。</li>
+</ul>
+<p><strong>对于DTCoreText：</strong></p>
+<ul>
+<li>对CoreText进行了封装；</li>
+<li>可以将html转换成<code>NSAttributedString</code>，而依然以<strong>html的样式</strong>展示出来；</li>
+<li>支持CSS样式的展示；</li>
+<li>支持内嵌html5视频及播放；</li>
+<li>支持对多种附件（图片、视频等）的自定义处理；</li>
+<li>支持远程图片等懒加载。</li>
+</ul>
+<p><strong>补充：</strong></p>
+<p>正如<a href="http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718" target="_blank" rel="external">pix</a>所说，iOS7起，UIKit中添加了<code>initWithData:options:documentAttributes:error:</code>方法，可以用HTML来初始化一个NSAttributedString对象。如下：</p>
+<pre><code>[[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUTF8StringEncoding] 
+                                 options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+                                           NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)} 
+                      documentAttributes:nil error:nil];
+</code></pre><p>但从评论中来看，普遍反映执行起来花费时间很长。所以类似情况，还是优先考虑使用DTCoreText。</p>
+<hr>
+<p><strong>Ref:</strong></p>
+<ul>
+<li>CoreText教程：<a href="https://www.raywenderlich.com/4147/core-text-tutorial-for-ios-making-a-magazine-app" target="_blank" rel="external">https://www.raywenderlich.com/4147/core-text-tutorial-for-ios-making-a-magazine-app</a></li>
+<li>DTCoreText: <a href="https://github.com/Cocoanetics/DTCoreText" target="_blank" rel="external">https://github.com/Cocoanetics/DTCoreText</a></li>
+<li>DTCoreText-Demo: <a href="https://github.com/yoon-boom/DTCoreText-DEMO" target="_blank" rel="external">https://github.com/yoon-boom/DTCoreText-DEMO</a>(Happy to find an executable one!)</li>
+<li>DTCoreText的源码分析：<a href="http://blog.cnbang.net/tech/2630/" target="_blank" rel="external">http://blog.cnbang.net/tech/2630/</a></li>
+<li>TextKit教程：<a href="https://www.raywenderlich.com/50151/text-kit-tutorial" target="_blank" rel="external">https://www.raywenderlich.com/50151/text-kit-tutorial</a></li>
+<li>YYText：<a href="https://github.com/ibireme/YYText" target="_blank" rel="external">https://github.com/ibireme/YYText</a></li>
+<li><a href="http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718" target="_blank" rel="external">http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718</a></li>
+</ul>
+<h2 id="通过UIWebView来间接实现"><a href="#通过UIWebView来间接实现" class="headerlink" title="通过UIWebView来间接实现"></a>通过UIWebView来间接实现</h2><p>原理是类似symfony中的twig模板，将设计好的模板存在项目中（.mustache和.html），字体保存为.ttf，然后每次请求数据时，将服务器返回的html用这个模板进行渲染，再用嵌入的webview加载，从而得到整体风格一致的页面。</p>
+<p>具体实现可以参考开源中国iOS版本的源码。</p>
+<hr>
+<p><strong>Ref:</strong></p>
+<ul>
+<li>GRMustache：<a href="https://github.com/groue/GRMustache" target="_blank" rel="external">https://github.com/groue/GRMustache</a></li>
+<li><a href="https://github.com/syntaxhighlighter/syntaxhighlighter" target="_blank" rel="external">https://github.com/syntaxhighlighter/syntaxhighlighter</a></li>
+<li>开源中国iOS版本源码：<a href="http://git.oschina.net/oschina/iphone-app/tree/master" target="_blank" rel="external">http://git.oschina.net/oschina/iphone-app/tree/master</a></li>
+</ul>
+<p><a href="http://www.calios.gq/2016/05/17/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" target="_blank" rel="external">原文地址http://www.calios.gq/2016/05/17/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/备忘/">备忘</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/富文本/">富文本</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/iOS学习/">iOS学习</a>
+	</div>
+
+
       
       <div class="clearfix"></div>
     </div>
@@ -763,64 +890,6 @@
       
         <p class="article-more-link">
           <a  href="/2016/01/22/(常用代码备忘)UIScrollView/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ViewController瘦身" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/18/ViewController瘦身/" class="article-date">
-  	<time datetime="2016-01-18T11:34:27.000Z" itemprop="datePublished">2016-01-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/18/ViewController瘦身/">ViewController瘦身</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>该篇主要针对的是UITableViewController，因为UITableViewController是iOS开发中用的最多的组件。<br>本文转自：<a href="http://objccn.io/issue-1-1/">http://objccn.io/issue-1-1/</a><br>示例代码地址：<a href="https://github.com/ZeroDY/DYSource/tree/master/DYDataSourceDelegate">https://github.com/ZeroDY/DYSource/tree/master/DYDataSourceDelegate</a></p>
-</blockquote>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/18/ViewController瘦身/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
