@@ -125,12 +125,13 @@
     <link href="http://yoursite.com/2016/03/13/iOS%E5%AF%8C%E6%96%87%E6%9C%AC/"/>
     <id>http://yoursite.com/2016/03/13/iOS富文本/</id>
     <published>2016-03-13T15:22:12.000Z</published>
-    <updated>2016-06-14T15:28:56.000Z</updated>
+    <updated>2016-06-14T15:30:07.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;要实现效果：&quot;&gt;&lt;a href=&quot;#要实现效果：&quot; class=&quot;headerlink&quot; title=&quot;要实现效果：&quot;&gt;&lt;/a&gt;要实现效果：&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;图片和文字混排&lt;/li&gt;
 &lt;li&gt;文字样式修改&lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h1 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;CoreText/TextKit-原生实现&lt;/li&gt;
 &lt;li&gt;UIWebView-间接实现&lt;/li&gt;
@@ -192,7 +193,6 @@
 &lt;li&gt;图片和文字混排&lt;/li&gt;
 &lt;li&gt;文字样式修改&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;实现方式&quot;
     
     </summary>
     
