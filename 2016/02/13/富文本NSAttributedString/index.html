@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>富文本NSAttributedString | ZeroDY&#39;s Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="iOS 富文本可以分为NSAttributedString和NSMutableAttributedString两种。在使用中通过将AttributedString赋值给控件的 attributedText 属性来添加文字样式。有属性的控件有UILabel、UITextField和UITextView。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="富文本NSAttributedString">
+<meta property="og:url" content="http://yoursite.com/2016/02/13/富文本NSAttributedString/index.html">
+<meta property="og:site_name" content="ZeroDY's Blogs">
+<meta property="og:description" content="iOS 富文本可以分为NSAttributedString和NSMutableAttributedString两种。在使用中通过将AttributedString赋值给控件的 attributedText 属性来添加文字样式。有属性的控件有UILabel、UITextField和UITextView。">
+<meta property="og:image" content="http://o76hg1e0m.bkt.clouddn.com/NSAttributedString.png">
+<meta property="og:updated_time" content="2016-06-14T10:47:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="富文本NSAttributedString">
+<meta name="twitter:description" content="iOS 富文本可以分为NSAttributedString和NSMutableAttributedString两种。在使用中通过将AttributedString赋值给控件的 attributedText 属性来添加文字样式。有属性的控件有UILabel、UITextField和UITextView。">
+<meta name="twitter:image" content="http://o76hg1e0m.bkt.clouddn.com/NSAttributedString.png">
+  
+  
+    <link rel="icon" href="http://o7279yd4s.bkt.clouddn.com/bitbug_favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://o7279yd4s.bkt.clouddn.com/IMG_1776.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">ZeroDY</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">梦想还是要有的，万一见鬼了呢。</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">主页</a></li> -->
+				        
+							<li><a href="/archives">所有文章</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">所有文章</a></li> -->
+				        
+							<li><a href="/tags">标签云</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">标签云</a></li> -->
+				        
+							<li><a href="/message">留言板</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">留言板</a></li> -->
+				        
+							<li><a href="/resume/index.html">关于我</a></li>
+							<!-- <li><a target="_top" href="/about/index.html">关于我</a></li> -->
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_self" href="https://github.com/ZeroDY" title="github">github</a>
+					        
+								<a class="weibo" target="_self" href="http://weibo.com/2345900261/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_self" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Blogs/" style="font-size: 10px;">Blogs</a> <a href="/tags/Category/" style="font-size: 10px;">Category</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/MVVM/" style="font-size: 10px;">MVVM</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSAttributedString/" style="font-size: 10px;">NSAttributedString</a> <a href="/tags/ReactiveCocoa/" style="font-size: 10px;">ReactiveCocoa</a> <a href="/tags/UIAppearance/" style="font-size: 10px;">UIAppearance</a> <a href="/tags/UIApplication/" style="font-size: 10px;">UIApplication</a> <a href="/tags/UIScrollView/" style="font-size: 10px;">UIScrollView</a> <a href="/tags/iOS学习/" style="font-size: 15px;">iOS学习</a> <a href="/tags/仿/" style="font-size: 10px;">仿</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/备忘/" style="font-size: 20px;">备忘</a> <a href="/tags/富文本/" style="font-size: 10px;">富文本</a> <a href="/tags/常用代码/" style="font-size: 15px;">常用代码</a> <a href="/tags/手工客/" style="font-size: 10px;">手工客</a> <a href="/tags/技巧/" style="font-size: 10px;">技巧</a> <a href="/tags/离屏渲染/" style="font-size: 10px;">离屏渲染</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">ZeroDY</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://o7279yd4s.bkt.clouddn.com/IMG_1776.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">ZeroDY</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">梦想还是要有的，万一见鬼了呢。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags">标签云</a></li>
+		        
+					<li><a href="/message">留言板</a></li>
+		        
+					<li><a href="/resume/index.html">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/ZeroDY" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/2345900261/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-富文本NSAttributedString" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/13/富文本NSAttributedString/" class="article-date">
+  	<time datetime="2016-02-13T10:57:12.000Z" itemprop="datePublished">2016-02-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      富文本NSAttributedString
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSAttributedString/">NSAttributedString</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/备忘/">备忘</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/富文本/">富文本</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/iOS学习/">iOS学习</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+          
+            <div id="toc" class="toc-article">
+              <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常用属性备忘"><span class="toc-number">1.</span> <span class="toc-text">常用属性备忘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用方法（上）"><span class="toc-number">2.</span> <span class="toc-text">使用方法（上）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用方法二"><span class="toc-number">3.</span> <span class="toc-text">使用方法二</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#链接属性的设置"><span class="toc-number">4.</span> <span class="toc-text">链接属性的设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置方式一"><span class="toc-number">4.1.</span> <span class="toc-text">设置方式一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置方式二"><span class="toc-number">4.2.</span> <span class="toc-text">设置方式二</span></a></li></ol></li></ol>
+            </div>
+          
+
+          
+
+        <p>iOS 富文本可以分为<code>NSAttributedString</code>和<code>NSMutableAttributedString</code>两种。在使用中通过将AttributedString赋值给控件的 <code>attributedText</code> 属性来添加文字样式。有属性的控件有<code>UILabel、UITextField和UITextView</code>。</p>
+<a id="more"></a>
+<p><img src="http://o76hg1e0m.bkt.clouddn.com/NSAttributedString.png" alt=""></p>
+<h1 id="常用属性备忘"><a href="#常用属性备忘" class="headerlink" title="常用属性备忘"></a>常用属性备忘</h1><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="comment">//初始化NSMutableAttributedString</span></span><br><span class="line"><span class="built_in">NSMutableAttributedString</span> *attributedString = [[<span class="built_in">NSMutableAttributedString</span> alloc]init];</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置字体格式和大小</span></span><br><span class="line"><span class="built_in">NSString</span> *str0 = <span class="string">@"设置字体格式和大小"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr0 = @&#123;<span class="built_in">NSFontAttributeName</span>:[<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">14</span>]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr0 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str0 attributes:dictAttr0];</span><br><span class="line">[attributedString appendAttributedString:attr0];</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置字体颜色</span></span><br><span class="line"><span class="built_in">NSString</span> *str1 = <span class="string">@"\n设置字体颜色\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr1 = @&#123;<span class="built_in">NSForegroundColorAttributeName</span>:[<span class="built_in">UIColor</span> purpleColor]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr1 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str1 attributes:dictAttr1];</span><br><span class="line">[attributedString appendAttributedString:attr1];</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置字体背景颜色</span></span><br><span class="line"><span class="built_in">NSString</span> *str2 = <span class="string">@"设置字体背景颜色\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr2 = @&#123;<span class="built_in">NSBackgroundColorAttributeName</span>:[<span class="built_in">UIColor</span> cyanColor]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr2 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str2 attributes:dictAttr2];</span><br><span class="line">[attributedString appendAttributedString:attr2];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> 注：NSLigatureAttributeName设置连体属性，取值为NSNumber对象（整数），1表示使用默认的连体字符，0表示不使用，2表示使用所有连体符号（iOS不支持2）。而且并非所有的字符之间都有组合符合。如 fly ，f和l会连起来。</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">//设置连体属性</span></span><br><span class="line"><span class="built_in">NSString</span> *str3 = <span class="string">@"fly"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr3 = @&#123;<span class="built_in">NSFontAttributeName</span>:[<span class="built_in">UIFont</span> fontWithName:<span class="string">@"futura"</span> size:<span class="number">14</span>],<span class="built_in">NSLigatureAttributeName</span>:[<span class="built_in">NSNumber</span> numberWithInteger:<span class="number">1</span>]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr3 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str3 attributes:dictAttr3];</span><br><span class="line">[attributedString appendAttributedString:attr3];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*!</span><br><span class="line"> 注：NSKernAttributeName用来设置字符之间的间距，取值为NSNumber对象（整数），负值间距变窄，正值间距变宽</span><br><span class="line"> */</span></span><br><span class="line"><span class="built_in">NSString</span> *str4 = <span class="string">@"\n设置字符间距"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr4 = @&#123;<span class="built_in">NSKernAttributeName</span>:@(<span class="number">4</span>)&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr4 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str4 attributes:dictAttr4];</span><br><span class="line">[attributedString appendAttributedString:attr4];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*!</span><br><span class="line"> 注：NSStrikethroughStyleAttributeName设置删除线，取值为NSNumber对象，枚举NSUnderlineStyle中的值。NSStrikethroughColorAttributeName设置删除线的颜色。并可以将Style和Pattern相互 取与 获取不同的效果</span><br><span class="line"> */</span></span><br><span class="line"><span class="built_in">NSString</span> *str51 = <span class="string">@"\n设置删除线为细单实线,颜色为红色"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr51 = @&#123;<span class="built_in">NSStrikethroughStyleAttributeName</span>:@(<span class="built_in">NSUnderlineStyleSingle</span>),<span class="built_in">NSStrikethroughColorAttributeName</span>:[<span class="built_in">UIColor</span> redColor]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr51 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str51 attributes:dictAttr51];</span><br><span class="line">[attributedString appendAttributedString:attr51];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span> *str52 = <span class="string">@"\n设置删除线为粗单实线,颜色为红色"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr52 = @&#123;<span class="built_in">NSStrikethroughStyleAttributeName</span>:@(<span class="built_in">NSUnderlineStyleThick</span>),<span class="built_in">NSStrikethroughColorAttributeName</span>:[<span class="built_in">UIColor</span> redColor]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr52 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str52 attributes:dictAttr52];</span><br><span class="line">[attributedString appendAttributedString:attr52];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span> *str53 = <span class="string">@"\n设置删除线为细双实线,颜色为红色"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr53 = @&#123;<span class="built_in">NSStrikethroughStyleAttributeName</span>:@(<span class="built_in">NSUnderlineStyleDouble</span>),<span class="built_in">NSStrikethroughColorAttributeName</span>:[<span class="built_in">UIColor</span> redColor]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr53 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str53 attributes:dictAttr53];</span><br><span class="line">[attributedString appendAttributedString:attr53];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span> *str54 = <span class="string">@"\n设置删除线为细单虚线,颜色为红色"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr54 = @&#123;<span class="built_in">NSStrikethroughStyleAttributeName</span>:@(<span class="built_in">NSUnderlineStyleSingle</span>|<span class="built_in">NSUnderlinePatternDot</span>),<span class="built_in">NSStrikethroughColorAttributeName</span>:[<span class="built_in">UIColor</span> redColor]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr54 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str54 attributes:dictAttr54];</span><br><span class="line">[attributedString appendAttributedString:attr54];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*!</span><br><span class="line"> NSStrokeWidthAttributeName 设置笔画的宽度，取值为NSNumber对象（整数），负值填充效果，正值是中空效果。NSStrokeColorAttributeName  设置填充部分颜色，取值为UIColor对象。</span><br><span class="line"> 设置中间部分颜色可以使用 NSForegroundColorAttributeName 属性来进行</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">//设置笔画宽度和填充部分颜色</span></span><br><span class="line"><span class="built_in">NSString</span> *str6 = <span class="string">@"\n设置笔画宽度和填充颜色\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr6 = @&#123;<span class="built_in">NSStrokeWidthAttributeName</span>:@(<span class="number">2</span>),<span class="built_in">NSStrokeColorAttributeName</span>:[<span class="built_in">UIColor</span> blueColor]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr6 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str6 attributes:dictAttr6];</span><br><span class="line">[attributedString appendAttributedString:attr6];</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置阴影属性，取值为NSShadow对象</span></span><br><span class="line"><span class="built_in">NSString</span> *str7 = <span class="string">@"设置阴影属性\n"</span>;</span><br><span class="line"><span class="built_in">NSShadow</span> *shadow = [[<span class="built_in">NSShadow</span> alloc]init];</span><br><span class="line">shadow.shadowColor = [<span class="built_in">UIColor</span> redColor];</span><br><span class="line">shadow.shadowBlurRadius = <span class="number">1.0</span>f;</span><br><span class="line">shadow.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr7 = @&#123;<span class="built_in">NSShadowAttributeName</span>:shadow&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr7 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str7 attributes:dictAttr7];</span><br><span class="line">[attributedString appendAttributedString:attr7];</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置文本特殊效果，取值为NSString类型，目前只有一个可用效果  NSTextEffectLetterpressStyle（凸版印刷效果）</span></span><br><span class="line"><span class="built_in">NSString</span> *str8 = <span class="string">@"设置特殊效果\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr8 = @&#123;<span class="built_in">NSTextEffectAttributeName</span>:<span class="built_in">NSTextEffectLetterpressStyle</span>&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr8 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str8 attributes:dictAttr8];</span><br><span class="line">[attributedString appendAttributedString:attr8];</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置文本附件，取值为NSTextAttachment对象，常用于文字的图文混排</span></span><br><span class="line"><span class="built_in">NSString</span> *str9 = <span class="string">@"文字的图文混排\n"</span>;</span><br><span class="line"><span class="built_in">NSTextAttachment</span> *textAttachment = [[<span class="built_in">NSTextAttachment</span> alloc]init];</span><br><span class="line">textAttachment.image = [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"image"</span>];</span><br><span class="line">textAttachment.bounds = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">30</span>, <span class="number">30</span>);</span><br><span class="line"><span class="built_in">NSMutableAttributedString</span> *attr9 = [[<span class="built_in">NSMutableAttributedString</span> alloc]initWithString:str9];</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attrStr1 = [<span class="built_in">NSAttributedString</span> attributedStringWithAttachment:textAttachment];</span><br><span class="line">[attr9 appendAttributedString:attrStr1];</span><br><span class="line">[attributedString appendAttributedString:attr9];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*!</span><br><span class="line"> 添加下划线 NSUnderlineStyleAttributeName。设置下划线的颜色 NSUnderlineColorAttributeName，对象为 UIColor。使用方式同删除线一样。</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">//添加下划线</span></span><br><span class="line"><span class="built_in">NSString</span> *str10 = <span class="string">@"添加下划线\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr10 = @&#123;<span class="built_in">NSUnderlineStyleAttributeName</span>:@(<span class="built_in">NSUnderlineStyleSingle</span>),<span class="built_in">NSUnderlineColorAttributeName</span>:[<span class="built_in">UIColor</span> redColor]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr10 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str10 attributes:dictAttr10];</span><br><span class="line">[attributedString appendAttributedString:attr10];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*!</span><br><span class="line"> NSBaselineOffsetAttributeName 设置基线偏移值。取值为NSNumber （float），正值上偏，负值下偏</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">//设置基线偏移值 NSBaselineOffsetAttributeName</span></span><br><span class="line"><span class="built_in">NSString</span> *str11 = <span class="string">@"添加基线偏移值\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr11 = @&#123;<span class="built_in">NSBaselineOffsetAttributeName</span>:@(<span class="number">-10</span>)&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr11 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str11 attributes:dictAttr11];</span><br><span class="line">[attributedString appendAttributedString:attr11];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*!</span><br><span class="line"> NSObliquenessAttributeName 设置字体倾斜度，取值为 NSNumber（float），正值右倾，负值左倾</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">//设置字体倾斜度 NSObliquenessAttributeName</span></span><br><span class="line"><span class="built_in">NSString</span> *str12 = <span class="string">@"设置字体倾斜度\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr12 = @&#123;<span class="built_in">NSObliquenessAttributeName</span>:@(<span class="number">0.5</span>)&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr12 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str12 attributes:dictAttr12];</span><br><span class="line">[attributedString appendAttributedString:attr12];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*!</span><br><span class="line"> NSExpansionAttributeName 设置字体的横向拉伸，取值为NSNumber （float），正值拉伸 ，负值压缩</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">//设置字体的横向拉伸 NSExpansionAttributeName</span></span><br><span class="line"><span class="built_in">NSString</span> *str13 = <span class="string">@"设置字体横向拉伸\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr13 = @&#123;<span class="built_in">NSExpansionAttributeName</span>:@(<span class="number">0.5</span>)&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr13 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str13 attributes:dictAttr13];</span><br><span class="line">[attributedString appendAttributedString:attr13];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*!</span><br><span class="line"> NSWritingDirectionAttributeName 设置文字的书写方向，取值为以下组合</span><br><span class="line"> @[@(NSWritingDirectionLeftToRight | NSWritingDirectionEmbedding)]</span><br><span class="line"> @[@(NSWritingDirectionLeftToRight | NSWritingDirectionOverride)]</span><br><span class="line"> @[@(NSWritingDirectionRightToLeft | NSWritingDirectionEmbedding)]</span><br><span class="line"> @[@(NSWritingDirectionRightToLeft | NSWritingDirectionOverride)]</span><br><span class="line"> </span><br><span class="line"> ???NSWritingDirectionEmbedding和NSWritingDirectionOverride有什么不同</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">//设置文字的书写方向 NSWritingDirectionAttributeName</span></span><br><span class="line"><span class="built_in">NSString</span> *str14 = <span class="string">@"设置文字书写方向\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr14 = @&#123;<span class="built_in">NSWritingDirectionAttributeName</span>:@[@(<span class="built_in">NSWritingDirectionRightToLeft</span> | <span class="built_in">NSWritingDirectionEmbedding</span>)]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr14 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str14 attributes:dictAttr14];</span><br><span class="line">[attributedString appendAttributedString:attr14];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*!</span><br><span class="line"> NSVerticalGlyphFormAttributeName 设置文字排版方向，取值为NSNumber对象（整数），0表示横排文本，1表示竖排文本  在iOS中只支持0</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">//设置文字排版方向 NSVerticalGlyphFormAttributeName</span></span><br><span class="line"><span class="built_in">NSString</span> *str15 = <span class="string">@"设置文字排版方向\n"</span>;</span><br><span class="line"><span class="built_in">NSDictionary</span> *dictAttr15 = @&#123;<span class="built_in">NSVerticalGlyphFormAttributeName</span>:@(<span class="number">0</span>)&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attr15 = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:str15 attributes:dictAttr15];</span><br><span class="line">[attributedString appendAttributedString:attr15];</span><br><span class="line"></span><br><span class="line"><span class="comment">//段落样式</span></span><br><span class="line"><span class="built_in">NSMutableParagraphStyle</span> *paragraph = [[<span class="built_in">NSMutableParagraphStyle</span> alloc]init];</span><br><span class="line"><span class="comment">//行间距</span></span><br><span class="line">paragraph.lineSpacing = <span class="number">8</span>;</span><br><span class="line"><span class="comment">//段落间距</span></span><br><span class="line">paragraph.paragraphSpacing = <span class="number">8</span>;</span><br><span class="line"><span class="comment">//对齐方式</span></span><br><span class="line">paragraph.alignment = <span class="built_in">NSTextAlignmentLeft</span>;</span><br><span class="line"><span class="comment">//指定段落开始的缩进像素</span></span><br><span class="line">paragraph.firstLineHeadIndent = <span class="number">30</span>;</span><br><span class="line"><span class="comment">//调整全部文字的缩进像素</span></span><br><span class="line">paragraph.headIndent = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//添加段落设置</span></span><br><span class="line">[attributedString addAttribute:<span class="built_in">NSParagraphStyleAttributeName</span> value:paragraph range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, attributedString.length)];</span><br><span class="line"></span><br><span class="line"><span class="built_in">UITextView</span> *textView = [[<span class="built_in">UITextView</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">20</span>, <span class="number">70</span>, <span class="number">300</span>,[<span class="built_in">UIScreen</span> mainScreen].bounds.size.height<span class="number">-80</span>)];</span><br><span class="line">textView.backgroundColor = [<span class="built_in">UIColor</span> groupTableViewBackgroundColor];</span><br><span class="line"><span class="comment">//设置textView的富文本</span></span><br><span class="line">textView.attributedText = attributedString;</span><br><span class="line"><span class="comment">//textView高度自适应</span></span><br><span class="line"><span class="comment">//    [textView sizeToFit];</span></span><br><span class="line"></span><br><span class="line">[<span class="keyword">self</span>.view addSubview:textView];</span><br></pre></td></tr></table></figure>
+<h1 id="使用方法（上）"><a href="#使用方法（上）" class="headerlink" title="使用方法（上）"></a>使用方法（上）</h1><ol>
+<li>创建属性字典，并将各种属性初始化。</li>
+<li>赋值，并利用方法appendAttributedString:添加入NSMutableAttributedString，</li>
+<li>将其赋给控件的attributedText属性。</li>
+</ol>
+<h1 id="使用方法二"><a href="#使用方法二" class="headerlink" title="使用方法二"></a>使用方法二</h1><pre><code>这种方式只是简单的用几个属性表示了用法，在下面的一种使用方式中，会详细总结所有属性
+</code></pre><ol>
+<li>初始化 <code>NSMutableAttributedString</code></li>
+<li>然后向里面添加文字样式</li>
+<li>将其赋给控件的<code>attributedText</code>属性。<figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *str = <span class="string">@"在有生的瞬间能遇到你，竟花光所有运气"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建NSMutableAttributedString</span></span><br><span class="line"><span class="built_in">NSMutableAttributedString</span> *attrStr = [[<span class="built_in">NSMutableAttributedString</span> alloc]initWithString:str];</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置字体和设置字体的范围</span></span><br><span class="line">[attrStr addAttribute:<span class="built_in">NSFontAttributeName</span> value:[<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">30.0</span>f] range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">3</span>)];</span><br><span class="line"><span class="comment">//添加下划线</span></span><br><span class="line">[attrStr addAttribute:<span class="built_in">NSUnderlineStyleAttributeName</span> value:[<span class="built_in">NSNumber</span> numberWithInteger:<span class="built_in">NSUnderlineStyleSingle</span>] range:<span class="built_in">NSMakeRange</span>(<span class="number">8</span>, <span class="number">7</span>)];</span><br><span class="line"></span><br><span class="line"><span class="built_in">UILabel</span> *label = [[<span class="built_in">UILabel</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">60</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">0</span>)];</span><br><span class="line">label.backgroundColor = [<span class="built_in">UIColor</span> greenColor];</span><br><span class="line"><span class="comment">//自动换行</span></span><br><span class="line">label.numberOfLines = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//设置label的富文本</span></span><br><span class="line">label.attributedText = attrStr;</span><br><span class="line"><span class="comment">//label高度自适应</span></span><br><span class="line">[label sizeToFit];</span><br><span class="line">[<span class="keyword">self</span>.view addSubview:label];</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="链接属性的设置"><a href="#链接属性的设置" class="headerlink" title="链接属性的设置"></a>链接属性的设置</h1><p>之所以把 <code>NSLinkAttributeName</code> 属性单独列出来，是因为在 UILabel 和 UITextField 中是无法使用该属性的。更准确点说是在UILabel 和 UITextField 中无法实现点击链接启动浏览器打开一个URL地址，因为在此过程中用到了一个代理函数。只能用在 UITextView 中。</p>
+<p>NSLinkAttributeName 的对象是 NSURL 类型 或 NSString，但是优先使用 NSURL。</p>
+<p>需要实现UITextView的代理方法 - (BOOL)textView:(UITextView <em>)textView shouldInteractWithURL:(NSURL </em>)URL inRange:(NSRange)characterRange，在该方法中，返回 YES，则会打开URL地址，返回 NO则不会。</p>
+<h2 id="设置方式一"><a href="#设置方式一" class="headerlink" title="设置方式一"></a>设置方式一</h2><p>将全部文字设置为链接（可点击）<br><figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="built_in">NSDictionary</span> *dictAttr = @&#123;<span class="built_in">NSLinkAttributeName</span>:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://www.jianshu.com"</span>]&#125;;</span><br><span class="line"><span class="built_in">NSAttributedString</span> *attrStr = [[<span class="built_in">NSAttributedString</span> alloc]initWithString:<span class="string">@"简书"</span> attributes:dictAttr];</span><br><span class="line">textView.attributedText = attrStr;</span><br></pre></td></tr></table></figure></p>
+<h2 id="设置方式二"><a href="#设置方式二" class="headerlink" title="设置方式二"></a>设置方式二</h2><p>将部分文字设置为链接</p>
+<figure class="highlight objectivec"><table><tr><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *str = <span class="string">@"跳转到简书"</span>;</span><br><span class="line"><span class="built_in">NSMutableAttributedString</span> *attrStr = [[<span class="built_in">NSMutableAttributedString</span> alloc]initWithString:str];</span><br><span class="line">[attrStr addAttribute:<span class="built_in">NSLinkAttributeName</span> value:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://www.jianshu.com"</span>] range:[str rangeOfString:<span class="string">@"简书"</span>]];</span><br><span class="line">textView.attributedText = attrStr;</span><br><span class="line"></span><br><span class="line"><span class="comment">//代理回调方法</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)textView:(<span class="built_in">UITextView</span> *)textView shouldInteractWithURL:(<span class="built_in">NSURL</span> *)URL inRange:(<span class="built_in">NSRange</span>)characterRange</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//在这里是可以做一些判定什么的，用来确定对应的操作。</span></span><br><span class="line"><span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>注意：</em></p>
+<ul>
+<li>实现textView的代理，否则调不到回调方法。</li>
+<li>设置textView的 editable 属性为 NO，在可编辑的状态下是不可点击的。</li>
+<li>在模拟器环境下一直无法点击，在真机上是正常的，不知道是不是模拟器不支持。</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/23/ReactiveCocoa学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          ReactiveCocoa学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/13/常用设计模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常用设计模式</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="富文本NSAttributedString" data-title="富文本NSAttributedString" data-url="http://yoursite.com/2016/02/13/富文本NSAttributedString/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"zerody"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 ZeroDY
+    	</div>
+
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-77677122-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+<div id="totop" style="position:fixed;bottom:30px;right:0px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/gotop.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>
