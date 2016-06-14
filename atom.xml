@@ -121,91 +121,6 @@
   </entry>
   
   <entry>
-    <title>iOS富文本</title>
-    <link href="http://yoursite.com/2016/03/13/iOS%E5%AF%8C%E6%96%87%E6%9C%AC/"/>
-    <id>http://yoursite.com/2016/03/13/iOS富文本/</id>
-    <published>2016-03-13T15:22:12.000Z</published>
-    <updated>2016-06-14T15:30:07.000Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;要实现效果：&quot;&gt;&lt;a href=&quot;#要实现效果：&quot; class=&quot;headerlink&quot; title=&quot;要实现效果：&quot;&gt;&lt;/a&gt;要实现效果：&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;图片和文字混排&lt;/li&gt;
-&lt;li&gt;文字样式修改&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;CoreText/TextKit-原生实现&lt;/li&gt;
-&lt;li&gt;UIWebView-间接实现&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;具体实现&quot;&gt;&lt;a href=&quot;#具体实现&quot; class=&quot;headerlink&quot; title=&quot;具体实现&quot;&gt;&lt;/a&gt;具体实现&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;通过CoreText-TextKit来原生实现&quot;&gt;&lt;a href=&quot;#通过CoreText-TextKit来原生实现&quot; class=&quot;headerlink&quot; title=&quot;通过CoreText/TextKit来原生实现&quot;&gt;&lt;/a&gt;通过CoreText/TextKit来原生实现&lt;/h2&gt;&lt;p&gt;iOS 6之前：CoreText,纯C语言,极其蛋疼&lt;br&gt;iOS 6开始：NSAttributedString,简单易用&lt;br&gt;iOS 7开始：TextKit,功能强大,简单易用&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;对于NSAttributedString（iOS6开始）：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可以给指定范围（range）内的string添加属性（见UIKit中的&lt;code&gt;NSAttributedString.h&lt;/code&gt;中的属性列表）；&lt;/li&gt;
-&lt;li&gt;可以使用它的类方法&lt;code&gt;attributedStringWithAttachment:&lt;/code&gt;，将图片以附件（&lt;code&gt;NSTextAttachment&lt;/code&gt;）的形式附加在已有NSAttributedString的后面。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;对于TextKit（iOS7开始）：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可以通过继承&lt;code&gt;NSTextStorage&lt;/code&gt;或&lt;code&gt;NSLayoutManager&lt;/code&gt;来对不同的样式（如指定文字的高亮、背景颜色、下划线等）进行自定义处理；&lt;/li&gt;
-&lt;li&gt;可以设置&lt;code&gt;NSTextContainer&lt;/code&gt;的&lt;code&gt;exclusionPaths&lt;/code&gt;属性来设置镂空区域。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;对于DTCoreText：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对CoreText进行了封装；&lt;/li&gt;
-&lt;li&gt;可以将html转换成&lt;code&gt;NSAttributedString&lt;/code&gt;，而依然以&lt;strong&gt;html的样式&lt;/strong&gt;展示出来；&lt;/li&gt;
-&lt;li&gt;支持CSS样式的展示；&lt;/li&gt;
-&lt;li&gt;支持内嵌html5视频及播放；&lt;/li&gt;
-&lt;li&gt;支持对多种附件（图片、视频等）的自定义处理；&lt;/li&gt;
-&lt;li&gt;支持远程图片等懒加载。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;补充：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;正如&lt;a href=&quot;http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pix&lt;/a&gt;所说，iOS7起，UIKit中添加了&lt;code&gt;initWithData:options:documentAttributes:error:&lt;/code&gt;方法，可以用HTML来初始化一个NSAttributedString对象。如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUTF8StringEncoding] 
-                                 options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-                                           NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)} 
-                      documentAttributes:nil error:nil];
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;但从评论中来看，普遍反映执行起来花费时间很长。所以类似情况，还是优先考虑使用DTCoreText。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Ref:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CoreText教程：&lt;a href=&quot;https://www.raywenderlich.com/4147/core-text-tutorial-for-ios-making-a-magazine-app&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.raywenderlich.com/4147/core-text-tutorial-for-ios-making-a-magazine-app&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;DTCoreText: &lt;a href=&quot;https://github.com/Cocoanetics/DTCoreText&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Cocoanetics/DTCoreText&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;DTCoreText-Demo: &lt;a href=&quot;https://github.com/yoon-boom/DTCoreText-DEMO&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/yoon-boom/DTCoreText-DEMO&lt;/a&gt;(Happy to find an executable one!)&lt;/li&gt;
-&lt;li&gt;DTCoreText的源码分析：&lt;a href=&quot;http://blog.cnbang.net/tech/2630/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.cnbang.net/tech/2630/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;TextKit教程：&lt;a href=&quot;https://www.raywenderlich.com/50151/text-kit-tutorial&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.raywenderlich.com/50151/text-kit-tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;YYText：&lt;a href=&quot;https://github.com/ibireme/YYText&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/ibireme/YYText&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;通过UIWebView来间接实现&quot;&gt;&lt;a href=&quot;#通过UIWebView来间接实现&quot; class=&quot;headerlink&quot; title=&quot;通过UIWebView来间接实现&quot;&gt;&lt;/a&gt;通过UIWebView来间接实现&lt;/h2&gt;&lt;p&gt;原理是类似symfony中的twig模板，将设计好的模板存在项目中（.mustache和.html），字体保存为.ttf，然后每次请求数据时，将服务器返回的html用这个模板进行渲染，再用嵌入的webview加载，从而得到整体风格一致的页面。&lt;/p&gt;
-&lt;p&gt;具体实现可以参考开源中国iOS版本的源码。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Ref:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;GRMustache：&lt;a href=&quot;https://github.com/groue/GRMustache&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/groue/GRMustache&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/syntaxhighlighter/syntaxhighlighter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/syntaxhighlighter/syntaxhighlighter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;开源中国iOS版本源码：&lt;a href=&quot;http://git.oschina.net/oschina/iphone-app/tree/master&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://git.oschina.net/oschina/iphone-app/tree/master&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.calios.gq/2016/05/17/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文地址http://www.calios.gq/2016/05/17/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;要实现效果：&quot;&gt;&lt;a href=&quot;#要实现效果：&quot; class=&quot;headerlink&quot; title=&quot;要实现效果：&quot;&gt;&lt;/a&gt;要实现效果：&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;图片和文字混排&lt;/li&gt;
-&lt;li&gt;文字样式修改&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="iOS学习" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
-    
-      <category term="富文本" scheme="http://yoursite.com/tags/%E5%AF%8C%E6%96%87%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
     <title>离屏渲染</title>
     <link href="http://yoursite.com/2016/03/08/%E7%A6%BB%E5%B1%8F%E6%B8%B2%E6%9F%93/"/>
     <id>http://yoursite.com/2016/03/08/离屏渲染/</id>
@@ -708,6 +623,91 @@
       <category term="UIAppearance" scheme="http://yoursite.com/tags/UIAppearance/"/>
     
       <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS富文本</title>
+    <link href="http://yoursite.com/2016/01/23/iOS%E5%AF%8C%E6%96%87%E6%9C%AC/"/>
+    <id>http://yoursite.com/2016/01/23/iOS富文本/</id>
+    <published>2016-01-23T15:22:12.000Z</published>
+    <updated>2016-06-14T15:33:27.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;要实现效果：&quot;&gt;&lt;a href=&quot;#要实现效果：&quot; class=&quot;headerlink&quot; title=&quot;要实现效果：&quot;&gt;&lt;/a&gt;要实现效果：&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;图片和文字混排&lt;/li&gt;
+&lt;li&gt;文字样式修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;CoreText/TextKit-原生实现&lt;/li&gt;
+&lt;li&gt;UIWebView-间接实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;具体实现&quot;&gt;&lt;a href=&quot;#具体实现&quot; class=&quot;headerlink&quot; title=&quot;具体实现&quot;&gt;&lt;/a&gt;具体实现&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;通过CoreText-TextKit来原生实现&quot;&gt;&lt;a href=&quot;#通过CoreText-TextKit来原生实现&quot; class=&quot;headerlink&quot; title=&quot;通过CoreText/TextKit来原生实现&quot;&gt;&lt;/a&gt;通过CoreText/TextKit来原生实现&lt;/h2&gt;&lt;p&gt;iOS 6之前：CoreText,纯C语言,极其蛋疼&lt;br&gt;iOS 6开始：NSAttributedString,简单易用&lt;br&gt;iOS 7开始：TextKit,功能强大,简单易用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;对于NSAttributedString（iOS6开始）：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以给指定范围（range）内的string添加属性（见UIKit中的&lt;code&gt;NSAttributedString.h&lt;/code&gt;中的属性列表）；&lt;/li&gt;
+&lt;li&gt;可以使用它的类方法&lt;code&gt;attributedStringWithAttachment:&lt;/code&gt;，将图片以附件（&lt;code&gt;NSTextAttachment&lt;/code&gt;）的形式附加在已有NSAttributedString的后面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;对于TextKit（iOS7开始）：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以通过继承&lt;code&gt;NSTextStorage&lt;/code&gt;或&lt;code&gt;NSLayoutManager&lt;/code&gt;来对不同的样式（如指定文字的高亮、背景颜色、下划线等）进行自定义处理；&lt;/li&gt;
+&lt;li&gt;可以设置&lt;code&gt;NSTextContainer&lt;/code&gt;的&lt;code&gt;exclusionPaths&lt;/code&gt;属性来设置镂空区域。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;对于DTCoreText：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对CoreText进行了封装；&lt;/li&gt;
+&lt;li&gt;可以将html转换成&lt;code&gt;NSAttributedString&lt;/code&gt;，而依然以&lt;strong&gt;html的样式&lt;/strong&gt;展示出来；&lt;/li&gt;
+&lt;li&gt;支持CSS样式的展示；&lt;/li&gt;
+&lt;li&gt;支持内嵌html5视频及播放；&lt;/li&gt;
+&lt;li&gt;支持对多种附件（图片、视频等）的自定义处理；&lt;/li&gt;
+&lt;li&gt;支持远程图片等懒加载。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;补充：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;正如&lt;a href=&quot;http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pix&lt;/a&gt;所说，iOS7起，UIKit中添加了&lt;code&gt;initWithData:options:documentAttributes:error:&lt;/code&gt;方法，可以用HTML来初始化一个NSAttributedString对象。如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUTF8StringEncoding] 
+                                 options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+                                           NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)} 
+                      documentAttributes:nil error:nil];
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;但从评论中来看，普遍反映执行起来花费时间很长。所以类似情况，还是优先考虑使用DTCoreText。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Ref:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CoreText教程：&lt;a href=&quot;https://www.raywenderlich.com/4147/core-text-tutorial-for-ios-making-a-magazine-app&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.raywenderlich.com/4147/core-text-tutorial-for-ios-making-a-magazine-app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DTCoreText: &lt;a href=&quot;https://github.com/Cocoanetics/DTCoreText&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Cocoanetics/DTCoreText&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DTCoreText-Demo: &lt;a href=&quot;https://github.com/yoon-boom/DTCoreText-DEMO&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/yoon-boom/DTCoreText-DEMO&lt;/a&gt;(Happy to find an executable one!)&lt;/li&gt;
+&lt;li&gt;DTCoreText的源码分析：&lt;a href=&quot;http://blog.cnbang.net/tech/2630/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.cnbang.net/tech/2630/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TextKit教程：&lt;a href=&quot;https://www.raywenderlich.com/50151/text-kit-tutorial&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.raywenderlich.com/50151/text-kit-tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;YYText：&lt;a href=&quot;https://github.com/ibireme/YYText&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/ibireme/YYText&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;通过UIWebView来间接实现&quot;&gt;&lt;a href=&quot;#通过UIWebView来间接实现&quot; class=&quot;headerlink&quot; title=&quot;通过UIWebView来间接实现&quot;&gt;&lt;/a&gt;通过UIWebView来间接实现&lt;/h2&gt;&lt;p&gt;原理是类似symfony中的twig模板，将设计好的模板存在项目中（.mustache和.html），字体保存为.ttf，然后每次请求数据时，将服务器返回的html用这个模板进行渲染，再用嵌入的webview加载，从而得到整体风格一致的页面。&lt;/p&gt;
+&lt;p&gt;具体实现可以参考开源中国iOS版本的源码。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Ref:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GRMustache：&lt;a href=&quot;https://github.com/groue/GRMustache&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/groue/GRMustache&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/syntaxhighlighter/syntaxhighlighter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/syntaxhighlighter/syntaxhighlighter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;开源中国iOS版本源码：&lt;a href=&quot;http://git.oschina.net/oschina/iphone-app/tree/master&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://git.oschina.net/oschina/iphone-app/tree/master&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.calios.gq/2016/05/17/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文地址http://www.calios.gq/2016/05/17/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;要实现效果：&quot;&gt;&lt;a href=&quot;#要实现效果：&quot; class=&quot;headerlink&quot; title=&quot;要实现效果：&quot;&gt;&lt;/a&gt;要实现效果：&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;图片和文字混排&lt;/li&gt;
+&lt;li&gt;文字样式修改&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="iOS学习" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
+    
+      <category term="富文本" scheme="http://yoursite.com/tags/%E5%AF%8C%E6%96%87%E6%9C%AC/"/>
     
   </entry>
   
