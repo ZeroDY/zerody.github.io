@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-04T15:23:44.000Z</updated>
+  <updated>2016-06-20T09:22:22.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS条码二维码扫描</title>
+    <link href="http://yoursite.com/2016/06/20/iOS%E6%9D%A1%E7%A0%81%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%89%AB%E6%8F%8F/"/>
+    <id>http://yoursite.com/2016/06/20/iOS条码二维码扫描/</id>
+    <published>2016-06-20T09:20:58.000Z</published>
+    <updated>2016-06-20T09:22:22.000Z</updated>
+    
+    <content type="html">&lt;p&gt;UPC与EAN编码的不同之处&lt;br&gt;两种条形码虽然只能表示0到，十个数字，但具有高度的查核能力，扫描操作简单可靠。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;产生&quot;&gt;&lt;a href=&quot;#产生&quot; class=&quot;headerlink&quot; title=&quot;产生&quot;&gt;&lt;/a&gt;产生&lt;/h1&gt;&lt;h2 id=&quot;1-UPC条形码。&quot;&gt;&lt;a href=&quot;#1-UPC条形码。&quot; class=&quot;headerlink&quot; title=&quot;(1)UPC条形码。&quot;&gt;&lt;/a&gt;(1)UPC条形码。&lt;/h2&gt;&lt;p&gt;UPC条形码是由美国和加拿大共同组织的“统一编码委员会”（Universal Code Council, UCC ）选定以IBM公司提出的 Dalta-Distance 为基础而通过的。UPC码（Uniform Product Code）作为美、加产品统一的标识符号。&lt;/p&gt;
+&lt;h2 id=&quot;2-EAN条形码。&quot;&gt;&lt;a href=&quot;#2-EAN条形码。&quot; class=&quot;headerlink&quot; title=&quot;(2)EAN条形码。&quot;&gt;&lt;/a&gt;(2)EAN条形码。&lt;/h2&gt;&lt;p&gt;EAN条形码是欧共体的“欧洲物品编码协会”（European Article Numbering Association , EAN）吸取了UPC的经验而确立的物品标识符号。该协会于1977年改名为“国际物品编码协会”（International Article Numbering Association）。迄今为止，使用EAN条形码的该协会成员国已有数十个，除欧洲外，亚洲许多国家也使用此码，我国于1991年7月参加该协会。&lt;/p&gt;
+&lt;p&gt;由于国际上存在这两种编码系统，因此，我国产品销往美国，加拿大应使用UPC码，而出口到其他国家和地区则需使用EAN码。&lt;/p&gt;
+&lt;h1 id=&quot;构成&quot;&gt;&lt;a href=&quot;#构成&quot; class=&quot;headerlink&quot; title=&quot;构成&quot;&gt;&lt;/a&gt;构成&lt;/h1&gt;&lt;p&gt;UPC和EAN两种条形码虽同属一个类型，但由于EAN码是在UPC码基础上形成的，而且有所发展和创新，所以，在技术上EAN系统的光电阅读器可以阅读UPC系统的条码，而UPC系统的光电阅读器却不能阅读EAN码。该两种条形码的构成如下：&lt;/p&gt;
+&lt;h1 id=&quot;1-UPC的构成。&quot;&gt;&lt;a href=&quot;#1-UPC的构成。&quot; class=&quot;headerlink&quot; title=&quot;(1)UPC的构成。&quot;&gt;&lt;/a&gt;(1)UPC的构成。&lt;/h1&gt;&lt;p&gt;由11位数字的通用产品代码和1位校验码组成。产品代码的第1位数字为编码系统字符；中间5位数字表示制造商号，后5位数字为产品代码。&lt;/p&gt;
+&lt;h1 id=&quot;2-EAN码的构成。&quot;&gt;&lt;a href=&quot;#2-EAN码的构成。&quot; class=&quot;headerlink&quot; title=&quot;(2)EAN码的构成。&quot;&gt;&lt;/a&gt;(2)EAN码的构成。&lt;/h1&gt;&lt;p&gt;EAN码符号有标准版（EAN-13）和缩短版（EAN-8）两种&lt;br&gt;EAN-13： 由代表12位数字的产品代码和1位校验码组成。产品代码的前3位为国别码；中间4位数字为制造商号；后5位数字为产品代码。&lt;br&gt;EAN-8：由8个数字组成，属EAN的简易编码型式。&lt;/p&gt;
+&lt;p&gt;EAN码的国别码由EAN总部分配管理。我国的国别代码为690。制造商号代码由EAN在各国的分支机构分配管理。我国由“中国物品编码中心”统一分配企业代码。产品代码由制造商根据规定自己编制。&lt;/p&gt;
+&lt;h1 id=&quot;iOS-识别&quot;&gt;&lt;a href=&quot;#iOS-识别&quot; class=&quot;headerlink&quot; title=&quot;iOS 识别&quot;&gt;&lt;/a&gt;iOS 识别&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;第三方扫码库 ：ZXing 或 ZBar 这类第三方扫码库&lt;/li&gt;
+&lt;li&gt;系统原生AVMetadataObject：从 iOS 7 开始系统原生 API 就支持通过扫描获取二维码的功能。 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IOS7之后，系统的AVMetadataObject类中，提供了解析二维码的接口。经过测试，使用原生API扫描和处理的效率非常高，远远高于第三方库。&lt;/p&gt;
+&lt;h1 id=&quot;常遇问题&quot;&gt;&lt;a href=&quot;#常遇问题&quot; class=&quot;headerlink&quot; title=&quot;常遇问题&quot;&gt;&lt;/a&gt;常遇问题&lt;/h1&gt;&lt;p&gt;UPC-A码长度是12位的，EAN13码长度是13位的，然后我在AVFoundation的文档中发现了这一段注释。&lt;br&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/*!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; @constant AVMetadataObjectTypeEAN13Code&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; @abstract An identifier for an&lt;span class=&quot;built_in&quot;&gt; instance &lt;/span&gt;of AVMetadataMachineReadableCodeObject having a type AVMetadataObjectTypeEAN13Code.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; @discussion&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    AVMetadataMachineReadableCodeObject objects generated from EAN-13 (**including UPC-A**) codes&lt;span class=&quot;built_in&quot;&gt; return &lt;/span&gt;this constant as their type.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;AVF_EXPORT NSString *const AVMetadataObjectTypeEAN13Code NS_AVAILABLE(NA, 7_0) __TVOS_PROHIBITED;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;苹果将UPC-A条码和EAN13条码放到了一起不做区分,&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://internationalbarcodes.com/difference-between-ean-13-and-upc-a-barcodes/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://internationalbarcodes.com/difference-between-ean-13-and-upc-a-barcodes/&lt;/a&gt;&lt;br&gt;    UPC-A Barcodes are effectively a subset of EAN-13 Barcodes. If the first digit on the EAN-13 number is a ‘0’, then the bars will be of both the EAN-13 and the UPC-A (without the leading ‘0’) will be identical.&lt;/p&gt;
+&lt;p&gt;UPC-A条码实际上是EAN-13条码的子集。如果一个EAN-13条码的第一位数字是0，那么这个条码既是EAN-13码也同样是是UPC-A码（去掉开头的0）。&lt;br&gt;所以，在AVFoundation扫描得到的结果里判断条码的类别是否AVMetadataObjectTypeEAN13Code并且是否以0开头，如果是的话就把第一位的0直接删掉，得到的为 UPC 编码。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;UPC与EAN编码的不同之处&lt;br&gt;两种条形码虽然只能表示0到，十个数字，但具有高度的查核能力，扫描操作简单可靠。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="iOS学习" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="扫码" scheme="http://yoursite.com/tags/%E6%89%AB%E7%A0%81/"/>
+    
+      <category term="二维码" scheme="http://yoursite.com/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
+    
+      <category term="条码" scheme="http://yoursite.com/tags/%E6%9D%A1%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>ShougongkeDemo(仿“手工客”iOS App)说明</title>
@@ -472,9 +515,9 @@
       <category term="iOS学习" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="iOS学习" scheme="http://yoursite.com/tags/iOS%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="Blogs" scheme="http://yoursite.com/tags/Blogs/"/>
+    
+      <category term="iOS学习" scheme="http://yoursite.com/tags/iOS%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -684,9 +727,9 @@
       <category term="备忘" scheme="http://yoursite.com/categories/%E5%A4%87%E5%BF%98/"/>
     
     
-      <category term="UIAppearance" scheme="http://yoursite.com/tags/UIAppearance/"/>
-    
       <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
+    
+      <category term="UIAppearance" scheme="http://yoursite.com/tags/UIAppearance/"/>
     
   </entry>
   
@@ -728,9 +771,9 @@
       <category term="iOS学习" scheme="http://yoursite.com/categories/iOS%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="富文本" scheme="http://yoursite.com/tags/%E5%AF%8C%E6%96%87%E6%9C%AC/"/>
-    
       <category term="TextKit" scheme="http://yoursite.com/tags/TextKit/"/>
+    
+      <category term="富文本" scheme="http://yoursite.com/tags/%E5%AF%8C%E6%96%87%E6%9C%AC/"/>
     
   </entry>
   
@@ -890,9 +933,9 @@
       <category term="备忘" scheme="http://yoursite.com/categories/%E5%A4%87%E5%BF%98/"/>
     
     
-      <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
-    
       <category term="UIScrollView" scheme="http://yoursite.com/tags/UIScrollView/"/>
+    
+      <category term="备忘" scheme="http://yoursite.com/tags/%E5%A4%87%E5%BF%98/"/>
     
       <category term="常用代码" scheme="http://yoursite.com/tags/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
     
@@ -1526,7 +1569,7 @@ $ git archive
 &lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;email &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;example@example.com&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;string&quot;&gt;GitHub&lt;/span&gt;](&lt;span class=&quot;link&quot;&gt;http://github.com&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;自动生成连接  &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;http:&lt;/span&gt;//&lt;span class=&quot;attr&quot;&gt;www.github.com&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。&lt;br&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#116;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x40;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#x65;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&quot;&gt;&amp;#x65;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x40;&amp;#x65;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#x65;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#x6f;&amp;#58;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#64;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#x65;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#64;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#108;&amp;#x65;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连接标题Github网站&lt;/a&gt;&lt;br&gt;自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
 &lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;p&gt;Markdown 语法：&lt;/p&gt;
 &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;某某说:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第一行引用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;quote&quot;&gt;&amp;gt; 第二行费用文字&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。&lt;br&gt;效果如下：&lt;/p&gt;

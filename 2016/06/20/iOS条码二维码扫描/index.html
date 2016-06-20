@@ -4,26 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>iOS富文本 | ZeroDY&#39;s Blogs</title>
+  <title>iOS条码二维码扫描 | ZeroDY&#39;s Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="要实现效果：
-图片和文字混排
-文字样式修改">
+  <meta name="description" content="UPC与EAN编码的不同之处两种条形码虽然只能表示0到，十个数字，但具有高度的查核能力，扫描操作简单可靠。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS富文本">
-<meta property="og:url" content="http://yoursite.com/2016/01/23/iOS富文本/index.html">
+<meta property="og:title" content="iOS条码二维码扫描">
+<meta property="og:url" content="http://yoursite.com/2016/06/20/iOS条码二维码扫描/index.html">
 <meta property="og:site_name" content="ZeroDY's Blogs">
-<meta property="og:description" content="要实现效果：
-图片和文字混排
-文字样式修改">
-<meta property="og:image" content="http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png">
-<meta property="og:updated_time" content="2016-06-14T15:33:27.000Z">
+<meta property="og:description" content="UPC与EAN编码的不同之处两种条形码虽然只能表示0到，十个数字，但具有高度的查核能力，扫描操作简单可靠。">
+<meta property="og:updated_time" content="2016-06-20T09:22:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS富文本">
-<meta name="twitter:description" content="要实现效果：
-图片和文字混排
-文字样式修改">
-<meta name="twitter:image" content="http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png">
+<meta name="twitter:title" content="iOS条码二维码扫描">
+<meta name="twitter:description" content="UPC与EAN编码的不同之处两种条形码虽然只能表示0到，十个数字，但具有高度的查核能力，扫描操作简单可靠。">
   
   
     <link rel="icon" href="http://o7279yd4s.bkt.clouddn.com/bitbug_favicon.ico">
@@ -195,11 +187,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-iOS富文本" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-iOS条码二维码扫描" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/23/iOS富文本/" class="article-date">
-  	<time datetime="2016-01-23T15:22:12.000Z" itemprop="datePublished">2016-01-23</time>
+      <a href="/2016/06/20/iOS条码二维码扫描/" class="article-date">
+  	<time datetime="2016-06-20T09:20:58.000Z" itemprop="datePublished">2016-06-20</time>
 </a>
     </div>
   
@@ -212,7 +204,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      iOS富文本
+      iOS条码二维码扫描
     </h1>
   
 
@@ -221,7 +213,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/备忘/">备忘</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/富文本/">富文本</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/二维码/">二维码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/扫码/">扫码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/条码/">条码</a></li></ul>
 	</div>
 
         
@@ -240,70 +232,29 @@
           
             <div id="toc" class="toc-article">
               <strong class="toc-title">文章目录</strong>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#要实现效果："><span class="toc-number">1.</span> <span class="toc-text">要实现效果：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现方式"><span class="toc-number">2.</span> <span class="toc-text">实现方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#具体实现"><span class="toc-number">3.</span> <span class="toc-text">具体实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#通过CoreText-TextKit来原生实现"><span class="toc-number">3.1.</span> <span class="toc-text">通过CoreText/TextKit来原生实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过UIWebView来间接实现"><span class="toc-number">3.2.</span> <span class="toc-text">通过UIWebView来间接实现</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#产生"><span class="toc-number">1.</span> <span class="toc-text">产生</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-UPC条形码。"><span class="toc-number">1.1.</span> <span class="toc-text">(1)UPC条形码。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-EAN条形码。"><span class="toc-number">1.2.</span> <span class="toc-text">(2)EAN条形码。</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#构成"><span class="toc-number">2.</span> <span class="toc-text">构成</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-UPC的构成。"><span class="toc-number">3.</span> <span class="toc-text">(1)UPC的构成。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-EAN码的构成。"><span class="toc-number">4.</span> <span class="toc-text">(2)EAN码的构成。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#iOS-识别"><span class="toc-number">5.</span> <span class="toc-text">iOS 识别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常遇问题"><span class="toc-number">6.</span> <span class="toc-text">常遇问题</span></a></li></ol>
             </div>
           
 
           
 
-        <h1 id="要实现效果："><a href="#要实现效果：" class="headerlink" title="要实现效果："></a>要实现效果：</h1><ul>
-<li>图片和文字混排</li>
-<li>文字样式修改</li>
+        <p>UPC与EAN编码的不同之处<br>两种条形码虽然只能表示0到，十个数字，但具有高度的查核能力，扫描操作简单可靠。<br><a id="more"></a></p>
+<h1 id="产生"><a href="#产生" class="headerlink" title="产生"></a>产生</h1><h2 id="1-UPC条形码。"><a href="#1-UPC条形码。" class="headerlink" title="(1)UPC条形码。"></a>(1)UPC条形码。</h2><p>UPC条形码是由美国和加拿大共同组织的“统一编码委员会”（Universal Code Council, UCC ）选定以IBM公司提出的 Dalta-Distance 为基础而通过的。UPC码（Uniform Product Code）作为美、加产品统一的标识符号。</p>
+<h2 id="2-EAN条形码。"><a href="#2-EAN条形码。" class="headerlink" title="(2)EAN条形码。"></a>(2)EAN条形码。</h2><p>EAN条形码是欧共体的“欧洲物品编码协会”（European Article Numbering Association , EAN）吸取了UPC的经验而确立的物品标识符号。该协会于1977年改名为“国际物品编码协会”（International Article Numbering Association）。迄今为止，使用EAN条形码的该协会成员国已有数十个，除欧洲外，亚洲许多国家也使用此码，我国于1991年7月参加该协会。</p>
+<p>由于国际上存在这两种编码系统，因此，我国产品销往美国，加拿大应使用UPC码，而出口到其他国家和地区则需使用EAN码。</p>
+<h1 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h1><p>UPC和EAN两种条形码虽同属一个类型，但由于EAN码是在UPC码基础上形成的，而且有所发展和创新，所以，在技术上EAN系统的光电阅读器可以阅读UPC系统的条码，而UPC系统的光电阅读器却不能阅读EAN码。该两种条形码的构成如下：</p>
+<h1 id="1-UPC的构成。"><a href="#1-UPC的构成。" class="headerlink" title="(1)UPC的构成。"></a>(1)UPC的构成。</h1><p>由11位数字的通用产品代码和1位校验码组成。产品代码的第1位数字为编码系统字符；中间5位数字表示制造商号，后5位数字为产品代码。</p>
+<h1 id="2-EAN码的构成。"><a href="#2-EAN码的构成。" class="headerlink" title="(2)EAN码的构成。"></a>(2)EAN码的构成。</h1><p>EAN码符号有标准版（EAN-13）和缩短版（EAN-8）两种<br>EAN-13： 由代表12位数字的产品代码和1位校验码组成。产品代码的前3位为国别码；中间4位数字为制造商号；后5位数字为产品代码。<br>EAN-8：由8个数字组成，属EAN的简易编码型式。</p>
+<p>EAN码的国别码由EAN总部分配管理。我国的国别代码为690。制造商号代码由EAN在各国的分支机构分配管理。我国由“中国物品编码中心”统一分配企业代码。产品代码由制造商根据规定自己编制。</p>
+<h1 id="iOS-识别"><a href="#iOS-识别" class="headerlink" title="iOS 识别"></a>iOS 识别</h1><ul>
+<li>第三方扫码库 ：ZXing 或 ZBar 这类第三方扫码库</li>
+<li>系统原生AVMetadataObject：从 iOS 7 开始系统原生 API 就支持通过扫描获取二维码的功能。 </li>
 </ul>
-<a id="more"></a>
-<h1 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h1><ul>
-<li>CoreText/TextKit-原生实现</li>
-<li>UIWebView-间接实现</li>
-</ul>
-<h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><p><a href="http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png" target="_blank" rel="external"><img src="http://7xkwcv.com1.z0.glb.clouddn.com/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png" alt=""></a></p>
-<h2 id="通过CoreText-TextKit来原生实现"><a href="#通过CoreText-TextKit来原生实现" class="headerlink" title="通过CoreText/TextKit来原生实现"></a>通过CoreText/TextKit来原生实现</h2><p>iOS 6之前：CoreText,纯C语言,极其蛋疼<br>iOS 6开始：NSAttributedString,简单易用<br>iOS 7开始：TextKit,功能强大,简单易用</p>
-<p><strong>对于NSAttributedString（iOS6开始）：</strong></p>
-<ul>
-<li>可以给指定范围（range）内的string添加属性（见UIKit中的<code>NSAttributedString.h</code>中的属性列表）；</li>
-<li>可以使用它的类方法<code>attributedStringWithAttachment:</code>，将图片以附件（<code>NSTextAttachment</code>）的形式附加在已有NSAttributedString的后面。</li>
-</ul>
-<p><strong>对于TextKit（iOS7开始）：</strong></p>
-<ul>
-<li>可以通过继承<code>NSTextStorage</code>或<code>NSLayoutManager</code>来对不同的样式（如指定文字的高亮、背景颜色、下划线等）进行自定义处理；</li>
-<li>可以设置<code>NSTextContainer</code>的<code>exclusionPaths</code>属性来设置镂空区域。</li>
-</ul>
-<p><strong>对于DTCoreText：</strong></p>
-<ul>
-<li>对CoreText进行了封装；</li>
-<li>可以将html转换成<code>NSAttributedString</code>，而依然以<strong>html的样式</strong>展示出来；</li>
-<li>支持CSS样式的展示；</li>
-<li>支持内嵌html5视频及播放；</li>
-<li>支持对多种附件（图片、视频等）的自定义处理；</li>
-<li>支持远程图片等懒加载。</li>
-</ul>
-<p><strong>补充：</strong></p>
-<p>正如<a href="http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718" target="_blank" rel="external">pix</a>所说，iOS7起，UIKit中添加了<code>initWithData:options:documentAttributes:error:</code>方法，可以用HTML来初始化一个NSAttributedString对象。如下：</p>
-<pre><code>[[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUTF8StringEncoding] 
-                                 options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-                                           NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)} 
-                      documentAttributes:nil error:nil];
-</code></pre><p>但从评论中来看，普遍反映执行起来花费时间很长。所以类似情况，还是优先考虑使用DTCoreText。</p>
-<hr>
-<p><strong>Ref:</strong></p>
-<ul>
-<li>CoreText教程：<a href="https://www.raywenderlich.com/4147/core-text-tutorial-for-ios-making-a-magazine-app" target="_blank" rel="external">https://www.raywenderlich.com/4147/core-text-tutorial-for-ios-making-a-magazine-app</a></li>
-<li>DTCoreText: <a href="https://github.com/Cocoanetics/DTCoreText" target="_blank" rel="external">https://github.com/Cocoanetics/DTCoreText</a></li>
-<li>DTCoreText-Demo: <a href="https://github.com/yoon-boom/DTCoreText-DEMO" target="_blank" rel="external">https://github.com/yoon-boom/DTCoreText-DEMO</a>(Happy to find an executable one!)</li>
-<li>DTCoreText的源码分析：<a href="http://blog.cnbang.net/tech/2630/" target="_blank" rel="external">http://blog.cnbang.net/tech/2630/</a></li>
-<li>TextKit教程：<a href="https://www.raywenderlich.com/50151/text-kit-tutorial" target="_blank" rel="external">https://www.raywenderlich.com/50151/text-kit-tutorial</a></li>
-<li>YYText：<a href="https://github.com/ibireme/YYText" target="_blank" rel="external">https://github.com/ibireme/YYText</a></li>
-<li><a href="http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718" target="_blank" rel="external">http://stackoverflow.com/questions/4217820/convert-html-to-nsattributedstring-in-ios/18886718#18886718</a></li>
-</ul>
-<h2 id="通过UIWebView来间接实现"><a href="#通过UIWebView来间接实现" class="headerlink" title="通过UIWebView来间接实现"></a>通过UIWebView来间接实现</h2><p>原理是类似symfony中的twig模板，将设计好的模板存在项目中（.mustache和.html），字体保存为.ttf，然后每次请求数据时，将服务器返回的html用这个模板进行渲染，再用嵌入的webview加载，从而得到整体风格一致的页面。</p>
-<p>具体实现可以参考开源中国iOS版本的源码。</p>
-<hr>
-<p><strong>Ref:</strong></p>
-<ul>
-<li>GRMustache：<a href="https://github.com/groue/GRMustache" target="_blank" rel="external">https://github.com/groue/GRMustache</a></li>
-<li><a href="https://github.com/syntaxhighlighter/syntaxhighlighter" target="_blank" rel="external">https://github.com/syntaxhighlighter/syntaxhighlighter</a></li>
-<li>开源中国iOS版本源码：<a href="http://git.oschina.net/oschina/iphone-app/tree/master" target="_blank" rel="external">http://git.oschina.net/oschina/iphone-app/tree/master</a></li>
-</ul>
-<p><a href="http://www.calios.gq/2016/05/17/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" target="_blank" rel="external">原文地址http://www.calios.gq/2016/05/17/iOS%E4%B8%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</a></p>
+<p>IOS7之后，系统的AVMetadataObject类中，提供了解析二维码的接口。经过测试，使用原生API扫描和处理的效率非常高，远远高于第三方库。</p>
+<h1 id="常遇问题"><a href="#常遇问题" class="headerlink" title="常遇问题"></a>常遇问题</h1><p>UPC-A码长度是12位的，EAN13码长度是13位的，然后我在AVFoundation的文档中发现了这一段注释。<br><figure class="highlight smali"><table><tr><td class="code"><pre><span class="line">/*!</span><br><span class="line"> @constant AVMetadataObjectTypeEAN13Code</span><br><span class="line"> @abstract An identifier for an<span class="built_in"> instance </span>of AVMetadataMachineReadableCodeObject having a type AVMetadataObjectTypeEAN13Code.</span><br><span class="line"> @discussion</span><br><span class="line">    AVMetadataMachineReadableCodeObject objects generated from EAN-13 (**including UPC-A**) codes<span class="built_in"> return </span>this constant as their type.</span><br><span class="line">*/</span><br><span class="line">AVF_EXPORT NSString *const AVMetadataObjectTypeEAN13Code NS_AVAILABLE(NA, 7_0) __TVOS_PROHIBITED;</span><br></pre></td></tr></table></figure></p>
+<p>苹果将UPC-A条码和EAN13条码放到了一起不做区分,</p>
+<p><a href="http://internationalbarcodes.com/difference-between-ean-13-and-upc-a-barcodes/" target="_blank" rel="external">http://internationalbarcodes.com/difference-between-ean-13-and-upc-a-barcodes/</a><br>    UPC-A Barcodes are effectively a subset of EAN-13 Barcodes. If the first digit on the EAN-13 number is a ‘0’, then the bars will be of both the EAN-13 and the UPC-A (without the leading ‘0’) will be identical.</p>
+<p>UPC-A条码实际上是EAN-13条码的子集。如果一个EAN-13条码的第一位数字是0，那么这个条码既是EAN-13码也同样是是UPC-A码（去掉开头的0）。<br>所以，在AVFoundation扫描得到的结果里判断条码的类别是否AVMetadataObjectTypeEAN13Code并且是否以0开头，如果是的话就把第一位的0直接删掉，得到的为 UPC 编码。</p>
 
       
     </div>
@@ -313,18 +264,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/02/05/TextKit学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          TextKit学习笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/01/22/(常用代码备忘)UIScrollView/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">(常用代码备忘)UIScrollView</div>
+    <a href="/2016/06/02/ShougongkeDemo(仿“手工客”iOS App)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ShougongkeDemo(仿“手工客”iOS App)说明</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -340,7 +282,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="iOS富文本" data-title="iOS富文本" data-url="http://yoursite.com/2016/01/23/iOS富文本/"></div>
+	<div class="ds-thread" data-thread-key="iOS条码二维码扫描" data-title="iOS条码二维码扫描" data-url="http://yoursite.com/2016/06/20/iOS条码二维码扫描/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
